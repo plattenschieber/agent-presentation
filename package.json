@@ -1,11 +1,15 @@
 {
   "name": "agentic-coding-presentation",
   "version": "1.0.0",
-  "description": "Slidev presentation about agentic coding tools for Claude Code Anonymous meetup",
+  "description": "Slidev presentations about agentic coding tools for Claude Code Anonymous meetup",
   "scripts": {
-    "build": "slidev build agentic-coding-presentation.md",
-    "dev": "slidev agentic-coding-presentation.md --open",
-    "export": "slidev export agentic-coding-presentation.md"
+    "build": "npm run build:all",
+    "build:all": "npm run build:round1 && npm run build:round2 && npm run build:index",
+    "build:round1": "slidev build agentic-journey-slides.md --base /agent-presentation/round1/ --out dist/round1",
+    "build:round2": "slidev build round2-hype-to-habits.md --base /agent-presentation/round2/ --out dist/round2",
+    "build:index": "node create-index.js",
+    "dev:round1": "slidev agentic-journey-slides.md --open",
+    "dev:round2": "slidev round2-hype-to-habits.md --open"
   },
   "devDependencies": {
     "@slidev/cli": "^0.48.0",
