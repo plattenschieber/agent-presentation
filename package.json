@@ -1,0 +1,14 @@
+{
+  "name": "agentic-coding-presentation",
+  "version": "1.0.0",
+  "description": "Slidev presentation about agentic coding tools for Claude Code Anonymous meetup",
+  "scripts": {
+    "build": "slidev build agentic-coding-presentation.md",
+    "dev": "slidev agentic-coding-presentation.md --open",
+    "export": "slidev export agentic-coding-presentation.md"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^0.48.0",
+    "@slidev/theme-default": "latest"
+  }
+}
