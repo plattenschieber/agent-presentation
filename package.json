@@ -12,7 +12,7 @@
     "dev:round2": "slidev round2-hype-to-habits.md --open"
   },
   "devDependencies": {
-    "@slidev/cli": "^0.48.0",
+    "@slidev/cli": "^52.5.0",
     "@slidev/theme-default": "latest"
   }
 }
