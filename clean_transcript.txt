@@ -1,0 +1,1628 @@
+00:00:00.160: Hello, I'm Armen
+00:00:03.750: Hello, I'm Armen
+00:00:03.760: Hello, I'm Armen and sometimes recently,
+00:00:07.749: and sometimes recently,
+00:00:07.759: and sometimes recently, rather more common than not, I'm sharing
+00:00:12.310: rather more common than not, I'm sharing
+00:00:12.320: rather more common than not, I'm sharing a decoding and just LLM stuff on this
+00:00:14.549: a decoding and just LLM stuff on this
+00:00:14.559: a decoding and just LLM stuff on this channel. And
+00:00:18.390: channel. And
+00:00:18.400: channel. And since May, there has been an explosion
+00:00:21.029: since May, there has been an explosion
+00:00:21.039: since May, there has been an explosion of different kind of aent decoding
+00:00:22.870: of different kind of aent decoding
+00:00:22.880: of different kind of aent decoding tools.
+00:00:24.550: tools.
+00:00:24.560: tools. And I wanted to give you a little bit of
+00:00:26.230: And I wanted to give you a little bit of
+00:00:26.240: And I wanted to give you a little bit of an update um of which tools exist and
+00:00:30.790: an update um of which tools exist and
+00:00:30.800: an update um of which tools exist and what I have learned in general about
+00:00:32.630: what I have learned in general about
+00:00:32.640: what I have learned in general about them in in the last couple of weeks in
+00:00:35.430: them in in the last couple of weeks in
+00:00:35.440: them in in the last couple of weeks in particular.
+00:00:38.559: So if you're on this channel, you
+00:00:39.590: So if you're on this channel, you
+00:00:39.600: So if you're on this channel, you probably already know who I am. I
+00:00:41.590: probably already know who I am. I
+00:00:41.600: probably already know who I am. I created a lot of open source software
+00:00:42.950: created a lot of open source software
+00:00:42.960: created a lot of open source software over the years, particularly in the
+00:00:43.990: over the years, particularly in the
+00:00:44.000: over the years, particularly in the Python ecosystem. And as of recently,
+00:00:46.630: Python ecosystem. And as of recently,
+00:00:46.640: Python ecosystem. And as of recently, I'm kind of obsessed with a chendic
+00:00:48.630: I'm kind of obsessed with a chendic
+00:00:48.640: I'm kind of obsessed with a chendic coding tools and I'm trying my best to
+00:00:50.709: coding tools and I'm trying my best to
+00:00:50.719: coding tools and I'm trying my best to use a lot of them uh to help me build my
+00:00:53.990: use a lot of them uh to help me build my
+00:00:54.000: use a lot of them uh to help me build my new startup.
+00:00:58.960: One of the ways in which I think we
+00:01:01.430: One of the ways in which I think we
+00:01:01.440: One of the ways in which I think we should look at the current point in time
+00:01:02.790: should look at the current point in time
+00:01:02.800: should look at the current point in time is that there has been an explosion of
+00:01:04.710: is that there has been an explosion of
+00:01:04.720: is that there has been an explosion of interest both from investors and from
+00:01:07.510: interest both from investors and from
+00:01:07.520: interest both from investors and from users
+00:01:09.119: users um and programmers in general um about
+00:01:12.230: um and programmers in general um about
+00:01:12.240: um and programmers in general um about uh this this general topic of using
+00:01:16.550: uh this this general topic of using
+00:01:16.560: uh this this general topic of using aic tool loops um to help us build
+00:01:19.670: aic tool loops um to help us build
+00:01:19.680: aic tool loops um to help us build software.
+00:01:21.350: software.
+00:01:21.360: software. And this has primarily resulted in tools
+00:01:25.670: And this has primarily resulted in tools
+00:01:25.680: And this has primarily resulted in tools that help us write more code. But
+00:01:27.830: that help us write more code. But
+00:01:27.840: that help us write more code. But there's also a little bit of um the same
+00:01:30.390: there's also a little bit of um the same
+00:01:30.400: there's also a little bit of um the same kind of pattern being applied for
+00:01:33.190: kind of pattern being applied for
+00:01:33.200: kind of pattern being applied for non-coding agent. But most of what's
+00:01:35.590: non-coding agent. But most of what's
+00:01:35.600: non-coding agent. But most of what's currently making its internet is
+00:01:38.710: currently making its internet is
+00:01:38.720: currently making its internet is combination of a very good foundation
+00:01:40.789: combination of a very good foundation
+00:01:40.799: combination of a very good foundation model with some achantic tool. A lot of
+00:01:44.149: model with some achantic tool. A lot of
+00:01:44.159: model with some achantic tool. A lot of them are moving for some reason or
+00:01:45.429: them are moving for some reason or
+00:01:45.439: them are moving for some reason or another into the command line and
+00:01:50.149: another into the command line and
+00:01:50.159: another into the command line and it has been very hard to keep track of
+00:01:52.389: it has been very hard to keep track of
+00:01:52.399: it has been very hard to keep track of everything because every single day a
+00:01:54.230: everything because every single day a
+00:01:54.240: everything because every single day a new tool pops up and then there are also
+00:01:56.710: new tool pops up and then there are also
+00:01:56.720: new tool pops up and then there are also different models that they can use with
+00:01:57.990: different models that they can use with
+00:01:58.000: different models that they can use with them and some tools support multiple
+00:01:59.670: them and some tools support multiple
+00:01:59.680: them and some tools support multiple models and so forth and I just wanted to
+00:02:01.749: models and so forth and I just wanted to
+00:02:01.759: models and so forth and I just wanted to give my best understanding of what's
+00:02:04.230: give my best understanding of what's
+00:02:04.240: give my best understanding of what's going on right now um as I as sort of my
+00:02:08.550: going on right now um as I as sort of my
+00:02:08.560: going on right now um as I as sort of my experience has has told me so far
+00:02:11.830: experience has has told me so far
+00:02:11.840: experience has has told me so far and I do want to be very clear that I do
+00:02:14.309: and I do want to be very clear that I do
+00:02:14.319: and I do want to be very clear that I do not want to recommend an agent here. So,
+00:02:16.070: not want to recommend an agent here. So,
+00:02:16.080: not want to recommend an agent here. So, I actually not recommend anything at
+00:02:18.309: I actually not recommend anything at
+00:02:18.319: I actually not recommend anything at all. I just want to share a little bit
+00:02:20.229: all. I just want to share a little bit
+00:02:20.239: all. I just want to share a little bit how I'm thinking about all of this and
+00:02:22.229: how I'm thinking about all of this and
+00:02:22.239: how I'm thinking about all of this and where this might be going. And I also
+00:02:24.790: where this might be going. And I also
+00:02:24.800: where this might be going. And I also apologize for calling them agents.
+00:02:27.190: apologize for calling them agents.
+00:02:27.200: apologize for calling them agents. There's a lot of discussion of this is
+00:02:28.949: There's a lot of discussion of this is
+00:02:28.959: There's a lot of discussion of this is an appropriate name or not. It's
+00:02:30.390: an appropriate name or not. It's
+00:02:30.400: an appropriate name or not. It's probably not an appropriate name. Um,
+00:02:32.070: probably not an appropriate name. Um,
+00:02:32.080: probably not an appropriate name. Um, but it is what it is. This is what
+00:02:34.550: but it is what it is. This is what
+00:02:34.560: but it is what it is. This is what seemingly we're calling this now. So,
+00:02:35.830: seemingly we're calling this now. So,
+00:02:35.840: seemingly we're calling this now. So, it's it's a when and I use agent here.
+00:02:37.670: it's it's a when and I use agent here.
+00:02:37.680: it's it's a when and I use agent here. It's sort of an agentic coding tool in
+00:02:40.390: It's sort of an agentic coding tool in
+00:02:40.400: It's sort of an agentic coding tool in one form or another.
+00:02:43.030: one form or another.
+00:02:43.040: one form or another. Um just to level set this here roughly
+00:02:46.869: Um just to level set this here roughly
+00:02:46.879: Um just to level set this here roughly we're looking at
+00:02:49.110: we're looking at
+00:02:49.120: we're looking at five different types of tools. Um some
+00:02:51.589: five different types of tools. Um some
+00:02:51.599: five different types of tools. Um some of them are IDE extensions. So uh GitHub
+00:02:55.030: of them are IDE extensions. So uh GitHub
+00:02:55.040: of them are IDE extensions. So uh GitHub copilot cursor are probably the most
+00:02:56.630: copilot cursor are probably the most
+00:02:56.640: copilot cursor are probably the most well-known ones well-known ones. They uh
+00:02:59.830: well-known ones well-known ones. They uh
+00:02:59.840: well-known ones well-known ones. They uh they're both autocomplete but they can
+00:03:01.830: they're both autocomplete but they can
+00:03:01.840: they're both autocomplete but they can also do u basic coding loops. Cursor can
+00:03:04.710: also do u basic coding loops. Cursor can
+00:03:04.720: also do u basic coding loops. Cursor can actually do very capable coding loops at
+00:03:07.190: actually do very capable coding loops at
+00:03:07.200: actually do very capable coding loops at this point in parts also because cursor
+00:03:10.229: this point in parts also because cursor
+00:03:10.239: this point in parts also because cursor has recently moved into the CLI as well
+00:03:13.030: has recently moved into the CLI as well
+00:03:13.040: has recently moved into the CLI as well and they are also providing these
+00:03:14.869: and they are also providing these
+00:03:14.879: and they are also providing these standalone
+00:03:16.550: standalone
+00:03:16.560: standalone um agents. So cursor for instance can
+00:03:19.589: um agents. So cursor for instance can
+00:03:19.599: um agents. So cursor for instance can run on uh remote server 2 they have
+00:03:22.149: run on uh remote server 2 they have
+00:03:22.159: run on uh remote server 2 they have these background agents then the tools
+00:03:24.070: these background agents then the tools
+00:03:24.080: these background agents then the tools like a devon which are also I think they
+00:03:26.309: like a devon which are also I think they
+00:03:26.319: like a devon which are also I think they bought vinsurf currently recently. So
+00:03:28.550: bought vinsurf currently recently. So
+00:03:28.560: bought vinsurf currently recently. So these are all kind of these are
+00:03:30.070: these are all kind of these are
+00:03:30.080: these are all kind of these are different kind of tools exist and then
+00:03:31.430: different kind of tools exist and then
+00:03:31.440: different kind of tools exist and then we have these
+00:03:33.270: we have these
+00:03:33.280: we have these vibe coding tools that use very much the
+00:03:35.589: vibe coding tools that use very much the
+00:03:35.599: vibe coding tools that use very much the same kind of technology behind the
+00:03:37.190: same kind of technology behind the
+00:03:37.200: same kind of technology behind the scenes. So they they're running
+00:03:38.869: scenes. So they they're running
+00:03:38.879: scenes. So they they're running autogenerating running in a tool loop
+00:03:41.350: autogenerating running in a tool loop
+00:03:41.360: autogenerating running in a tool loop but they often uh very targeted towards
+00:03:46.149: but they often uh very targeted towards
+00:03:46.159: but they often uh very targeted towards user interface creation and they behave
+00:03:49.910: user interface creation and they behave
+00:03:49.920: user interface creation and they behave quite a bit different from what you can
+00:03:52.229: quite a bit different from what you can
+00:03:52.239: quite a bit different from what you can do with um with a tool like uh Cloud
+00:03:55.990: do with um with a tool like uh Cloud
+00:03:56.000: do with um with a tool like uh Cloud Code or Similar which really have a they
+00:04:01.190: Code or Similar which really have a they
+00:04:01.200: Code or Similar which really have a they run on your machine and they can do
+00:04:03.190: run on your machine and they can do
+00:04:03.200: run on your machine and they can do pretty much everything that you give
+00:04:04.229: pretty much everything that you give
+00:04:04.239: pretty much everything that you give them access to And
+00:04:07.509: them access to And
+00:04:07.519: them access to And when I recorded this last video here,
+00:04:09.350: when I recorded this last video here,
+00:04:09.360: when I recorded this last video here, there was really just a handful of tools
+00:04:11.670: there was really just a handful of tools
+00:04:11.680: there was really just a handful of tools that were capable of competing with uh
+00:04:15.350: that were capable of competing with uh
+00:04:15.360: that were capable of competing with uh cloud code, which was one of the first,
+00:04:17.909: cloud code, which was one of the first,
+00:04:17.919: cloud code, which was one of the first, if not the first, that got mass
+00:04:19.509: if not the first, that got mass
+00:04:19.519: if not the first, that got mass adoption. But by now, honestly, there
+00:04:22.469: adoption. But by now, honestly, there
+00:04:22.479: adoption. But by now, honestly, there are so many of them. I I don't even want
+00:04:24.150: are so many of them. I I don't even want
+00:04:24.160: are so many of them. I I don't even want to enumerate them. But um I think there
+00:04:27.430: to enumerate them. But um I think there
+00:04:27.440: to enumerate them. But um I think there more than 30 different kind of command
+00:04:28.950: more than 30 different kind of command
+00:04:28.960: more than 30 different kind of command line tools at this point that that have
+00:04:31.030: line tools at this point that that have
+00:04:31.040: line tools at this point that that have some version of aentic coding loop
+00:04:34.950: some version of aentic coding loop
+00:04:34.960: some version of aentic coding loop and
+00:04:37.520: and I don't have the time to look at all of
+00:04:39.270: I don't have the time to look at all of
+00:04:39.280: I don't have the time to look at all of those tools. Right? This is this is
+00:04:41.110: those tools. Right? This is this is
+00:04:41.120: those tools. Right? This is this is really not um I I don't have the time
+00:04:43.189: really not um I I don't have the time
+00:04:43.199: really not um I I don't have the time for that and I don't think honestly
+00:04:44.550: for that and I don't think honestly
+00:04:44.560: for that and I don't think honestly anyone has time for that. But there are
+00:04:46.469: anyone has time for that. But there are
+00:04:46.479: anyone has time for that. But there are some reasons of why you want to look at
+00:04:48.469: some reasons of why you want to look at
+00:04:48.479: some reasons of why you want to look at more than one than one tool. uh for me
+00:04:51.350: more than one than one tool. uh for me
+00:04:51.360: more than one than one tool. uh for me one of which is there has been a
+00:04:52.710: one of which is there has been a
+00:04:52.720: one of which is there has been a discussion recently about pricing and I
+00:04:54.390: discussion recently about pricing and I
+00:04:54.400: discussion recently about pricing and I will go into that later but because
+00:04:56.950: will go into that later but because
+00:04:56.960: will go into that later but because there is a worry that um
+00:05:00.710: there is a worry that um
+00:05:00.720: there is a worry that um we might be heavily being subsidized by
+00:05:04.790: we might be heavily being subsidized by
+00:05:04.800: we might be heavily being subsidized by venture capital here that the the cost
+00:05:06.550: venture capital here that the the cost
+00:05:06.560: venture capital here that the the cost of all of this will go up. So people
+00:05:08.790: of all of this will go up. So people
+00:05:08.800: of all of this will go up. So people have been starting to look into um can
+00:05:10.950: have been starting to look into um can
+00:05:10.960: have been starting to look into um can you use open models to do the same thing
+00:05:14.629: you use open models to do the same thing
+00:05:14.639: you use open models to do the same thing and
+00:05:16.160: and for one reason or another there are
+00:05:18.230: for one reason or another there are
+00:05:18.240: for one reason or another there are limitations in some of the tools that
+00:05:19.749: limitations in some of the tools that
+00:05:19.759: limitations in some of the tools that we're currently using. And it's very
+00:05:21.510: we're currently using. And it's very
+00:05:21.520: we're currently using. And it's very helpful to understand if those
+00:05:22.790: helpful to understand if those
+00:05:22.800: helpful to understand if those limitations are related to the coding
+00:05:25.029: limitations are related to the coding
+00:05:25.039: limitations are related to the coding agent versus if they're related to the
+00:05:26.870: agent versus if they're related to the
+00:05:26.880: agent versus if they're related to the model and what this might mean in the
+00:05:28.469: model and what this might mean in the
+00:05:28.479: model and what this might mean in the future.
+00:05:30.550: future.
+00:05:30.560: future. I don't want to talk too much about what
+00:05:32.310: I don't want to talk too much about what
+00:05:32.320: I don't want to talk too much about what kind of workloads work really well with
+00:05:33.990: kind of workloads work really well with
+00:05:34.000: kind of workloads work really well with aentic coding tools today, but I do want
+00:05:36.950: aentic coding tools today, but I do want
+00:05:36.960: aentic coding tools today, but I do want to mention that
+00:05:39.029: to mention that
+00:05:39.039: to mention that one of the main unlocks that I see today
+00:05:41.670: one of the main unlocks that I see today
+00:05:41.680: one of the main unlocks that I see today in
+00:05:43.440: in Agentic coding tools is the creation of
+00:05:47.990: Agentic coding tools is the creation of
+00:05:48.000: Agentic coding tools is the creation of software that
+00:05:52.000: can be perpetual prototypes.
+00:05:56.870: can be perpetual prototypes.
+00:05:56.880: can be perpetual prototypes. And some very good examples of this are
+00:05:59.830: And some very good examples of this are
+00:05:59.840: And some very good examples of this are internal tools.
+00:06:01.990: internal tools.
+00:06:02.000: internal tools. You might have been in a situation
+00:06:03.909: You might have been in a situation
+00:06:03.919: You might have been in a situation multiple times through your career where
+00:06:05.990: multiple times through your career where
+00:06:06.000: multiple times through your career where you wish you would have had a slightly
+00:06:07.830: you wish you would have had a slightly
+00:06:07.840: you wish you would have had a slightly better debugging tool, but you also
+00:06:09.990: better debugging tool, but you also
+00:06:10.000: better debugging tool, but you also didn't have the time at this very moment
+00:06:11.510: didn't have the time at this very moment
+00:06:11.520: didn't have the time at this very moment to create them. And this is actually one
+00:06:13.590: to create them. And this is actually one
+00:06:13.600: to create them. And this is actually one of the ways in which I really enjoy
+00:06:15.430: of the ways in which I really enjoy
+00:06:15.440: of the ways in which I really enjoy using these tools is that I'm working on
+00:06:17.590: using these tools is that I'm working on
+00:06:17.600: using these tools is that I'm working on something, but I can also have the agent
+00:06:19.830: something, but I can also have the agent
+00:06:19.840: something, but I can also have the agent on the side provide me a better way to
+00:06:22.070: on the side provide me a better way to
+00:06:22.080: on the side provide me a better way to visualize my data or a better way to
+00:06:24.150: visualize my data or a better way to
+00:06:24.160: visualize my data or a better way to debug a particular problem. and write a
+00:06:26.790: debug a particular problem. and write a
+00:06:26.800: debug a particular problem. and write a tool in a way that I can maybe use it a
+00:06:29.110: tool in a way that I can maybe use it a
+00:06:29.120: tool in a way that I can maybe use it a couple of times that makes this this
+00:06:32.070: couple of times that makes this this
+00:06:32.080: couple of times that makes this this flow generally more enjoyable and
+00:06:36.309: flow generally more enjoyable and
+00:06:36.319: flow generally more enjoyable and to create these tools
+00:06:39.029: to create these tools
+00:06:39.039: to create these tools you're kind of in a situation where you
+00:06:42.629: you're kind of in a situation where you
+00:06:42.639: you're kind of in a situation where you want to be able to see what they do and
+00:06:46.550: want to be able to see what they do and
+00:06:46.560: want to be able to see what they do and interrupt and steer them. So it's it's a
+00:06:48.629: interrupt and steer them. So it's it's a
+00:06:48.639: interrupt and steer them. So it's it's a little bit of a combination of both
+00:06:49.990: little bit of a combination of both
+00:06:50.000: little bit of a combination of both hands off and hands on
+00:06:52.469: hands off and hands on
+00:06:52.479: hands off and hands on which is very different from
+00:06:55.430: which is very different from
+00:06:55.440: which is very different from tools which are fully detached. Devon is
+00:06:58.070: tools which are fully detached. Devon is
+00:06:58.080: tools which are fully detached. Devon is a good example here. I think a lot of
+00:06:59.589: a good example here. I think a lot of
+00:06:59.599: a good example here. I think a lot of the tools that um sit as uh GitHub
+00:07:03.990: the tools that um sit as uh GitHub
+00:07:04.000: the tools that um sit as uh GitHub extensions on the pull request are a
+00:07:06.230: extensions on the pull request are a
+00:07:06.240: extensions on the pull request are a little bit like this because it's much
+00:07:08.309: little bit like this because it's much
+00:07:08.319: little bit like this because it's much harder to understand if a change that
+00:07:11.110: harder to understand if a change that
+00:07:11.120: harder to understand if a change that you're doing to a prompt or a tool setup
+00:07:13.189: you're doing to a prompt or a tool setup
+00:07:13.199: you're doing to a prompt or a tool setup or something like this has a positive or
+00:07:14.870: or something like this has a positive or
+00:07:14.880: or something like this has a positive or negative effect. So these these command
+00:07:17.350: negative effect. So these these command
+00:07:17.360: negative effect. So these these command line based tools or this IDE integrated
+00:07:19.510: line based tools or this IDE integrated
+00:07:19.520: line based tools or this IDE integrated tools they're very they they make it
+00:07:22.390: tools they're very they they make it
+00:07:22.400: tools they're very they they make it easier for do rather quick
+00:07:24.469: easier for do rather quick
+00:07:24.479: easier for do rather quick experimentation but it is still very
+00:07:26.309: experimentation but it is still very
+00:07:26.319: experimentation but it is still very hard and I will share a little bit later
+00:07:27.909: hard and I will share a little bit later
+00:07:27.919: hard and I will share a little bit later of why I think it's so hard to evaluate
+00:07:29.350: of why I think it's so hard to evaluate
+00:07:29.360: of why I think it's so hard to evaluate this.
+00:07:31.759: this. So
+00:07:34.479: So last time I talked about this I think I
+00:07:36.629: last time I talked about this I think I
+00:07:36.639: last time I talked about this I think I made this assumption that there's a
+00:07:38.230: made this assumption that there's a
+00:07:38.240: made this assumption that there's a little bit more of an understanding of
+00:07:39.430: little bit more of an understanding of
+00:07:39.440: little bit more of an understanding of how these tools work. And I actually
+00:07:41.670: how these tools work. And I actually
+00:07:41.680: how these tools work. And I actually think that what I've discovered over the
+00:07:43.510: think that what I've discovered over the
+00:07:43.520: think that what I've discovered over the last couple of weeks is that there's a
+00:07:46.629: last couple of weeks is that there's a
+00:07:46.639: last couple of weeks is that there's a lack of understanding how they actually
+00:07:48.390: lack of understanding how they actually
+00:07:48.400: lack of understanding how they actually work. And this does make a sense a
+00:07:51.110: work. And this does make a sense a
+00:07:51.120: work. And this does make a sense a little bit because on the one hand it
+00:07:52.230: little bit because on the one hand it
+00:07:52.240: little bit because on the one hand it seems very simple. It's a LLM that runs
+00:07:54.309: seems very simple. It's a LLM that runs
+00:07:54.319: seems very simple. It's a LLM that runs inference and then calls a bunch of
+00:07:55.670: inference and then calls a bunch of
+00:07:55.680: inference and then calls a bunch of tools.
+00:07:57.749: tools.
+00:07:57.759: tools. But if you go into the nitty-gritty
+00:07:59.909: But if you go into the nitty-gritty
+00:07:59.919: But if you go into the nitty-gritty details of how these agents work, there
+00:08:01.990: details of how these agents work, there
+00:08:02.000: details of how these agents work, there are
+00:08:04.000: are some really rather important aspects to
+00:08:07.029: some really rather important aspects to
+00:08:07.039: some really rather important aspects to it that can fundamentally change how
+00:08:10.869: it that can fundamentally change how
+00:08:10.879: it that can fundamentally change how they behave.
+00:08:12.869: they behave.
+00:08:12.879: they behave. And this also directly translates to
+00:08:17.350: And this also directly translates to
+00:08:17.360: And this also directly translates to their capabilities
+00:08:19.270: their capabilities
+00:08:19.280: their capabilities and what they cost and how long they
+00:08:21.110: and what they cost and how long they
+00:08:21.120: and what they cost and how long they run. So
+00:08:23.990: run. So
+00:08:24.000: run. So the very basic behavior is obvious,
+00:08:25.670: the very basic behavior is obvious,
+00:08:25.680: the very basic behavior is obvious, right? There's an aentic coding tool
+00:08:27.749: right? There's an aentic coding tool
+00:08:27.759: right? There's an aentic coding tool which has a system prompt that tells it
+00:08:30.309: which has a system prompt that tells it
+00:08:30.319: which has a system prompt that tells it something. It takes a user prompt and
+00:08:32.709: something. It takes a user prompt and
+00:08:32.719: something. It takes a user prompt and then it runs into a loop with a bunch of
+00:08:34.790: then it runs into a loop with a bunch of
+00:08:34.800: then it runs into a loop with a bunch of tools until the agent thinks it's done.
+00:08:40.149: tools until the agent thinks it's done.
+00:08:40.159: tools until the agent thinks it's done. Um,
+00:08:42.080: Um, but
+00:08:44.480: but how all of this goes together and and
+00:08:46.949: how all of this goes together and and
+00:08:46.959: how all of this goes together and and how they are actually capable of doing
+00:08:48.710: how they are actually capable of doing
+00:08:48.720: how they are actually capable of doing that and why we're actually seeing
+00:08:50.230: that and why we're actually seeing
+00:08:50.240: that and why we're actually seeing progress in these tools I think is is is
+00:08:53.269: progress in these tools I think is is is
+00:08:53.279: progress in these tools I think is is is rather subtle.
+00:08:55.269: rather subtle.
+00:08:55.279: rather subtle. So the most important tools that an
+00:08:57.590: So the most important tools that an
+00:08:57.600: So the most important tools that an agent needs is the ability to read a
+00:08:59.430: agent needs is the ability to read a
+00:08:59.440: agent needs is the ability to read a file. And what does it mean? It
+00:09:00.470: file. And what does it mean? It
+00:09:00.480: file. And what does it mean? It basically means that the agent is
+00:09:01.750: basically means that the agent is
+00:09:01.760: basically means that the agent is interested in seeing something. And it
+00:09:04.550: interested in seeing something. And it
+00:09:04.560: interested in seeing something. And it it reads the file and it reads it into
+00:09:06.710: it reads the file and it reads it into
+00:09:06.720: it reads the file and it reads it into its context. In order to understand
+00:09:09.269: its context. In order to understand
+00:09:09.279: its context. In order to understand which files it might want to read, it
+00:09:10.949: which files it might want to read, it
+00:09:10.959: which files it might want to read, it needs to find this code. And so for
+00:09:12.630: needs to find this code. And so for
+00:09:12.640: needs to find this code. And so for instance, cloud code and a bunch of
+00:09:14.550: instance, cloud code and a bunch of
+00:09:14.560: instance, cloud code and a bunch of other tools, they use tools like grap,
+00:09:17.110: other tools, they use tools like grap,
+00:09:17.120: other tools, they use tools like grap, usually rip grap to
+00:09:20.230: usually rip grap to
+00:09:20.240: usually rip grap to have an idea of what they're looking for
+00:09:22.310: have an idea of what they're looking for
+00:09:22.320: have an idea of what they're looking for and then to find the file names and then
+00:09:24.310: and then to find the file names and then
+00:09:24.320: and then to find the file names and then they use that to pull it into the
+00:09:25.750: they use that to pull it into the
+00:09:25.760: they use that to pull it into the context. It's a combination of grap and
+00:09:28.310: context. It's a combination of grap and
+00:09:28.320: context. It's a combination of grap and the read file that will bring files into
+00:09:30.790: the read file that will bring files into
+00:09:30.800: the read file that will bring files into context.
+00:09:32.550: context.
+00:09:32.560: context. Once it has determined that it want to
+00:09:34.070: Once it has determined that it want to
+00:09:34.080: Once it has determined that it want to make some changes, it needs to use
+00:09:35.750: make some changes, it needs to use
+00:09:35.760: make some changes, it needs to use another tool to change the files on
+00:09:37.590: another tool to change the files on
+00:09:37.600: another tool to change the files on disk.
+00:09:39.839: disk. And then
+00:09:42.070: And then
+00:09:42.080: And then for the hint decoding loop to work best,
+00:09:45.030: for the hint decoding loop to work best,
+00:09:45.040: for the hint decoding loop to work best, you need to be able to execute commands.
+00:09:46.870: you need to be able to execute commands.
+00:09:46.880: you need to be able to execute commands. And this is particularly important for
+00:09:48.389: And this is particularly important for
+00:09:48.399: And this is particularly important for things like can this even compile? Like
+00:09:52.470: things like can this even compile? Like
+00:09:52.480: things like can this even compile? Like the the most useful ability for an agent
+00:09:55.590: the the most useful ability for an agent
+00:09:55.600: the the most useful ability for an agent in many ways is just to understand if
+00:09:57.269: in many ways is just to understand if
+00:09:57.279: in many ways is just to understand if llinters pass, if the compiler is able
+00:09:59.990: llinters pass, if the compiler is able
+00:10:00.000: llinters pass, if the compiler is able to compile it and uh is it able to run
+00:10:02.949: to compile it and uh is it able to run
+00:10:02.959: to compile it and uh is it able to run the program that you have just changed.
+00:10:06.310: the program that you have just changed.
+00:10:06.320: the program that you have just changed. for some things. It also is capable of
+00:10:08.710: for some things. It also is capable of
+00:10:08.720: for some things. It also is capable of doing web searches or fetching remote
+00:10:10.949: doing web searches or fetching remote
+00:10:10.959: doing web searches or fetching remote files, things like that. These are also
+00:10:13.190: files, things like that. These are also
+00:10:13.200: files, things like that. These are also useful. And with these tools,
+00:10:19.110: useful. And with these tools,
+00:10:19.120: useful. And with these tools, there are some some rather subtle
+00:10:22.069: there are some some rather subtle
+00:10:22.079: there are some some rather subtle aspects to it
+00:10:25.190: aspects to it
+00:10:25.200: aspects to it which influence the quality of this.
+00:10:29.670: which influence the quality of this.
+00:10:29.680: which influence the quality of this. And I will go into this, but what you
+00:10:31.829: And I will go into this, but what you
+00:10:31.839: And I will go into this, but what you should think of with these tools is that
+00:10:33.750: should think of with these tools is that
+00:10:33.760: should think of with these tools is that you you don't wake up in the morning and
+00:10:35.670: you you don't wake up in the morning and
+00:10:35.680: you you don't wake up in the morning and you determine as an agent agent decoding
+00:10:38.550: you determine as an agent agent decoding
+00:10:38.560: you determine as an agent agent decoding tool writer that you want to add a new
+00:10:40.389: tool writer that you want to add a new
+00:10:40.399: tool writer that you want to add a new tool to it. In a way, you are because
+00:10:42.389: tool to it. In a way, you are because
+00:10:42.399: tool to it. In a way, you are because this is what MCP does. But the best
+00:10:46.150: this is what MCP does. But the best
+00:10:46.160: this is what MCP does. But the best performing tools, they have been trained
+00:10:48.470: performing tools, they have been trained
+00:10:48.480: performing tools, they have been trained into the LLM in one form or another. So
+00:10:51.590: into the LLM in one form or another. So
+00:10:51.600: into the LLM in one form or another. So the the foundation model that you're
+00:10:53.430: the the foundation model that you're
+00:10:53.440: the the foundation model that you're using to some degree is an understanding
+00:10:55.110: using to some degree is an understanding
+00:10:55.120: using to some degree is an understanding of these tools.
+00:10:57.430: of these tools.
+00:10:57.440: of these tools. And the consequence of this fundamental
+00:11:00.069: And the consequence of this fundamental
+00:11:00.079: And the consequence of this fundamental understanding of tooling is that there
+00:11:01.670: understanding of tooling is that there
+00:11:01.680: understanding of tooling is that there is some sort of binding between a
+00:11:03.990: is some sort of binding between a
+00:11:04.000: is some sort of binding between a particular coding agent
+00:11:06.310: particular coding agent
+00:11:06.320: particular coding agent uh or the the the tool used by a
+00:11:10.310: uh or the the the tool used by a
+00:11:10.320: uh or the the the tool used by a decoding agent and the model that it's
+00:11:12.630: decoding agent and the model that it's
+00:11:12.640: decoding agent and the model that it's using. Um so
+00:11:18.079: there are different kind of models that
+00:11:19.750: there are different kind of models that
+00:11:19.760: there are different kind of models that you can use. Um, so for instance,
+00:11:21.750: you can use. Um, so for instance,
+00:11:21.760: you can use. Um, so for instance, Sonnet, you can use GPD5.
+00:11:24.630: Sonnet, you can use GPD5.
+00:11:24.640: Sonnet, you can use GPD5. And some of these models have been
+00:11:26.310: And some of these models have been
+00:11:26.320: And some of these models have been trained not just with the knowledge that
+00:11:28.630: trained not just with the knowledge that
+00:11:28.640: trained not just with the knowledge that a tool exists, but also seemingly with a
+00:11:30.870: a tool exists, but also seemingly with a
+00:11:30.880: a tool exists, but also seemingly with a whole bunch of examples of what it
+00:11:32.230: whole bunch of examples of what it
+00:11:32.240: whole bunch of examples of what it means. Um, and Entropic actually does a
+00:11:36.949: means. Um, and Entropic actually does a
+00:11:36.959: means. Um, and Entropic actually does a pretty good job at documenting most of
+00:11:38.949: pretty good job at documenting most of
+00:11:38.959: pretty good job at documenting most of these tools
+00:11:40.790: these tools
+00:11:40.800: these tools in their documentation. So if you go to
+00:11:43.269: in their documentation. So if you go to
+00:11:43.279: in their documentation. So if you go to the API documentation on the Sonnet
+00:11:46.230: the API documentation on the Sonnet
+00:11:46.240: the API documentation on the Sonnet family of models or the Opus family of
+00:11:47.829: family of models or the Opus family of
+00:11:47.839: family of models or the Opus family of models, they will document these tools.
+00:11:50.310: models, they will document these tools.
+00:11:50.320: models, they will document these tools. So it's in a bash tool. So it
+00:11:51.829: So it's in a bash tool. So it
+00:11:51.839: So it's in a bash tool. So it understands how to run bash commands and
+00:11:53.750: understands how to run bash commands and
+00:11:53.760: understands how to run bash commands and through the bash command, it also
+00:11:55.110: through the bash command, it also
+00:11:55.120: through the bash command, it also understands how to run Python.
+00:11:57.590: understands how to run Python.
+00:11:57.600: understands how to run Python. It has a code execution command. It has
+00:11:59.269: It has a code execution command. It has
+00:11:59.279: It has a code execution command. It has this computer use command. Neither of
+00:12:00.790: this computer use command. Neither of
+00:12:00.800: this computer use command. Neither of which I believe are actually being used
+00:12:02.550: which I believe are actually being used
+00:12:02.560: which I believe are actually being used by
+00:12:04.560: by cloud code. I think they might be used
+00:12:06.150: cloud code. I think they might be used
+00:12:06.160: cloud code. I think they might be used by cloud desktop, although I'm not sure.
+00:12:07.670: by cloud desktop, although I'm not sure.
+00:12:07.680: by cloud desktop, although I'm not sure. There's a text editor command um that
+00:12:09.750: There's a text editor command um that
+00:12:09.760: There's a text editor command um that that has been specifically trained on
+00:12:12.310: that has been specifically trained on
+00:12:12.320: that has been specifically trained on manipulating text web search command and
+00:12:15.269: manipulating text web search command and
+00:12:15.279: manipulating text web search command and so forth. But for instance, if you use
+00:12:17.910: so forth. But for instance, if you use
+00:12:17.920: so forth. But for instance, if you use the GPT OSS model, you will rather
+00:12:20.629: the GPT OSS model, you will rather
+00:12:20.639: the GPT OSS model, you will rather quickly figure out that it loves to call
+00:12:22.310: quickly figure out that it loves to call
+00:12:22.320: quickly figure out that it loves to call a tool called search even if it hasn't
+00:12:24.069: a tool called search even if it hasn't
+00:12:24.079: a tool called search even if it hasn't been supplied to the context,
+00:12:25.509: been supplied to the context,
+00:12:25.519: been supplied to the context, particularly in the smaller model. And
+00:12:28.230: particularly in the smaller model. And
+00:12:28.240: particularly in the smaller model. And there the sort of the interesting
+00:12:30.790: there the sort of the interesting
+00:12:30.800: there the sort of the interesting element of this is that um codeex also
+00:12:34.230: element of this is that um codeex also
+00:12:34.240: element of this is that um codeex also doesn't have a search tool even though
+00:12:36.389: doesn't have a search tool even though
+00:12:36.399: doesn't have a search tool even though codex is written by uh openai who also
+00:12:39.829: codex is written by uh openai who also
+00:12:39.839: codex is written by uh openai who also supply choss
+00:12:42.230: supply choss
+00:12:42.240: supply choss and the answer seemingly is that this is
+00:12:44.470: and the answer seemingly is that this is
+00:12:44.480: and the answer seemingly is that this is a tool that's being executed by the
+00:12:47.190: a tool that's being executed by the
+00:12:47.200: a tool that's being executed by the inference platform and not by
+00:12:51.590: inference platform and not by
+00:12:51.600: inference platform and not by the coding agent. And this is probably
+00:12:53.590: the coding agent. And this is probably
+00:12:53.600: the coding agent. And this is probably similar to the web search tool although
+00:12:55.269: similar to the web search tool although
+00:12:55.279: similar to the web search tool although again I'm not really familiar how it's
+00:12:57.030: again I'm not really familiar how it's
+00:12:57.040: again I'm not really familiar how it's supposed to be used but these tools
+00:12:58.470: supposed to be used but these tools
+00:12:58.480: supposed to be used but these tools effectively do not provide um normally
+00:13:02.470: effectively do not provide um normally
+00:13:02.480: effectively do not provide um normally if you run a tool you basically say like
+00:13:05.350: if you run a tool you basically say like
+00:13:05.360: if you run a tool you basically say like hey here here are the tools that you can
+00:13:06.870: hey here here are the tools that you can
+00:13:06.880: hey here here are the tools that you can use the LLM
+00:13:09.430: use the LLM
+00:13:09.440: use the LLM exposes
+00:13:10.949: exposes
+00:13:10.959: exposes uh will reply so it will reply with a
+00:13:13.590: uh will reply so it will reply with a
+00:13:13.600: uh will reply so it will reply with a JSON blob or some XML blob or something
+00:13:15.509: JSON blob or some XML blob or something
+00:13:15.519: JSON blob or some XML blob or something similar saying like hey I want to use
+00:13:17.670: similar saying like hey I want to use
+00:13:17.680: similar saying like hey I want to use this tool then you would in the end
+00:13:19.990: this tool then you would in the end
+00:13:20.000: this tool then you would in the end decoding loop execute the tool and
+00:13:22.230: decoding loop execute the tool and
+00:13:22.240: decoding loop execute the tool and provide write the results back and it
+00:13:23.750: provide write the results back and it
+00:13:23.760: provide write the results back and it makes another another turn with the
+00:13:26.870: makes another another turn with the
+00:13:26.880: makes another another turn with the server side or the inference side tools.
+00:13:29.030: server side or the inference side tools.
+00:13:29.040: server side or the inference side tools. What actually happens is that you're not
+00:13:31.190: What actually happens is that you're not
+00:13:31.200: What actually happens is that you're not supposed to be able to call these tools
+00:13:33.030: supposed to be able to call these tools
+00:13:33.040: supposed to be able to call these tools because they will be called
+00:13:34.150: because they will be called
+00:13:34.160: because they will be called automatically behind the scenes. The
+00:13:36.310: automatically behind the scenes. The
+00:13:36.320: automatically behind the scenes. The results of those tools invocation will
+00:13:38.150: results of those tools invocation will
+00:13:38.160: results of those tools invocation will be immediately fed back into the prompt
+00:13:40.550: be immediately fed back into the prompt
+00:13:40.560: be immediately fed back into the prompt and then they make a turn further. And
+00:13:45.670: and then they make a turn further. And
+00:13:45.680: and then they make a turn further. And one of the results of this is the
+00:13:48.150: one of the results of this is the
+00:13:48.160: one of the results of this is the primary result of this is that if your
+00:13:50.069: primary result of this is that if your
+00:13:50.079: primary result of this is that if your agent does not match the tools with
+00:13:52.389: agent does not match the tools with
+00:13:52.399: agent does not match the tools with those models, then the experience that
+00:13:54.230: those models, then the experience that
+00:13:54.240: those models, then the experience that you're going to get from that agent is
+00:13:55.590: you're going to get from that agent is
+00:13:55.600: you're going to get from that agent is worse. And
+00:13:59.030: worse. And
+00:13:59.040: worse. And I I really really don't want to name any
+00:14:01.189: I I really really don't want to name any
+00:14:01.199: I I really really don't want to name any HD coding tools today, but um
+00:14:03.750: HD coding tools today, but um
+00:14:03.760: HD coding tools today, but um particularly coding tools that allow you
+00:14:06.150: particularly coding tools that allow you
+00:14:06.160: particularly coding tools that allow you to swap out the model and that are kind
+00:14:10.389: to swap out the model and that are kind
+00:14:10.399: to swap out the model and that are kind of open-ended to which model you can use
+00:14:12.949: of open-ended to which model you can use
+00:14:12.959: of open-ended to which model you can use are also not necessarily going to map
+00:14:15.590: are also not necessarily going to map
+00:14:15.600: are also not necessarily going to map the tools
+00:14:17.430: the tools
+00:14:17.440: the tools um exactly with either prompt and or uh
+00:14:21.030: um exactly with either prompt and or uh
+00:14:21.040: um exactly with either prompt and or uh tool naming or tool providing to those
+00:14:24.069: tool naming or tool providing to those
+00:14:24.079: tool naming or tool providing to those models.
+00:14:26.069: models.
+00:14:26.079: models. Um, and you can you can sort of see this
+00:14:27.910: Um, and you can you can sort of see this
+00:14:27.920: Um, and you can you can sort of see this a little bit. Um, the with the GPT5
+00:14:30.389: a little bit. Um, the with the GPT5
+00:14:30.399: a little bit. Um, the with the GPT5 release, um, there were a bunch of day
+00:14:32.949: release, um, there were a bunch of day
+00:14:32.959: release, um, there were a bunch of day one tools that came out which had access
+00:14:36.949: one tools that came out which had access
+00:14:36.959: one tools that came out which had access to GPT5 for 2 weeks or more. And at
+00:14:40.470: to GPT5 for 2 weeks or more. And at
+00:14:40.480: to GPT5 for 2 weeks or more. And at least on the first two days when I tried
+00:14:42.150: least on the first two days when I tried
+00:14:42.160: least on the first two days when I tried them, they outperformed tools which only
+00:14:44.790: them, they outperformed tools which only
+00:14:44.800: them, they outperformed tools which only added support for GPD5 on the first day.
+00:14:48.550: added support for GPD5 on the first day.
+00:14:48.560: added support for GPD5 on the first day. uh presumably because they got a little
+00:14:50.629: uh presumably because they got a little
+00:14:50.639: uh presumably because they got a little bit of a heads up of of how they should
+00:14:52.550: bit of a heads up of of how they should
+00:14:52.560: bit of a heads up of of how they should match up uh prompts and tool usage.
+00:15:01.279: The it's not just the tools that you provide
+00:15:03.590: it's not just the tools that you provide
+00:15:03.600: it's not just the tools that you provide that can have a significant impact on
+00:15:06.150: that can have a significant impact on
+00:15:06.160: that can have a significant impact on the agent's performance. In some cases,
+00:15:09.269: the agent's performance. In some cases,
+00:15:09.279: the agent's performance. In some cases, there are pre-flights and post-flights
+00:15:11.430: there are pre-flights and post-flights
+00:15:11.440: there are pre-flights and post-flights to
+00:15:13.279: to uh each decoding loop. So
+00:15:17.509: uh each decoding loop. So
+00:15:17.519: uh each decoding loop. So I will go with the example of clot here
+00:15:19.430: I will go with the example of clot here
+00:15:19.440: I will go with the example of clot here uh clot code. Um,
+00:15:22.310: uh clot code. Um,
+00:15:22.320: uh clot code. Um, there's a a little
+00:15:25.110: there's a a little
+00:15:25.120: there's a a little spinning indicator to the left of your
+00:15:27.110: spinning indicator to the left of your
+00:15:27.120: spinning indicator to the left of your prompt which sort of makes up a little
+00:15:28.870: prompt which sort of makes up a little
+00:15:28.880: prompt which sort of makes up a little fancy QT description
+00:15:31.990: fancy QT description
+00:15:32.000: fancy QT description and that comes by running uh the the
+00:15:35.750: and that comes by running uh the the
+00:15:35.760: and that comes by running uh the the request also through haiku which is one
+00:15:37.509: request also through haiku which is one
+00:15:37.519: request also through haiku which is one of the fast models and they will also
+00:15:39.829: of the fast models and they will also
+00:15:39.839: of the fast models and they will also for any tool usage that is emitted by
+00:15:42.150: for any tool usage that is emitted by
+00:15:42.160: for any tool usage that is emitted by the main model uh which is usually cl
+00:15:44.949: the main model uh which is usually cl
+00:15:44.959: the main model uh which is usually cl usually set or ous they will also run it
+00:15:47.509: usually set or ous they will also run it
+00:15:47.519: usually set or ous they will also run it through haiku um in a form of like llm
+00:15:49.990: through haiku um in a form of like llm
+00:15:50.000: through haiku um in a form of like llm as a judge to figure out if it's safe to
+00:15:51.910: as a judge to figure out if it's safe to
+00:15:51.920: as a judge to figure out if it's safe to run this tool or not.
+00:15:54.629: run this tool or not.
+00:15:54.639: run this tool or not. Which for instance means that is much
+00:15:57.590: Which for instance means that is much
+00:15:57.600: Which for instance means that is much less likely that clot code will
+00:16:01.910: less likely that clot code will
+00:16:01.920: less likely that clot code will delete the wrong file or will work
+00:16:04.949: delete the wrong file or will work
+00:16:04.959: delete the wrong file or will work outside of its working directory or at
+00:16:07.269: outside of its working directory or at
+00:16:07.279: outside of its working directory or at least outside of your project's
+00:16:08.550: least outside of your project's
+00:16:08.560: least outside of your project's directory then an agent will that skips
+00:16:11.670: directory then an agent will that skips
+00:16:11.680: directory then an agent will that skips that step.
+00:16:13.509: that step.
+00:16:13.519: that step. Um it is very possible for um an agent
+00:16:18.389: Um it is very possible for um an agent
+00:16:18.399: Um it is very possible for um an agent to emit commands
+00:16:20.949: to emit commands
+00:16:20.959: to emit commands which are highly inappropriate to use
+00:16:25.749: which are highly inappropriate to use
+00:16:25.759: which are highly inappropriate to use and having the second LLM make a sanity
+00:16:29.509: and having the second LLM make a sanity
+00:16:29.519: and having the second LLM make a sanity check on it will get rid of some of
+00:16:31.990: check on it will get rid of some of
+00:16:32.000: check on it will get rid of some of those users not all of them but some of
+00:16:33.590: those users not all of them but some of
+00:16:33.600: those users not all of them but some of them. And so for instance, I know for a
+00:16:36.230: them. And so for instance, I know for a
+00:16:36.240: them. And so for instance, I know for a fact that not every single agent
+00:16:38.230: fact that not every single agent
+00:16:38.240: fact that not every single agent decoding tool that exists today is safe
+00:16:40.550: decoding tool that exists today is safe
+00:16:40.560: decoding tool that exists today is safe to run with yodo mode, which is
+00:16:43.110: to run with yodo mode, which is
+00:16:43.120: to run with yodo mode, which is basically full permissions. Um in fact
+00:16:46.310: basically full permissions. Um in fact
+00:16:46.320: basically full permissions. Um in fact um quite a few of them do not properly
+00:16:50.790: um quite a few of them do not properly
+00:16:50.800: um quite a few of them do not properly protect to the same degree that some
+00:16:52.790: protect to the same degree that some
+00:16:52.800: protect to the same degree that some others do.
+00:16:55.110: others do.
+00:16:55.120: others do. There's a second problem also which is
+00:16:57.110: There's a second problem also which is
+00:16:57.120: There's a second problem also which is that once you give the agent the ability
+00:16:59.350: that once you give the agent the ability
+00:16:59.360: that once you give the agent the ability to run code, you also have to
+00:17:03.990: to run code, you also have to
+00:17:04.000: to run code, you also have to figure out what to do if that code
+00:17:05.510: figure out what to do if that code
+00:17:05.520: figure out what to do if that code doesn't run properly. And
+00:17:09.590: doesn't run properly. And
+00:17:09.600: doesn't run properly. And there are definitely big quality
+00:17:12.470: there are definitely big quality
+00:17:12.480: there are definitely big quality differences in the tools ability to run
+00:17:17.270: differences in the tools ability to run
+00:17:17.280: differences in the tools ability to run executables.
+00:17:19.510: executables.
+00:17:19.520: executables. So for instance um
+00:17:22.870: So for instance um
+00:17:22.880: So for instance um some tools get stuck and never recover.
+00:17:25.429: some tools get stuck and never recover.
+00:17:25.439: some tools get stuck and never recover. Um I I ran this yesterday. I will not
+00:17:28.230: Um I I ran this yesterday. I will not
+00:17:28.240: Um I I ran this yesterday. I will not name the agent that I was using but I
+00:17:29.909: name the agent that I was using but I
+00:17:29.919: name the agent that I was using but I ran any agent yesterday at night before
+00:17:32.950: ran any agent yesterday at night before
+00:17:32.960: ran any agent yesterday at night before I went to bed. Actually I ran three
+00:17:34.789: I went to bed. Actually I ran three
+00:17:34.799: I went to bed. Actually I ran three agents um with one prompt overnight same
+00:17:38.390: agents um with one prompt overnight same
+00:17:38.400: agents um with one prompt overnight same prompt just to see how they're using the
+00:17:40.549: prompt just to see how they're using the
+00:17:40.559: prompt just to see how they're using the same model um differently. And two out
+00:17:43.909: same model um differently. And two out
+00:17:43.919: same model um differently. And two out of three agents got stuck and never
+00:17:45.990: of three agents got stuck and never
+00:17:46.000: of three agents got stuck and never recovered. and they got stuck
+00:17:49.510: recovered. and they got stuck
+00:17:49.520: recovered. and they got stuck in different places. One of them got
+00:17:51.029: in different places. One of them got
+00:17:51.039: in different places. One of them got stuck because uh they ran a tool which
+00:17:53.430: stuck because uh they ran a tool which
+00:17:53.440: stuck because uh they ran a tool which brought up a prompt and they just didn't
+00:17:56.310: brought up a prompt and they just didn't
+00:17:56.320: brought up a prompt and they just didn't figure out and didn't kill it. And the
+00:17:58.470: figure out and didn't kill it. And the
+00:17:58.480: figure out and didn't kill it. And the other one got stuck because it made an
+00:18:00.390: other one got stuck because it made an
+00:18:00.400: other one got stuck because it made an HTTP request seemingly that got stuck
+00:18:03.190: HTTP request seemingly that got stuck
+00:18:03.200: HTTP request seemingly that got stuck somehow and it didn't recover from that.
+00:18:05.830: somehow and it didn't recover from that.
+00:18:05.840: somehow and it didn't recover from that. And I and I could I could see that it
+00:18:07.750: And I and I could I could see that it
+00:18:07.760: And I and I could I could see that it was doing that because there was no tool
+00:18:09.270: was doing that because there was no tool
+00:18:09.280: was doing that because there was no tool usage being um or I was assuming it was
+00:18:11.590: usage being um or I was assuming it was
+00:18:11.600: usage being um or I was assuming it was doing this because there was no tool
+00:18:12.789: doing this because there was no tool
+00:18:12.799: doing this because there was no tool usage at that time. It was effectively
+00:18:15.270: usage at that time. It was effectively
+00:18:15.280: usage at that time. It was effectively an inference step.
+00:18:17.110: an inference step.
+00:18:17.120: an inference step. and the token counter did not increase
+00:18:19.909: and the token counter did not increase
+00:18:19.919: and the token counter did not increase anymore. It was just stuck there. And it
+00:18:22.870: anymore. It was just stuck there. And it
+00:18:22.880: anymore. It was just stuck there. And it was either because the response that it
+00:18:24.470: was either because the response that it
+00:18:24.480: was either because the response that it got back from the server
+00:18:26.710: got back from the server
+00:18:26.720: got back from the server um let it locally get stuck in a loop.
+00:18:30.630: um let it locally get stuck in a loop.
+00:18:30.640: um let it locally get stuck in a loop. But my point here is that
+00:18:34.470: But my point here is that
+00:18:34.480: But my point here is that there are some tools which have been
+00:18:36.230: there are some tools which have been
+00:18:36.240: there are some tools which have been already battle tested for autonomous use
+00:18:40.950: already battle tested for autonomous use
+00:18:40.960: already battle tested for autonomous use for extended period of time and some of
+00:18:43.510: for extended period of time and some of
+00:18:43.520: for extended period of time and some of which haven't. um even though they might
+00:18:46.230: which haven't. um even though they might
+00:18:46.240: which haven't. um even though they might be using the exact same underlying
+00:18:48.789: be using the exact same underlying
+00:18:48.799: be using the exact same underlying model.
+00:18:51.510: model.
+00:18:51.520: model. And so this this really puts us in this
+00:18:54.789: And so this this really puts us in this
+00:18:54.799: And so this this really puts us in this really unfortunate situation where it is
+00:18:57.990: really unfortunate situation where it is
+00:18:58.000: really unfortunate situation where it is even with the same model very hard to
+00:19:01.990: even with the same model very hard to
+00:19:02.000: even with the same model very hard to evaluate the quality of an agent and
+00:19:04.789: evaluate the quality of an agent and
+00:19:04.799: evaluate the quality of an agent and seemingly I think to me it has become
+00:19:06.789: seemingly I think to me it has become
+00:19:06.799: seemingly I think to me it has become harder.
+00:19:08.950: harder.
+00:19:08.960: harder. If you look at Swebench for instance or
+00:19:11.110: If you look at Swebench for instance or
+00:19:11.120: If you look at Swebench for instance or things like this, you will get a bunch
+00:19:12.710: things like this, you will get a bunch
+00:19:12.720: things like this, you will get a bunch of numbers, but they don't necessarily
+00:19:14.870: of numbers, but they don't necessarily
+00:19:14.880: of numbers, but they don't necessarily tell you everything. Um, there too many
+00:19:18.630: tell you everything. Um, there too many
+00:19:18.640: tell you everything. Um, there too many different workloads that we're throwing
+00:19:20.230: different workloads that we're throwing
+00:19:20.240: different workloads that we're throwing at these things. And there also seems to
+00:19:23.990: at these things. And there also seems to
+00:19:24.000: at these things. And there also seems to be some form of benchmark manipulation
+00:19:26.070: be some form of benchmark manipulation
+00:19:26.080: be some form of benchmark manipulation going on. Um, I don't think if this
+00:19:28.950: going on. Um, I don't think if this
+00:19:28.960: going on. Um, I don't think if this necessarily nefarious. This might just
+00:19:30.789: necessarily nefarious. This might just
+00:19:30.799: necessarily nefarious. This might just be an accidental benchmark optimization
+00:19:33.430: be an accidental benchmark optimization
+00:19:33.440: be an accidental benchmark optimization by um just running it in a SW bench and
+00:19:35.750: by um just running it in a SW bench and
+00:19:35.760: by um just running it in a SW bench and see how it's doing. and and if those
+00:19:37.190: see how it's doing. and and if those
+00:19:37.200: see how it's doing. and and if those tests don't change all that much then uh
+00:19:39.750: tests don't change all that much then uh
+00:19:39.760: tests don't change all that much then uh maybe it just optimized towards that but
+00:19:43.830: maybe it just optimized towards that but
+00:19:43.840: maybe it just optimized towards that but for instance um when GP5 launched
+00:19:48.310: for instance um when GP5 launched
+00:19:48.320: for instance um when GP5 launched it it looked very appealing and it
+00:19:50.789: it it looked very appealing and it
+00:19:50.799: it it looked very appealing and it probably is very appealing that is
+00:19:52.310: probably is very appealing that is
+00:19:52.320: probably is very appealing that is significantly cheaper than the entropic
+00:19:55.190: significantly cheaper than the entropic
+00:19:55.200: significantly cheaper than the entropic models are.
+00:19:57.190: models are.
+00:19:57.200: models are. The problem today is that if I just
+00:19:58.950: The problem today is that if I just
+00:19:58.960: The problem today is that if I just compare
+00:20:01.029: compare
+00:20:01.039: compare their official CLI or cursor with cloud
+00:20:06.470: their official CLI or cursor with cloud
+00:20:06.480: their official CLI or cursor with cloud code, I notice that it uses many more
+00:20:09.029: code, I notice that it uses many more
+00:20:09.039: code, I notice that it uses many more tokens tokens and many more turns. So
+00:20:11.590: tokens tokens and many more turns. So
+00:20:11.600: tokens tokens and many more turns. So some of the savings that you get from
+00:20:14.789: some of the savings that you get from
+00:20:14.799: some of the savings that you get from the cheaper per token cost are negated
+00:20:18.549: the cheaper per token cost are negated
+00:20:18.559: the cheaper per token cost are negated by less efficient
+00:20:21.029: by less efficient
+00:20:21.039: by less efficient agentic loops.
+00:20:23.190: agentic loops.
+00:20:23.200: agentic loops. And even inference and turns doesn't
+00:20:26.070: And even inference and turns doesn't
+00:20:26.080: And even inference and turns doesn't necessarily take turn tell you how long
+00:20:27.990: necessarily take turn tell you how long
+00:20:28.000: necessarily take turn tell you how long it's going to take because there are
+00:20:29.990: it's going to take because there are
+00:20:30.000: it's going to take because there are also other things um that influence the
+00:20:34.070: also other things um that influence the
+00:20:34.080: also other things um that influence the overall speed that it takes you to
+00:20:37.590: overall speed that it takes you to
+00:20:37.600: overall speed that it takes you to um get a good result. So there's
+00:20:40.230: um get a good result. So there's
+00:20:40.240: um get a good result. So there's actually some benefit to oneshotting a
+00:20:43.190: actually some benefit to oneshotting a
+00:20:43.200: actually some benefit to oneshotting a good result because you're less likely
+00:20:45.430: good result because you're less likely
+00:20:45.440: good result because you're less likely to go into iteration which might be
+00:20:48.789: to go into iteration which might be
+00:20:48.799: to go into iteration which might be slow. On the other hand, um
+00:20:54.310: slow. On the other hand, um
+00:20:54.320: slow. On the other hand, um if you are
+00:20:57.750: if you are
+00:20:57.760: if you are making
+00:20:59.909: making
+00:20:59.919: making iterative improvements
+00:21:02.789: iterative improvements
+00:21:02.799: iterative improvements and you also run the right tools all the
+00:21:05.190: and you also run the right tools all the
+00:21:05.200: and you also run the right tools all the time afterwards, sometimes that can
+00:21:06.870: time afterwards, sometimes that can
+00:21:06.880: time afterwards, sometimes that can actually result in uh better code
+00:21:09.750: actually result in uh better code
+00:21:09.760: actually result in uh better code quality overall. I think that Sonnet
+00:21:12.149: quality overall. I think that Sonnet
+00:21:12.159: quality overall. I think that Sonnet loves to write wrong code, but because
+00:21:14.549: loves to write wrong code, but because
+00:21:14.559: loves to write wrong code, but because it is also rather eager to run the
+00:21:17.750: it is also rather eager to run the
+00:21:17.760: it is also rather eager to run the tools, it overall
+00:21:20.789: tools, it overall
+00:21:20.799: tools, it overall results in better looking code
+00:21:24.789: results in better looking code
+00:21:24.799: results in better looking code quicker than you would achieve that same
+00:21:26.630: quicker than you would achieve that same
+00:21:26.640: quicker than you would achieve that same result right now in some versions of
+00:21:28.789: result right now in some versions of
+00:21:28.799: result right now in some versions of Jupit.
+00:21:30.950: Jupit.
+00:21:30.960: Jupit. Um,
+00:21:32.559: Um, and some agents are at least
+00:21:36.470: and some agents are at least
+00:21:36.480: and some agents are at least functionally capable of parallelization
+00:21:41.350: functionally capable of parallelization
+00:21:41.360: functionally capable of parallelization even though that is not necessarily
+00:21:42.870: even though that is not necessarily
+00:21:42.880: even though that is not necessarily always possible. Um, but there's so many
+00:21:45.669: always possible. Um, but there's so many
+00:21:45.679: always possible. Um, but there's so many different ways in which these models can
+00:21:47.350: different ways in which these models can
+00:21:47.360: different ways in which these models can and these agents can behave differently.
+00:21:49.830: and these agents can behave differently.
+00:21:49.840: and these agents can behave differently. That's very very hard to evaluate. Um,
+00:21:53.110: That's very very hard to evaluate. Um,
+00:21:53.120: That's very very hard to evaluate. Um, and I just generally want to caution
+00:21:55.510: and I just generally want to caution
+00:21:55.520: and I just generally want to caution everybody on a lot of takes that you can
+00:21:59.029: everybody on a lot of takes that you can
+00:21:59.039: everybody on a lot of takes that you can get on Twitter and elsewhere because
+00:22:02.470: get on Twitter and elsewhere because
+00:22:02.480: get on Twitter and elsewhere because it is really really hard to I think at
+00:22:05.510: it is really really hard to I think at
+00:22:05.520: it is really really hard to I think at least it is really hard to get a good
+00:22:07.830: least it is really hard to get a good
+00:22:07.840: least it is really hard to get a good sense of what works and doesn't work.
+00:22:10.789: sense of what works and doesn't work.
+00:22:10.799: sense of what works and doesn't work. And I also noticed that in many ways
+00:22:12.549: And I also noticed that in many ways
+00:22:12.559: And I also noticed that in many ways what prevents me from using a tool today
+00:22:14.710: what prevents me from using a tool today
+00:22:14.720: what prevents me from using a tool today is is actually not necessarily the
+00:22:16.470: is is actually not necessarily the
+00:22:16.480: is is actually not necessarily the quality of the code that it writes or
+00:22:17.990: quality of the code that it writes or
+00:22:18.000: quality of the code that it writes or the quality of the inference but really
+00:22:20.149: the quality of the inference but really
+00:22:20.159: the quality of the inference but really annoying things. So for instance, one of
+00:22:23.029: annoying things. So for instance, one of
+00:22:23.039: annoying things. So for instance, one of the agents that I actually think I would
+00:22:26.230: the agents that I actually think I would
+00:22:26.240: the agents that I actually think I would like quite a lot, I don't enjoy the user
+00:22:29.510: like quite a lot, I don't enjoy the user
+00:22:29.520: like quite a lot, I don't enjoy the user interface of and so I'm less likely to
+00:22:32.390: interface of and so I'm less likely to
+00:22:32.400: interface of and so I'm less likely to use that. Another person might have a
+00:22:34.310: use that. Another person might have a
+00:22:34.320: use that. Another person might have a different uh opinion on it. Um but there
+00:22:37.190: different uh opinion on it. Um but there
+00:22:37.200: different uh opinion on it. Um but there there's so many different kind of things
+00:22:39.510: there's so many different kind of things
+00:22:39.520: there's so many different kind of things that influence how you interact with a
+00:22:42.549: that influence how you interact with a
+00:22:42.559: that influence how you interact with a tool that it can also then compromise
+00:22:45.590: tool that it can also then compromise
+00:22:45.600: tool that it can also then compromise the results that you're going to get.
+00:22:48.149: the results that you're going to get.
+00:22:48.159: the results that you're going to get. So it is very hard to evaluate
+00:22:51.270: So it is very hard to evaluate
+00:22:51.280: So it is very hard to evaluate um and I think that a lot of people are
+00:22:53.750: um and I think that a lot of people are
+00:22:53.760: um and I think that a lot of people are attached to one of the tools that
+00:22:55.190: attached to one of the tools that
+00:22:55.200: attached to one of the tools that they're using particular if they already
+00:22:56.390: they're using particular if they already
+00:22:56.400: they're using particular if they already start paying for it
+00:22:58.789: start paying for it
+00:22:58.799: start paying for it and
+00:23:02.080: I do think it's important for us to get
+00:23:05.029: I do think it's important for us to get
+00:23:05.039: I do think it's important for us to get some better sentiment of evaluating this
+00:23:07.909: some better sentiment of evaluating this
+00:23:07.919: some better sentiment of evaluating this uh in particular also because I think is
+00:23:10.549: uh in particular also because I think is
+00:23:10.559: uh in particular also because I think is unsustainable to have that many tools
+00:23:12.390: unsustainable to have that many tools
+00:23:12.400: unsustainable to have that many tools that will have to consolidate down and
+00:23:15.110: that will have to consolidate down and
+00:23:15.120: that will have to consolidate down and the way we're evaluating sometimes is
+00:23:17.669: the way we're evaluating sometimes is
+00:23:17.679: the way we're evaluating sometimes is just really kind of wrong.
+00:23:20.390: just really kind of wrong.
+00:23:20.400: just really kind of wrong. Um,
+00:23:22.159: Um, particularly I think in the last two
+00:23:23.430: particularly I think in the last two
+00:23:23.440: particularly I think in the last two weeks there was a lot of discussion
+00:23:24.549: weeks there was a lot of discussion
+00:23:24.559: weeks there was a lot of discussion about like who has the nicest looking
+00:23:26.310: about like who has the nicest looking
+00:23:26.320: about like who has the nicest looking terminal UI or the best performing
+00:23:27.830: terminal UI or the best performing
+00:23:27.840: terminal UI or the best performing terminal UI. Um, I also don't like how
+00:23:33.750: terminal UI. Um, I also don't like how
+00:23:33.760: terminal UI. Um, I also don't like how the terminal renderer of most of those
+00:23:35.750: the terminal renderer of most of those
+00:23:35.760: the terminal renderer of most of those tools around and and is
+00:23:37.830: tools around and and is
+00:23:37.840: tools around and and is annoying. At the same time,
+00:23:41.190: annoying. At the same time,
+00:23:41.200: annoying. At the same time, that's not the most pressing issue that
+00:23:43.110: that's not the most pressing issue that
+00:23:43.120: that's not the most pressing issue that I have with an achantic coding tool. And
+00:23:45.590: I have with an achantic coding tool. And
+00:23:45.600: I have with an achantic coding tool. And I also think that longterm the terminal
+00:23:47.350: I also think that longterm the terminal
+00:23:47.360: I also think that longterm the terminal UI is not where we want to end up. Um so
+00:23:51.830: UI is not where we want to end up. Um so
+00:23:51.840: UI is not where we want to end up. Um so there are many ways to evaluate it but
+00:23:53.750: there are many ways to evaluate it but
+00:23:53.760: there are many ways to evaluate it but really what we should be evaluating on
+00:23:55.350: really what we should be evaluating on
+00:23:55.360: really what we should be evaluating on is like how good is it daytoday in
+00:23:58.149: is like how good is it daytoday in
+00:23:58.159: is like how good is it daytoday in solving the problems that we're throwing
+00:23:59.430: solving the problems that we're throwing
+00:23:59.440: solving the problems that we're throwing at these tools. And I I don't think
+00:24:01.990: at these tools. And I I don't think
+00:24:02.000: at these tools. And I I don't think we're doing a particularly good job
+00:24:03.990: we're doing a particularly good job
+00:24:04.000: we're doing a particularly good job right now or at least in general I find
+00:24:06.390: right now or at least in general I find
+00:24:06.400: right now or at least in general I find um Twitter to be an horrible uh source
+00:24:09.430: um Twitter to be an horrible uh source
+00:24:09.440: um Twitter to be an horrible uh source of high signal information on that
+00:24:13.350: of high signal information on that
+00:24:13.360: of high signal information on that topic.
+00:24:15.590: topic.
+00:24:15.600: topic. for evaluating models, I think it's even
+00:24:17.430: for evaluating models, I think it's even
+00:24:17.440: for evaluating models, I think it's even harder because there's so many
+00:24:18.710: harder because there's so many
+00:24:18.720: harder because there's so many trade-offs on it. At the moment, I think
+00:24:21.110: trade-offs on it. At the moment, I think
+00:24:21.120: trade-offs on it. At the moment, I think they're basically
+00:24:23.269: they're basically
+00:24:23.279: they're basically a handful of models that are capable of
+00:24:25.430: a handful of models that are capable of
+00:24:25.440: a handful of models that are capable of doing this. Um, the most significant
+00:24:27.990: doing this. Um, the most significant
+00:24:28.000: doing this. Um, the most significant ones are, of course, the entropic
+00:24:29.269: ones are, of course, the entropic
+00:24:29.279: ones are, of course, the entropic models, OPUS, and Sonnet. Um, GBD5. Uh,
+00:24:33.110: models, OPUS, and Sonnet. Um, GBD5. Uh,
+00:24:33.120: models, OPUS, and Sonnet. Um, GBD5. Uh, actually there's also Gemini in there. I
+00:24:35.110: actually there's also Gemini in there. I
+00:24:35.120: actually there's also Gemini in there. I kind of forgot about this, but um, I
+00:24:37.430: kind of forgot about this, but um, I
+00:24:37.440: kind of forgot about this, but um, I think GBD5 and Gemini are both fantastic
+00:24:41.350: think GBD5 and Gemini are both fantastic
+00:24:41.360: think GBD5 and Gemini are both fantastic models for code generation.
+00:24:43.669: models for code generation.
+00:24:43.679: models for code generation. Gemini didn't perform particularly great
+00:24:45.990: Gemini didn't perform particularly great
+00:24:46.000: Gemini didn't perform particularly great for tool usage. Some of which can be
+00:24:48.789: for tool usage. Some of which can be
+00:24:48.799: for tool usage. Some of which can be compensated by um by the tool. So Gemini
+00:24:53.190: compensated by um by the tool. So Gemini
+00:24:53.200: compensated by um by the tool. So Gemini CLI for instance got quite a bit better
+00:24:56.310: CLI for instance got quite a bit better
+00:24:56.320: CLI for instance got quite a bit better recently
+00:24:57.830: recently
+00:24:57.840: recently by just recovering better from bad tool
+00:25:00.070: by just recovering better from bad tool
+00:25:00.080: by just recovering better from bad tool usage.
+00:25:01.750: usage.
+00:25:01.760: usage. Um, I think with Chifi, it's a little
+00:25:03.990: Um, I think with Chifi, it's a little
+00:25:04.000: Um, I think with Chifi, it's a little bit too early to say, but it looks from
+00:25:07.350: bit too early to say, but it looks from
+00:25:07.360: bit too early to say, but it looks from the initial feedback on people that got
+00:25:09.029: the initial feedback on people that got
+00:25:09.039: the initial feedback on people that got it already for two weeks or so that that
+00:25:11.269: it already for two weeks or so that that
+00:25:11.279: it already for two weeks or so that that it's pretty pretty capable. And then
+00:25:14.149: it's pretty pretty capable. And then
+00:25:14.159: it's pretty pretty capable. And then there's a growing number of open weights
+00:25:16.710: there's a growing number of open weights
+00:25:16.720: there's a growing number of open weights models that are at least
+00:25:20.230: models that are at least
+00:25:20.240: models that are at least capable of tool calls and I think
+00:25:22.390: capable of tool calls and I think
+00:25:22.400: capable of tool calls and I think they're very interesting for all kinds
+00:25:24.070: they're very interesting for all kinds
+00:25:24.080: they're very interesting for all kinds of different reasons. So for instance
+00:25:25.350: of different reasons. So for instance
+00:25:25.360: of different reasons. So for instance quens recoder I don't know if it has
+00:25:28.149: quens recoder I don't know if it has
+00:25:28.159: quens recoder I don't know if it has been trained on any particular tool but
+00:25:31.269: been trained on any particular tool but
+00:25:31.279: been trained on any particular tool but seemingly it is it is at least
+00:25:35.029: seemingly it is it is at least
+00:25:35.039: seemingly it is it is at least quite a capable tool caller.
+00:25:38.230: quite a capable tool caller.
+00:25:38.240: quite a capable tool caller. Um
+00:25:40.000: Um I think this is very interesting. Um
+00:25:44.789: I think this is very interesting. Um
+00:25:44.799: I think this is very interesting. Um Kimmy is also a seemingly capable tool.
+00:25:47.990: Kimmy is also a seemingly capable tool.
+00:25:48.000: Kimmy is also a seemingly capable tool. There's also the GML GLM model which I
+00:25:50.390: There's also the GML GLM model which I
+00:25:50.400: There's also the GML GLM model which I haven't tried yet. Um many of these
+00:25:52.549: haven't tried yet. Um many of these
+00:25:52.559: haven't tried yet. Um many of these models though the open weight ones come
+00:25:54.390: models though the open weight ones come
+00:25:54.400: models though the open weight ones come in very different sizes. So if you go to
+00:25:56.390: in very different sizes. So if you go to
+00:25:56.400: in very different sizes. So if you go to open router um you can pick different
+00:25:58.789: open router um you can pick different
+00:25:58.799: open router um you can pick different ones if you run them locally. They can
+00:26:00.870: ones if you run them locally. They can
+00:26:00.880: ones if you run them locally. They can run sort of different systems like
+00:26:02.310: run sort of different systems like
+00:26:02.320: run sort of different systems like there's a pretty significant difference
+00:26:03.830: there's a pretty significant difference
+00:26:03.840: there's a pretty significant difference in behavior sometimes between uh LM
+00:26:06.470: in behavior sometimes between uh LM
+00:26:06.480: in behavior sometimes between uh LM studio and uh on open router it's almost
+00:26:11.430: studio and uh on open router it's almost
+00:26:11.440: studio and uh on open router it's almost a slot machine about if that model comes
+00:26:14.549: a slot machine about if that model comes
+00:26:14.559: a slot machine about if that model comes as advertised or not.
+00:26:17.269: as advertised or not.
+00:26:17.279: as advertised or not. Um
+00:26:18.799: Um I forgot for which model it was. It
+00:26:20.950: I forgot for which model it was. It
+00:26:20.960: I forgot for which model it was. It might have been GPTOSS where people
+00:26:23.430: might have been GPTOSS where people
+00:26:23.440: might have been GPTOSS where people reported a wildly different uh measured
+00:26:26.870: reported a wildly different uh measured
+00:26:26.880: reported a wildly different uh measured performance difference for tool calling
+00:26:28.950: performance difference for tool calling
+00:26:28.960: performance difference for tool calling reliability between the different
+00:26:30.390: reliability between the different
+00:26:30.400: reliability between the different providers on open router. And it also
+00:26:32.630: providers on open router. And it also
+00:26:32.640: providers on open router. And it also looked like um the initial source
+00:26:35.990: looked like um the initial source
+00:26:36.000: looked like um the initial source release of the harmony
+00:26:39.590: release of the harmony
+00:26:39.600: release of the harmony um new token system, whatever you want
+00:26:42.390: um new token system, whatever you want
+00:26:42.400: um new token system, whatever you want to call this, had some bugs that people
+00:26:44.549: to call this, had some bugs that people
+00:26:44.559: to call this, had some bugs that people walked around in different ways. Um, so
+00:26:48.070: walked around in different ways. Um, so
+00:26:48.080: walked around in different ways. Um, so all of this makes it just so much harder
+00:26:49.830: all of this makes it just so much harder
+00:26:49.840: all of this makes it just so much harder to evaluate this. And I I want to
+00:26:52.710: to evaluate this. And I I want to
+00:26:52.720: to evaluate this. And I I want to reiterate this. I think it's very hard
+00:26:54.070: reiterate this. I think it's very hard
+00:26:54.080: reiterate this. I think it's very hard to estimate the costs right now because
+00:26:55.990: to estimate the costs right now because
+00:26:56.000: to estimate the costs right now because just because a a token is cheaper
+00:26:58.390: just because a a token is cheaper
+00:26:58.400: just because a a token is cheaper doesn't mean that you're going to be
+00:27:01.190: doesn't mean that you're going to be
+00:27:01.200: doesn't mean that you're going to be cheaper off um than with another one.
+00:27:04.950: cheaper off um than with another one.
+00:27:04.960: cheaper off um than with another one. And also I think I didn't write this
+00:27:06.789: And also I think I didn't write this
+00:27:06.799: And also I think I didn't write this here but I think another way of also
+00:27:08.310: here but I think another way of also
+00:27:08.320: here but I think another way of also investigating this is there was a lot of
+00:27:10.630: investigating this is there was a lot of
+00:27:10.640: investigating this is there was a lot of excitement in the first couple of days
+00:27:12.070: excitement in the first couple of days
+00:27:12.080: excitement in the first couple of days for Serbus and Grock that they're going
+00:27:14.710: for Serbus and Grock that they're going
+00:27:14.720: for Serbus and Grock that they're going to be dramatically faster for
+00:27:18.549: to be dramatically faster for
+00:27:18.559: to be dramatically faster for um for these agents. But the challenge
+00:27:20.870: um for these agents. But the challenge
+00:27:20.880: um for these agents. But the challenge is that it doesn't seem like that is a
+00:27:23.110: is that it doesn't seem like that is a
+00:27:23.120: is that it doesn't seem like that is a consistent uh experience and in some
+00:27:26.630: consistent uh experience and in some
+00:27:26.640: consistent uh experience and in some cases just being faster doesn't help you
+00:27:29.350: cases just being faster doesn't help you
+00:27:29.360: cases just being faster doesn't help you if you're also worse or that inference
+00:27:32.950: if you're also worse or that inference
+00:27:32.960: if you're also worse or that inference is necessarily the most expensive piece
+00:27:35.350: is necessarily the most expensive piece
+00:27:35.360: is necessarily the most expensive piece here. So for instance pure throughput
+00:27:39.669: here. So for instance pure throughput
+00:27:39.679: here. So for instance pure throughput uh in some cases is higher on some
+00:27:41.750: uh in some cases is higher on some
+00:27:41.760: uh in some cases is higher on some hosting platforms but time to first
+00:27:43.350: hosting platforms but time to first
+00:27:43.360: hosting platforms but time to first token um is also higher which in many
+00:27:46.470: token um is also higher which in many
+00:27:46.480: token um is also higher which in many cases compensates a lot. So it is it is
+00:27:49.510: cases compensates a lot. So it is it is
+00:27:49.520: cases compensates a lot. So it is it is really really really hard to evaluate. I
+00:27:51.269: really really really hard to evaluate. I
+00:27:51.279: really really really hard to evaluate. I just want to point this out once again.
+00:27:53.590: just want to point this out once again.
+00:27:53.600: just want to point this out once again. Um I have no idea how to do this better
+00:27:56.389: Um I have no idea how to do this better
+00:27:56.399: Um I have no idea how to do this better yet. But many of the benchmarks are kind
+00:27:59.750: yet. But many of the benchmarks are kind
+00:27:59.760: yet. But many of the benchmarks are kind of misleading and I think we need to
+00:28:01.830: of misleading and I think we need to
+00:28:01.840: of misleading and I think we need to just share a little bit the practical
+00:28:03.350: just share a little bit the practical
+00:28:03.360: just share a little bit the practical results and experience that we have.
+00:28:06.549: results and experience that we have.
+00:28:06.559: results and experience that we have. Um
+00:28:08.480: Um this is basically just a why is
+00:28:11.190: this is basically just a why is
+00:28:11.200: this is basically just a why is everything so crazy. Um it's very clear
+00:28:13.590: everything so crazy. Um it's very clear
+00:28:13.600: everything so crazy. Um it's very clear that there's something really cool here.
+00:28:16.950: that there's something really cool here.
+00:28:16.960: that there's something really cool here. There's a lot of value um being
+00:28:21.350: There's a lot of value um being
+00:28:21.360: There's a lot of value um being possible with these models, particularly
+00:28:23.990: possible with these models, particularly
+00:28:24.000: possible with these models, particularly if the agent and tool combination works
+00:28:27.029: if the agent and tool combination works
+00:28:27.039: if the agent and tool combination works out really well. Um I think almost
+00:28:31.510: out really well. Um I think almost
+00:28:31.520: out really well. Um I think almost everybody can use one of the agents to
+00:28:33.669: everybody can use one of the agents to
+00:28:33.679: everybody can use one of the agents to build another agent. So there's there's
+00:28:36.310: build another agent. So there's there's
+00:28:36.320: build another agent. So there's there's there's only going to be more for a
+00:28:38.389: there's only going to be more for a
+00:28:38.399: there's only going to be more for a little while on these just because it's
+00:28:39.909: little while on these just because it's
+00:28:39.919: little while on these just because it's so much fun to build them, too. Um and
+00:28:42.310: so much fun to build them, too. Um and
+00:28:42.320: so much fun to build them, too. Um and it's kind of shocking how many people
+00:28:43.750: it's kind of shocking how many people
+00:28:43.760: it's kind of shocking how many people raise money right now on more coding
+00:28:45.590: raise money right now on more coding
+00:28:45.600: raise money right now on more coding agents. Um I don't I don't understand
+00:28:48.070: agents. Um I don't I don't understand
+00:28:48.080: agents. Um I don't I don't understand the the motivation here, but it it it
+00:28:51.350: the the motivation here, but it it it
+00:28:51.360: the the motivation here, but it it it doesn't stop. Uh there's so many more
+00:28:55.110: doesn't stop. Uh there's so many more
+00:28:55.120: doesn't stop. Uh there's so many more and because we haven't found a good way
+00:28:57.269: and because we haven't found a good way
+00:28:57.279: and because we haven't found a good way to evaluate them, I I think it's also
+00:28:59.029: to evaluate them, I I think it's also
+00:28:59.039: to evaluate them, I I think it's also very hard to evaluate the quality of an
+00:29:00.389: very hard to evaluate the quality of an
+00:29:00.399: very hard to evaluate the quality of an agent. I'm evaluating the quality of one
+00:29:02.070: agent. I'm evaluating the quality of one
+00:29:02.080: agent. I'm evaluating the quality of one agent in particular. I still use cloud
+00:29:03.909: agent in particular. I still use cloud
+00:29:03.919: agent in particular. I still use cloud code most of the time um because I got
+00:29:07.510: code most of the time um because I got
+00:29:07.520: code most of the time um because I got used to that and I I have one eval where
+00:29:11.430: used to that and I I have one eval where
+00:29:11.440: used to that and I I have one eval where I run in regular intervals the same task
+00:29:17.110: I run in regular intervals the same task
+00:29:17.120: I run in regular intervals the same task on my codebase just to see if it doesn't
+00:29:20.149: on my codebase just to see if it doesn't
+00:29:20.159: on my codebase just to see if it doesn't get worse. I basically want to make sure
+00:29:23.590: get worse. I basically want to make sure
+00:29:23.600: get worse. I basically want to make sure that my codebase stays in a state where
+00:29:25.750: that my codebase stays in a state where
+00:29:25.760: that my codebase stays in a state where the agent
+00:29:27.750: the agent
+00:29:27.760: the agent doesn't get meaningfully worse. But even
+00:29:30.149: doesn't get meaningfully worse. But even
+00:29:30.159: doesn't get meaningfully worse. But even that evaluation I can only run against
+00:29:32.389: that evaluation I can only run against
+00:29:32.399: that evaluation I can only run against cloud code
+00:29:34.470: cloud code
+00:29:34.480: cloud code just because of some of the behaviors
+00:29:36.230: just because of some of the behaviors
+00:29:36.240: just because of some of the behaviors that it has like I cannot I currently
+00:29:39.830: that it has like I cannot I currently
+00:29:39.840: that it has like I cannot I currently have this not set up in a way where I
+00:29:42.549: have this not set up in a way where I
+00:29:42.559: have this not set up in a way where I could use open code here or why I could
+00:29:44.310: could use open code here or why I could
+00:29:44.320: could use open code here or why I could use crush or Gemini CLI right this is is
+00:29:47.430: use crush or Gemini CLI right this is is
+00:29:47.440: use crush or Gemini CLI right this is is a very very specific to how I'm
+00:29:49.830: a very very specific to how I'm
+00:29:49.840: a very very specific to how I'm evaluating cloud code um and this is
+00:29:52.710: evaluating cloud code um and this is
+00:29:52.720: evaluating cloud code um and this is just for me to evaluate that my codebase
+00:29:54.710: just for me to evaluate that my codebase
+00:29:54.720: just for me to evaluate that my codebase does not get worse
+00:29:58.399: last thing here is pricing. Um
+00:30:03.279: there was an interview with Daria
+00:30:04.710: there was an interview with Daria
+00:30:04.720: there was an interview with Daria recently. Uh it was a podcast somewhere
+00:30:07.590: recently. Uh it was a podcast somewhere
+00:30:07.600: recently. Uh it was a podcast somewhere where he mentioned that they
+00:30:08.870: where he mentioned that they
+00:30:08.880: where he mentioned that they underestimated how many people would use
+00:30:12.070: underestimated how many people would use
+00:30:12.080: underestimated how many people would use uh
+00:30:13.679: uh the Claude Max subscription to the
+00:30:15.830: the Claude Max subscription to the
+00:30:15.840: the Claude Max subscription to the degree that they did. Um I know a
+00:30:20.230: degree that they did. Um I know a
+00:30:20.240: degree that they did. Um I know a handful of people that have gotten a lot
+00:30:22.950: handful of people that have gotten a lot
+00:30:22.960: handful of people that have gotten a lot of value out of it. um thousands of
+00:30:26.950: of value out of it. um thousands of
+00:30:26.960: of value out of it. um thousands of dollars worth of value out of a $200
+00:30:29.590: dollars worth of value out of a $200
+00:30:29.600: dollars worth of value out of a $200 subscription.
+00:30:31.430: subscription.
+00:30:31.440: subscription. Um so so there is a there's some
+00:30:33.190: Um so so there is a there's some
+00:30:33.200: Um so so there is a there's some pressure coming in right now to uh put
+00:30:35.750: pressure coming in right now to uh put
+00:30:35.760: pressure coming in right now to uh put higher rate limits up. But if you look
+00:30:39.350: higher rate limits up. But if you look
+00:30:39.360: higher rate limits up. But if you look into how could you get tokens cheaper,
+00:30:43.909: into how could you get tokens cheaper,
+00:30:43.919: into how could you get tokens cheaper, you will discover that it's not possible
+00:30:46.230: you will discover that it's not possible
+00:30:46.240: you will discover that it's not possible for you to come to those token pricings
+00:30:49.350: for you to come to those token pricings
+00:30:49.360: for you to come to those token pricings for self-hosting. There are H100s,
+00:30:52.310: for self-hosting. There are H100s,
+00:30:52.320: for self-hosting. There are H100s, H200s, P200s, whatever they are called,
+00:30:55.029: H200s, P200s, whatever they are called,
+00:30:55.039: H200s, P200s, whatever they are called, uh, on the internet. You can rent them
+00:30:56.950: uh, on the internet. You can rent them
+00:30:56.960: uh, on the internet. You can rent them for a couple of hours. You can rent them
+00:30:58.630: for a couple of hours. You can rent them
+00:30:58.640: for a couple of hours. You can rent them for longer. But if you want to end up
+00:31:00.950: for longer. But if you want to end up
+00:31:00.960: for longer. But if you want to end up with a self-hosted open weights model,
+00:31:04.310: with a self-hosted open weights model,
+00:31:04.320: with a self-hosted open weights model, it is going to be more expensive than if
+00:31:06.470: it is going to be more expensive than if
+00:31:06.480: it is going to be more expensive than if you buy those minutes on open router.
+00:31:09.510: you buy those minutes on open router.
+00:31:09.520: you buy those minutes on open router. That's the situation that we find
+00:31:10.950: That's the situation that we find
+00:31:10.960: That's the situation that we find ourselves in today. And your experience
+00:31:14.070: ourselves in today. And your experience
+00:31:14.080: ourselves in today. And your experience is also not necessarily going to work
+00:31:16.149: is also not necessarily going to work
+00:31:16.159: is also not necessarily going to work all that well. Um, even some of the open
+00:31:18.789: all that well. Um, even some of the open
+00:31:18.799: all that well. Um, even some of the open weights models require a lot of hacks
+00:31:20.789: weights models require a lot of hacks
+00:31:20.799: weights models require a lot of hacks for you to self-host them reliably. And
+00:31:23.669: for you to self-host them reliably. And
+00:31:23.679: for you to self-host them reliably. And that might also explain why some of the
+00:31:26.230: that might also explain why some of the
+00:31:26.240: that might also explain why some of the model providers that you can find an
+00:31:28.070: model providers that you can find an
+00:31:28.080: model providers that you can find an open router for the same model have
+00:31:30.310: open router for the same model have
+00:31:30.320: open router for the same model have worse performance. There's there's a lot
+00:31:32.549: worse performance. There's there's a lot
+00:31:32.559: worse performance. There's there's a lot of stuff in the stack. So for instance
+00:31:34.549: of stuff in the stack. So for instance
+00:31:34.559: of stuff in the stack. So for instance when GPT OSS launched there were a bunch
+00:31:37.029: when GPT OSS launched there were a bunch
+00:31:37.039: when GPT OSS launched there were a bunch of bugs filed against open uh code and
+00:31:40.470: of bugs filed against open uh code and
+00:31:40.480: of bugs filed against open uh code and other tools that the responses coming
+00:31:42.789: other tools that the responses coming
+00:31:42.799: other tools that the responses coming from GPT OSS were wrong but it was
+00:31:45.190: from GPT OSS were wrong but it was
+00:31:45.200: from GPT OSS were wrong but it was actually a bug or limitation in the
+00:31:49.110: actually a bug or limitation in the
+00:31:49.120: actually a bug or limitation in the underlying O lama and LM studio where
+00:31:53.350: underlying O lama and LM studio where
+00:31:53.360: underlying O lama and LM studio where that issue appeared and so that fixing
+00:31:58.070: that issue appeared and so that fixing
+00:31:58.080: that issue appeared and so that fixing that problem in open code would would
+00:31:59.909: that problem in open code would would
+00:31:59.919: that problem in open code would would not be correct because the
+00:32:01.350: not be correct because the
+00:32:01.360: not be correct because the transformation should happen one layer
+00:32:02.950: transformation should happen one layer
+00:32:02.960: transformation should happen one layer down. Um but at the same time as I have
+00:32:05.830: down. Um but at the same time as I have
+00:32:05.840: down. Um but at the same time as I have already seen uh some fixes landing in
+00:32:07.750: already seen uh some fixes landing in
+00:32:07.760: already seen uh some fixes landing in some of the code coding tools
+00:32:09.110: some of the code coding tools
+00:32:09.120: some of the code coding tools specifically for for that. So it's it's
+00:32:12.310: specifically for for that. So it's it's
+00:32:12.320: specifically for for that. So it's it's kind of tricky to say um
+00:32:16.389: kind of tricky to say um
+00:32:16.399: kind of tricky to say um where where this um
+00:32:19.029: where where this um
+00:32:19.039: where where this um where this goes. I think right now there
+00:32:20.870: where this goes. I think right now there
+00:32:20.880: where this goes. I think right now there there's a only limited
+00:32:23.430: there's a only limited
+00:32:23.440: there's a only limited um motivation for people to get these
+00:32:25.669: um motivation for people to get these
+00:32:25.679: um motivation for people to get these open models running. uh but but some
+00:32:28.230: open models running. uh but but some
+00:32:28.240: open models running. uh but but some people are trying right and so maybe as
+00:32:29.909: people are trying right and so maybe as
+00:32:29.919: people are trying right and so maybe as more people as the cost might go down
+00:32:32.950: more people as the cost might go down
+00:32:32.960: more people as the cost might go down there might be more people trying it
+00:32:34.389: there might be more people trying it
+00:32:34.399: there might be more people trying it there might be better tooling around it
+00:32:35.909: there might be better tooling around it
+00:32:35.919: there might be better tooling around it you might actually get to the point
+00:32:37.190: you might actually get to the point
+00:32:37.200: you might actually get to the point where maybe 10 people can share two
+00:32:39.909: where maybe 10 people can share two
+00:32:39.919: where maybe 10 people can share two H200s and get a decent experience out of
+00:32:42.149: H200s and get a decent experience out of
+00:32:42.159: H200s and get a decent experience out of it um but but we're not there today and
+00:32:45.350: it um but but we're not there today and
+00:32:45.360: it um but but we're not there today and even more so locally running models I I
+00:32:49.350: even more so locally running models I I
+00:32:49.360: even more so locally running models I I think you're just going to have a really
+00:32:50.389: think you're just going to have a really
+00:32:50.399: think you're just going to have a really bad time with them I I I try regularly
+00:32:53.909: bad time with them I I I try regularly
+00:32:53.919: bad time with them I I I try regularly to see how far they get and GBTOSS S and
+00:32:57.029: to see how far they get and GBTOSS S and
+00:32:57.039: to see how far they get and GBTOSS S and a bunch of others quence recoder the um
+00:33:00.470: a bunch of others quence recoder the um
+00:33:00.480: a bunch of others quence recoder the um the smaller variant
+00:33:02.789: the smaller variant
+00:33:02.799: the smaller variant they're definitely capable of running
+00:33:04.470: they're definitely capable of running
+00:33:04.480: they're definitely capable of running but they give up early they sometimes
+00:33:07.350: but they give up early they sometimes
+00:33:07.360: but they give up early they sometimes call the wrong tools um I haven't found
+00:33:10.310: call the wrong tools um I haven't found
+00:33:10.320: call the wrong tools um I haven't found a good agent agent decoding tool that is
+00:33:13.269: a good agent agent decoding tool that is
+00:33:13.279: a good agent agent decoding tool that is really tweaked for them um so it's it's
+00:33:17.430: really tweaked for them um so it's it's
+00:33:17.440: really tweaked for them um so it's it's just too early right now um but I would
+00:33:21.029: just too early right now um but I would
+00:33:21.039: just too early right now um but I would just generally say like unless you
+00:33:22.389: just generally say like unless you
+00:33:22.399: just generally say like unless you you're really motivated to try this
+00:33:23.990: you're really motivated to try this
+00:33:24.000: you're really motivated to try this there's not much of a point in doing
+00:33:25.269: there's not much of a point in doing
+00:33:25.279: there's not much of a point in doing that there's a price pressure per token
+00:33:28.870: that there's a price pressure per token
+00:33:28.880: that there's a price pressure per token um that's visible. Uh GBD5 launched for
+00:33:31.750: um that's visible. Uh GBD5 launched for
+00:33:31.760: um that's visible. Uh GBD5 launched for a lower token price than the entropic
+00:33:33.509: a lower token price than the entropic
+00:33:33.519: a lower token price than the entropic models, but overall we're using many
+00:33:36.070: models, but overall we're using many
+00:33:36.080: models, but overall we're using many more tokens. Um the the the problems
+00:33:38.549: more tokens. Um the the the problems
+00:33:38.559: more tokens. Um the the the problems that we're throwing at these agents,
+00:33:40.310: that we're throwing at these agents,
+00:33:40.320: that we're throwing at these agents, they are still largely constrained by
+00:33:42.310: they are still largely constrained by
+00:33:42.320: they are still largely constrained by how much we can throw into the context.
+00:33:44.470: how much we can throw into the context.
+00:33:44.480: how much we can throw into the context. And so for for quite a while longer, our
+00:33:48.310: And so for for quite a while longer, our
+00:33:48.320: And so for for quite a while longer, our the number of tokens we're going to
+00:33:49.430: the number of tokens we're going to
+00:33:49.440: the number of tokens we're going to throw at these are going to go up. And
+00:33:51.430: throw at these are going to go up. And
+00:33:51.440: throw at these are going to go up. And so as a result, I just generally expect
+00:33:53.590: so as a result, I just generally expect
+00:33:53.600: so as a result, I just generally expect that the cost will also go up. And
+00:33:57.029: that the cost will also go up. And
+00:33:57.039: that the cost will also go up. And that's all I have at the moment. So I
+00:33:58.710: that's all I have at the moment. So I
+00:33:58.720: that's all I have at the moment. So I have absolutely no recommendations of
+00:34:00.070: have absolutely no recommendations of
+00:34:00.080: have absolutely no recommendations of which agents you should be using, but I
+00:34:02.549: which agents you should be using, but I
+00:34:02.559: which agents you should be using, but I just want to share a little bit what
+00:34:04.070: just want to share a little bit what
+00:34:04.080: just want to share a little bit what I've learned on this.
+00:34:06.230: I've learned on this.
+00:34:06.240: I've learned on this. And um and I encourage everybody to
+00:34:10.230: And um and I encourage everybody to
+00:34:10.240: And um and I encourage everybody to share their experiences, their genuine
+00:34:12.550: share their experiences, their genuine
+00:34:12.560: share their experiences, their genuine experiences, not their quick takes on
+00:34:14.790: experiences, not their quick takes on
+00:34:14.800: experiences, not their quick takes on Twitter. Like write blog posts, like
+00:34:17.349: Twitter. Like write blog posts, like
+00:34:17.359: Twitter. Like write blog posts, like long form content, share what you really
+00:34:19.750: long form content, share what you really
+00:34:19.760: long form content, share what you really did with it.
+00:34:21.190: did with it.
+00:34:21.200: did with it. That is so much more valuable than any
+00:34:25.909: That is so much more valuable than any
+00:34:25.919: That is so much more valuable than any quick tweet
+00:34:28.710: quick tweet
+00:34:28.720: quick tweet that
+00:34:30.240: that has a face blown emoji or something like
+00:34:32.470: has a face blown emoji or something like
+00:34:32.480: has a face blown emoji or something like this. We don't need more of that. That's
+00:34:35.030: this. We don't need more of that. That's
+00:34:35.040: this. We don't need more of that. That's already we have enough of that. But what
+00:34:36.790: already we have enough of that. But what
+00:34:36.800: already we have enough of that. But what we need is genuine experiences with
+00:34:38.710: we need is genuine experiences with
+00:34:38.720: we need is genuine experiences with these tools. Um and and some
+00:34:42.230: these tools. Um and and some
+00:34:42.240: these tools. Um and and some consolidation to few of them that it's
+00:34:45.270: consolidation to few of them that it's
+00:34:45.280: consolidation to few of them that it's just too much.
+00:34:47.430: just too much.
+00:34:47.440: just too much. Um yeah. So thank you for listening. I
+00:34:49.909: Um yeah. So thank you for listening. I
+00:34:49.919: Um yeah. So thank you for listening. I hope this was useful in one form or
