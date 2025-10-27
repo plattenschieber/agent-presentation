@@ -14,7 +14,7 @@
     "dev:astgrep": "slidev presentations/ast-grep-best-practice.md --open"
   },
   "devDependencies": {
-    "@slidev/cli": "^0.48.0",
+    "@slidev/cli": "^52.6.0",
     "@slidev/theme-default": "latest"
   }
 }
