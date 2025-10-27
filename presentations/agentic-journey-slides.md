@@ -19,7 +19,7 @@ mdc: true
 *Agentic Coding: Real Talk*
 
 <div class="text-center mt-4">
-<img src="/claudecodeanon.png" alt="Claude Code Anonymous" class="mx-auto rounded-lg shadow-md" style="max-height: 300px;">
+<img src="../public/claudecodeanon.png" alt="Claude Code Anonymous" class="mx-auto rounded-lg shadow-md" style="max-height: 300px;">
 </div>
 
 <div class="pt-12">
@@ -140,7 +140,7 @@ That dream became my mission
 <v-click>
 
 <div class="text-center mt-4">
-<img src="/10xprompt.jpeg" alt="The 10x Prompt Engineering Hype" class="mx-auto rounded-lg shadow-md" style="max-height: 200px;">
+<img src="../public/10xprompt.jpeg" alt="The 10x Prompt Engineering Hype" class="mx-auto rounded-lg shadow-md" style="max-height: 200px;">
 </div>
 
 </v-click>

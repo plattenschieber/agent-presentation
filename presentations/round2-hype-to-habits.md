@@ -19,7 +19,7 @@ mdc: true
 *Claude Code Anonymous - Round 2*
 
 <div class="text-center mt-4">
-<img src="/claudecodeanon2.png" alt="Claude Code Anonymous Round 2" class="mx-auto rounded-lg shadow-md" style="max-height: 300px;">
+<img src="../public/claudecodeanon2.png" alt="Claude Code Anonymous Round 2" class="mx-auto rounded-lg shadow-md" style="max-height: 300px;">
 </div>
 
 <div class="pt-12">
@@ -38,7 +38,7 @@ class: text-center
 <v-click>
 
 <div class="text-center mt-4">
-<img src="/slotmachines.jpeg" alt="Slot Machine Addiction" class="mx-auto rounded-lg shadow-md" style="max-height: 300px;">
+<img src="../public/slotmachines.jpeg" alt="Slot Machine Addiction" class="mx-auto rounded-lg shadow-md" style="max-height: 300px;">
 </div>
 
 </v-click>
