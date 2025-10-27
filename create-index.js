@@ -144,6 +144,13 @@ const html = `<!DOCTYPE html>
                 <p class="date">October 2024</p>
                 <span class="cta">View Slides →</span>
             </a>
+
+            <a href="./ast-grep/" class="presentation-card">
+                <h2>ast-grep + Claude Code</h2>
+                <p>Automated architectural enforcement for AI-assisted development. How to prevent pattern drift and security issues.</p>
+                <p class="date">October 2024</p>
+                <span class="cta">View Slides →</span>
+            </a>
         </div>
 
         <div class="footer">
