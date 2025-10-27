@@ -5,13 +5,13 @@
   "scripts": {
     "build": "npm run build:all",
     "build:all": "npm run build:round1 && npm run build:round2 && npm run build:astgrep && npm run build:index",
-    "build:round1": "slidev build agentic-journey-slides.md --base /agent-presentation/round1/ --out dist/round1",
-    "build:round2": "slidev build round2-hype-to-habits.md --base /agent-presentation/round2/ --out dist/round2",
-    "build:astgrep": "slidev build ast-grep-best-practice.md --base /agent-presentation/ast-grep/ --out dist/ast-grep",
-    "build:index": "node create-index.js",
-    "dev:round1": "slidev agentic-journey-slides.md --open",
-    "dev:round2": "slidev round2-hype-to-habits.md --open",
-    "dev:astgrep": "slidev ast-grep-best-practice.md --open"
+    "build:round1": "slidev build presentations/agentic-journey-slides.md --base /agent-presentation/round1/ --out dist/round1",
+    "build:round2": "slidev build presentations/round2-hype-to-habits.md --base /agent-presentation/round2/ --out dist/round2",
+    "build:astgrep": "slidev build presentations/ast-grep-best-practice.md --base /agent-presentation/ast-grep/ --out dist/ast-grep",
+    "build:index": "node scripts/create-index.js",
+    "dev:round1": "slidev presentations/agentic-journey-slides.md --open",
+    "dev:round2": "slidev presentations/round2-hype-to-habits.md --open",
+    "dev:astgrep": "slidev presentations/ast-grep-best-practice.md --open"
   },
   "devDependencies": {
     "@slidev/cli": "^0.48.0",

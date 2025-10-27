@@ -29,6 +29,19 @@ Automated architectural enforcement for AI-assisted development.
 - **Topics:** Pattern drift prevention, security boundaries, architectural enforcement
 - **Duration:** Lightning talk
 
+## 📁 Repository Structure
+
+```
+agent-presentation/
+├── presentations/     # Slide decks (Slidev markdown)
+├── public/           # Shared assets (images, logos)
+├── scripts/          # Build scripts
+├── docs/             # Methodology docs, notes
+├── events/           # Event invitations, materials
+├── archive/          # Old versions, drafts
+└── transcripts/      # Video transcripts
+```
+
 ## 🚀 Running Locally
 
 ```bash
