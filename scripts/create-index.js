@@ -161,7 +161,7 @@ const html = `<!DOCTYPE html>
 </body>
 </html>`;
 
-const distDir = path.join(__dirname, 'dist');
+const distDir = path.join(__dirname, '..', 'dist');
 if (!fs.existsSync(distDir)) {
     fs.mkdirSync(distDir, { recursive: true });
 }
@@ -175,7 +175,7 @@ fs.writeFileSync(path.join(distDir, '.nojekyll'), '');
 console.log('✓ Created .nojekyll file');
 
 // Copy public folder to dist for shared assets
-const publicDir = path.join(__dirname, 'public');
+const publicDir = path.join(__dirname, '..', 'public');
 const distPublicDir = path.join(distDir, 'public');
 
 function copyDirectoryRecursive(src, dest) {
