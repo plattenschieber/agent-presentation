@@ -145,6 +145,20 @@ const html = `<!DOCTYPE html>
                 <span class="cta">View Slides →</span>
             </a>
 
+            <a href="./round3/" class="presentation-card">
+                <h2>Round 3: Patterns That Stuck</h2>
+                <p>Which workflows survived daily use? What got quietly abandoned? Fresh perspectives on what actually matters after months of building.</p>
+                <p class="date">December 2025</p>
+                <span class="cta">View Slides →</span>
+            </a>
+
+            <a href="./round4/" class="presentation-card">
+                <h2>Round 4: Ralph Wiggum, Clawd Bot & Skills</h2>
+                <p>The Ralph Wiggum Technique, personal AI assistants with Clawdbot, and why Skills beat MCPs. Plus a glimpse into Gas Town's future.</p>
+                <p class="date">January 2026</p>
+                <span class="cta">View Slides →</span>
+            </a>
+
             <a href="./ast-grep/" class="presentation-card">
                 <h2>ast-grep + Claude Code</h2>
                 <p>Automated architectural enforcement for AI-assisted development. How to prevent pattern drift and security issues.</p>
