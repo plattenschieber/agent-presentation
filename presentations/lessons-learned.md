@@ -702,47 +702,40 @@ class: text-center
 
 <v-click>
 
-<div class="text-center text-2xl font-bold text-red-600 mb-8">
-Jede Erkenntnis die in deinem lokalen Repo bleibt,<br/>ist für die Organisation verloren.
+<div class="text-center text-xl font-bold text-red-600 mb-4">
+Jede Erkenntnis die in deinem lokalen Repo bleibt, ist für die Organisation verloren.
 </div>
 
 </v-click>
 
+<div class="grid grid-cols-3 gap-4 text-sm">
+
 <v-clicks>
 
-<div class="space-y-4">
-
-<div class="bg-blue-50 p-4 rounded-lg flex items-center gap-4">
-<div class="text-3xl">👤</div>
-<div>
-<strong>CLAUDE.md</strong> — Persönliches Repo<br/>
-<span class="text-sm">Entwickler lernt etwas → schreibt es auf → Agent liest es beim nächsten Mal</span>
-</div>
+<div class="bg-blue-50 p-3 rounded-lg text-center">
+<div class="text-2xl mb-1">👤</div>
+<strong>CLAUDE.md</strong><br/>
+Persönliches Repo<br/>
+<span class="text-xs opacity-75">Entwickler lernt → schreibt auf → Agent liest</span>
 </div>
 
-<div class="text-center text-2xl">↓</div>
-
-<div class="bg-purple-50 p-4 rounded-lg flex items-center gap-4">
-<div class="text-3xl">👥</div>
-<div>
-<strong>Team-CLAUDE.md</strong> — Shared Repo / Monorepo Root<br/>
-<span class="text-sm">Best Practices, Conventions, "So machen wir das hier"</span>
-</div>
+<div class="bg-purple-50 p-3 rounded-lg text-center">
+<div class="text-2xl mb-1">👥</div>
+<strong>Team-CLAUDE.md</strong><br/>
+Shared Repo / Monorepo<br/>
+<span class="text-xs opacity-75">Best Practices, Conventions</span>
 </div>
 
-<div class="text-center text-2xl">↓</div>
-
-<div class="bg-green-50 p-4 rounded-lg flex items-center gap-4">
-<div class="text-3xl">🏢</div>
-<div>
-<strong>Abteilungs-CLAUDE.md</strong> — Org-wide Patterns<br/>
-<span class="text-sm">Security Rules, Architecture Decisions, Compliance — für alle Teams</span>
-</div>
-</div>
-
+<div class="bg-green-50 p-3 rounded-lg text-center">
+<div class="text-2xl mb-1">🏢</div>
+<strong>Abteilungs-CLAUDE.md</strong><br/>
+Org-wide Patterns<br/>
+<span class="text-xs opacity-75">Security, Architecture, Compliance</span>
 </div>
 
 </v-clicks>
+
+</div>
 
 ---
 
