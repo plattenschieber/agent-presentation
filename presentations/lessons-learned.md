@@ -30,6 +30,53 @@ mdc: true
 
 ---
 
+# 🧵 Worum geht's?
+
+<v-click>
+
+<div class="text-xl mb-6">
+Vor einem Jahr habe ich angefangen, mit AI Coding Agents zu arbeiten.<br/>
+Seitdem hat sich <strong>alles</strong> verändert — wie ich code, wie ich denke, wie ich arbeite.
+</div>
+
+</v-click>
+
+<v-clicks>
+
+<div class="grid grid-cols-3 gap-4 mb-6">
+
+<div class="bg-gray-100 p-4 rounded-lg text-center">
+<div class="text-3xl mb-2">🪨→⚔️</div>
+<strong>Die Reise</strong><br/>
+<span class="text-sm">Von Tab-Complete über Hype-Psychosis zu echten Durchbrüchen</span>
+</div>
+
+<div class="bg-gray-100 p-4 rounded-lg text-center">
+<div class="text-3xl mb-2">💀→🪄</div>
+<strong>Die Shifts</strong><br/>
+<span class="text-sm">Death of the IDE. Agents die sich selbst präsentieren.</span>
+</div>
+
+<div class="bg-gray-100 p-4 rounded-lg text-center">
+<div class="text-3xl mb-2">👤→🏢</div>
+<strong>Der Weg nach vorn</strong><br/>
+<span class="text-sm">Wie Teams und Organisationen jetzt mitziehen müssen</span>
+</div>
+
+</div>
+
+</v-clicks>
+
+<v-click>
+
+<div class="bg-blue-50 p-4 rounded-lg">
+<strong>Kein Sales Pitch. Keine Theorie.</strong> Nur was wirklich passiert ist — Wins, Fails, und die Patterns die überlebt haben.
+</div>
+
+</v-click>
+
+---
+
 # 📅 The Journey at a Glance
 
 <div class="grid grid-cols-2 gap-4 text-sm">
