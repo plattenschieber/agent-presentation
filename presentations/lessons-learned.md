@@ -901,6 +901,46 @@ CLAUDE.md: Lokal → Team → Organisation
 </v-clicks>
 
 ---
+
+# 📚 Resources & Weiterführendes
+
+<div class="grid grid-cols-2 gap-4 text-sm">
+
+<div>
+
+### Blog Posts
+
+- 🔥 [Shipping at Inference-Speed](https://steipete.me/posts/2025/shipping-at-inference-speed) — steipete
+- 📝 [Just Talk To It](https://steipete.me/posts/just-talk-to-it) — steipete
+- 🔧 [How to Build an Agent](https://ampcode.com/notes/how-to-build-an-agent) — Amp
+- 💩 [shittycodingagent.ai](https://shittycodingagent.ai) — Pi Agent Harness
+
+### Videos
+
+- 🎬 [Ralph Wiggum Technique](https://youtu.be/4Nna09dG_c0) — Jeff Huntley
+- 🎬 [Steve Yegge Interview](https://youtu.be/zuJyJP517Uw) — Gas Town
+
+</div>
+
+<div>
+
+### Repos
+
+- 🦞 [OpenClaw](https://github.com/openclaw/openclaw) — Always-on AI Assistant
+- 🐙 [anthropic-golang-agent](https://github.com/plattenschieber/anthropic-golang-agent) — DIY Agent in Go
+- 🎤 [agent-presentation](https://github.com/plattenschieber/agent-presentation) — Diese + alle CCA Slides
+- 🧠 [brain-cli](https://github.com/bloomedai/brain-cli) — Lobster Pipelines
+
+### Tweets
+
+- 🐦 [@plattenschieber](https://x.com/plattenschieber) — Jero
+- 🐦 [@steipete](https://x.com/steipete) — Peter Steinberger
+
+</div>
+
+</div>
+
+---
 layout: center
 class: text-center
 ---
