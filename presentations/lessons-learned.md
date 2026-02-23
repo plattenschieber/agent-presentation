@@ -36,6 +36,8 @@ mdc: true
 
 # 🧵 Worum geht's?
 
+<audio src="/alfred-intro.mp3" controls class="mx-auto mb-4" style="width: 300px; height: 32px;"></audio>
+
 <v-click>
 
 <div class="text-xl mb-6">
