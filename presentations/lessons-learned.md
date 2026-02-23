@@ -560,45 +560,40 @@ Terminal, Filesystem, Git — keine Syntax-Highlighting-GUI.
 
 # 🏖️ Peter in Morocco
 
-
-<div class="text-sm opacity-50 mb-4">Oktober 2025</div>
+<div class="text-sm opacity-50 mb-2">Oktober 2025</div>
 
 <v-click>
+
+<div class="grid grid-cols-2 gap-4">
+
+<div>
 
 **Peter Steinberger** (steipete) — Gründer von PSPDFKit, 200+ Mitarbeiter.
 
-Pool in Marokko. Spricht eine Voice Message in WhatsApp. Schickt sie an seinen Agent.
+Pool in Marokko. Voice Message an seinen Agent. **Problem:** Niemand hatte Voice-Support eingebaut.
 
-</v-click>
-
-<v-click>
-
-<div class="bg-red-50 p-4 rounded-lg mb-4">
-<strong>Das Problem:</strong> Niemand hatte Voice-Support eingebaut. Der Agent konnte keine Sprachnachrichten verarbeiten.
-</div>
-
-</v-click>
-
-<v-clicks>
-
-<div class="bg-blue-50 p-4 rounded-lg mb-4">
+<div class="bg-blue-50 p-3 rounded-lg mt-3 text-sm">
 <strong>Was der Agent selbständig tat:</strong>
 
 1. Nachricht empfangen → kann sie nicht lesen
-2. **Header analysiert** → erkennt: Audiodatei
-3. Auf dem Server nach **ffmpeg** gesucht → zu langsam
-4. **OpenAI API-Key gefunden** auf dem Server
-5. **Whisper API** aufgerufen → Transkript erstellt
-6. Mit dem Transkript geantwortet ✅
+2. **Header analysiert** → erkennt: Audio
+3. **OpenAI API-Key gefunden** auf dem Server
+4. **Whisper API** aufgerufen → Transkript
+5. Mit dem Transkript geantwortet ✅
 </div>
 
-</v-clicks>
+</div>
 
-<v-click>
+<div>
 
-<div class="bg-yellow-50 p-4 rounded-lg">
-<strong>Peters Reaktion:</strong> "WTF" — Er hat seinen Agent gefragt wie er das gemacht hat.<br/>
+<div class="bg-yellow-50 p-3 rounded-lg">
+<strong>Peters Reaktion:</strong> "WTF"<br/><br/>
+Er hat seinen Agent gefragt wie er das gemacht hat.<br/><br/>
 <strong>Niemand hat das programmiert.</strong> Der Agent hat sich selbst beigebracht, Voice zu verarbeiten.
+</div>
+
+</div>
+
 </div>
 
 </v-click>
