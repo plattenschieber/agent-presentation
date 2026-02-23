@@ -36,40 +36,7 @@ mdc: true
 
 # 🧵 Worum geht's?
 
-<script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-
-const audioEl = ref(null)
-
-onMounted(() => {
-  // Try multiple paths for dev vs gh-pages
-  const paths = [
-    '/alfred-intro.mp3',
-    '/agent-presentation/public/alfred-intro.mp3',
-    '../public/alfred-intro.mp3',
-  ]
-  
-  function tryLoad(i) {
-    if (i >= paths.length) return
-    const a = new Audio(paths[i])
-    a.addEventListener('canplaythrough', () => {
-      audioEl.value = a
-      a.play().catch(() => {
-        const handler = () => {
-          a.play().catch(() => {})
-          document.removeEventListener('click', handler)
-          document.removeEventListener('keydown', handler)
-        }
-        document.addEventListener('click', handler, { once: true })
-        document.addEventListener('keydown', handler, { once: true })
-      })
-    }, { once: true })
-    a.addEventListener('error', () => tryLoad(i + 1), { once: true })
-  }
-  tryLoad(0)
-})
-onUnmounted(() => { if (audioEl.value) { audioEl.value.pause() } })
-</script>
+<SlideAudio src="slide02-intro.mp3" />
 
 <v-click>
 
@@ -117,6 +84,8 @@ Seitdem hat sich <strong>alles</strong> verändert — wie ich code, wie ich den
 ---
 
 # 📅 The Journey at a Glance
+
+<SlideAudio src="slide03-timeline.mp3" />
 
 <div class="grid grid-cols-2 gap-4 text-sm">
 
@@ -184,6 +153,8 @@ class: text-center
 ---
 
 # Act 1
+
+<SlideAudio src="slide04-act1.mp3" />
 ## Wie alles anfing
 
 *Tab Tab Complete → erste Zweifel*
@@ -193,6 +164,8 @@ class: text-center
 ---
 
 # 🪨 The Stone Age: Tab Completion
+
+<SlideAudio src="slide05-tab.mp3" />
 
 <v-clicks>
 
@@ -228,6 +201,8 @@ class: text-center
 ---
 
 # Act 2
+
+<SlideAudio src="slide06-act2.mp3" />
 ## Der Hype-Rausch & AI Psychosis
 
 *Alles ausprobiert, nichts funktioniert*
@@ -237,6 +212,8 @@ class: text-center
 ---
 
 # 🔥 The Reddit Rabbit Hole
+
+<SlideAudio src="slide07-reddit.mp3" />
 
 <v-clicks>
 
@@ -281,6 +258,8 @@ class: text-center
 
 # 🧠 AI Psychosis
 
+<SlideAudio src="slide08-psychosis.mp3" />
+
 <v-click>
 
 <div class="text-center text-2xl font-bold text-red-600 mb-8">
@@ -321,6 +300,8 @@ class: text-center
 ---
 
 # Act 3
+
+<SlideAudio src="slide09-act3.mp3" />
 ## Die echten Durchbrüche
 
 *Claude Code = Co-Founder, nicht Autocomplete*
@@ -330,6 +311,8 @@ class: text-center
 ---
 
 # ⚔️ The Iron Age: Claude Code
+
+<SlideAudio src="slide10-claude.mp3" />
 
 <v-click>
 
@@ -384,6 +367,8 @@ April 2025: Alles ändert sich.
 
 # 📝 Spec-Driven Development
 
+<SlideAudio src="slide11-specflow.mp3" />
+
 <div class="text-sm opacity-50 mb-4">Mai/Juni 2025</div>
 
 <v-click>
@@ -435,6 +420,8 @@ Actionable Steps — Agent kann sofort loslegen
 
 # 🏛️ The Socratic Approach
 
+<SlideAudio src="slide12-socratic.mp3" />
+
 <v-clicks>
 
 <div class="text-center mb-8">
@@ -461,6 +448,8 @@ Anthropic hat das später offiziell als "Plan Mode" eingebaut — wir haben's vo
 ---
 
 # ⚡ Flow State > Safety Theater
+
+<SlideAudio src="slide13-permissions.mp3" />
 
 <v-click>
 
@@ -511,6 +500,8 @@ class: text-center
 ---
 
 # Act 4
+
+<SlideAudio src="slide14-act4.mp3" />
 ## The Death of the IDE
 
 *IDEs sind für Menschen gebaut, nicht für Agents*
@@ -520,6 +511,8 @@ class: text-center
 ---
 
 # 💀 The Death of the IDE
+
+<SlideAudio src="slide15-ide-detail.mp3" />
 
 <v-click>
 
@@ -577,6 +570,8 @@ Terminal, Filesystem, Git — keine Syntax-Highlighting-GUI.
 
 # 🏖️ Peter in Morocco
 
+<SlideAudio src="slide16-peter.mp3" />
+
 <div class="text-sm opacity-50 mb-4">Oktober 2025</div>
 
 <v-click>
@@ -625,6 +620,8 @@ class: text-center
 ---
 
 # Act 5
+
+<SlideAudio src="slide17-act5.mp3" />
 ## How Agents Actually Evolved
 
 *Von "ich nutze Agents" zu "ich verstehe Agents"*
@@ -632,6 +629,8 @@ class: text-center
 ---
 
 # 🔬 Den Agent verstehen
+
+<SlideAudio src="slide18-understand.mp3" />
 
 <v-clicks>
 
@@ -672,6 +671,8 @@ Minimalismus als Architekturprinzip.
 
 # 🦞 The Evolution of Agents
 
+<SlideAudio src="slide19-evolution.mp3" />
+
 <div class="grid grid-cols-4 gap-3 text-sm">
 
 <v-clicks>
@@ -708,6 +709,8 @@ Minimalismus als Architekturprinzip.
 
 # 🪄 Agent Generates Its Own Presentation
 
+<SlideAudio src="slide20-presentation.mp3" />
+
 <div class="text-sm opacity-50 mb-4">January 13, 2026</div>
 
 <v-clicks>
@@ -742,6 +745,8 @@ class: text-center
 ---
 
 # Act 6
+
+<SlideAudio src="slide21-act6.mp3" />
 ## How to Move Forward as a Company
 
 *Knowledge muss fließen*
@@ -749,6 +754,8 @@ class: text-center
 ---
 
 # 📚 The Knowledge Flow Problem
+
+<SlideAudio src="slide22-knowledge.mp3" />
 
 <v-click>
 
@@ -790,6 +797,8 @@ Org-wide Patterns<br/>
 ---
 
 # 🔄 CLAUDE.md als lebende Dokumentation
+
+<SlideAudio src="slide23-claudemd.mp3" />
 
 <v-clicks>
 
@@ -842,6 +851,8 @@ Nicht Wiki. Nicht Confluence. Dort wo der Agent es liest.
 ---
 
 # ✅ Patterns That Stuck vs. ❌ Patterns That Died
+
+<SlideAudio src="slide24-patterns.mp3" />
 
 <div class="grid grid-cols-2 gap-6 text-sm">
 
@@ -923,6 +934,8 @@ class: text-center
 
 # Die 3 Takes
 
+<SlideAudio src="slide25-takes.mp3" />
+
 <v-clicks>
 
 <div class="text-3xl font-bold text-blue-600 mb-8">
@@ -954,6 +967,8 @@ CLAUDE.md: Lokal → Team → Organisation
 ---
 
 # 📚 Resources & Weiterführendes
+
+<SlideAudio src="slide26-resources.mp3" />
 
 <div class="grid grid-cols-2 gap-4 text-sm">
 
@@ -997,6 +1012,8 @@ class: text-center
 ---
 
 # Diskussion 🎤
+
+<SlideAudio src="slide27-discussion.mp3" />
 
 <v-click>
 
