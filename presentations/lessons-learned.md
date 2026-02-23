@@ -36,7 +36,19 @@ mdc: true
 
 # 🧵 Worum geht's?
 
-<audio src="/alfred-intro.mp3" controls class="mx-auto mb-4" style="width: 300px; height: 32px;"></audio>
+<audio id="alfred-intro" src="/alfred-intro.mp3" style="display:none"></audio>
+
+<script setup>
+import { onMounted } from 'vue'
+import { useNav } from '@slidev/client'
+
+const { currentPage } = useNav()
+
+onMounted(() => {
+  const audio = document.getElementById('alfred-intro')
+  if (audio) audio.play().catch(() => {})
+})
+</script>
 
 <v-click>
 
