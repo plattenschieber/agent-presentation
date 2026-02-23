@@ -26,11 +26,15 @@ mdc: true
   <div class="text-sm opacity-50 mt-1">February 2026</div>
 </div>
 
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next slide <carbon:arrow-right class="inline"/>
+<v-click>
+
+<div class="pt-8 text-center">
+  <span class="px-2 py-1 rounded opacity-50">
+    Press Space to start <carbon:arrow-right class="inline"/>
   </span>
 </div>
+
+</v-click>
 
 ---
 
