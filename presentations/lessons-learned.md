@@ -36,30 +36,34 @@ mdc: true
 
 # 🧵 Worum geht's?
 
-<audio id="alfred-intro" src="/alfred-intro.mp3" preload="auto" style="display:none"></audio>
-
 <script setup>
-import { onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
-let audio
+const audioEl = ref(null)
+
 onMounted(() => {
-  audio = document.getElementById('alfred-intro')
-  if (!audio) return
-  audio.volume = 1.0
-  audio.play().catch(() => {
-    // Safari/Edge: autoplay blocked, play on next interaction
-    const tryPlay = () => {
-      audio.play().catch(() => {})
-      document.removeEventListener('click', tryPlay)
-      document.removeEventListener('keydown', tryPlay)
-    }
-    document.addEventListener('click', tryPlay, { once: true })
-    document.addEventListener('keydown', tryPlay, { once: true })
-  })
+  // Try multiple paths for dev vs gh-pages
+  const paths = [
+    '/alfred-intro.mp3',
+    '/agent-presentation/public/alfred-intro.mp3',
+    '../public/alfred-intro.mp3',
+  ]
+  
+  function tryLoad(i) {
+    if (i >= paths.length) return
+    const a = new Audio(paths[i])
+    a.addEventListener('canplaythrough', () => {
+      audioEl.value = a
+      a.play().catch(() => {
+        const handler = () => { a.play().catch(() => {}); document.removeEventListener('click', handler) }
+        document.addEventListener('click', handler, { once: true })
+      })
+    }, { once: true })
+    a.addEventListener('error', () => tryLoad(i + 1), { once: true })
+  }
+  tryLoad(0)
 })
-onUnmounted(() => {
-  if (audio) { audio.pause(); audio.currentTime = 0 }
-})
+onUnmounted(() => { if (audioEl.value) { audioEl.value.pause() } })
 </script>
 
 <v-click>
