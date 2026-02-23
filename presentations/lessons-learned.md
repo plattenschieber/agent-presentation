@@ -527,35 +527,44 @@ Du schaust dir an was der Agent gemacht hat. Du tippst nicht mehr selbst.
 
 # 🏖️ Peter in Morocco
 
+<div class="text-sm opacity-50 mb-4">Oktober 2025</div>
+
 <v-click>
 
-<div class="text-center mb-6">
-<div class="text-2xl font-bold text-purple-600">
-Voice Message via WhatsApp → Agent coded → Ergebnis zurück
-</div>
+**Peter Steinberger** (steipete) — Gründer von PSPDFKit, 200+ Mitarbeiter.
+
+Pool in Marokko. Spricht eine Voice Message in WhatsApp. Schickt sie an seinen Agent.
+
+</v-click>
+
+<v-click>
+
+<div class="bg-red-50 p-4 rounded-lg mb-4">
+<strong>Das Problem:</strong> Niemand hatte Voice-Support eingebaut. Der Agent konnte keine Sprachnachrichten verarbeiten.
 </div>
 
 </v-click>
 
 <v-clicks>
 
-**Peter Steinberger** (steipete) — Gründer von PSPDFKit, 200+ Mitarbeiter:
+<div class="bg-blue-50 p-4 rounded-lg mb-4">
+<strong>Was der Agent selbständig tat:</strong>
 
-- Liegt am Pool in Marokko 🏖️
-- Spricht eine Voice Message in WhatsApp
-- Sein Agent (Clawdbot) empfängt, versteht, coded
-- Ergebnis kommt als Nachricht zurück
-
-**Kein Editor. Kein IDE. Kein Laptop aufklappen.**
-
-Nur Intent.
+1. Nachricht empfangen → kann sie nicht lesen
+2. **Header analysiert** → erkennt: Audiodatei
+3. Auf dem Server nach **ffmpeg** gesucht → zu langsam
+4. **OpenAI API-Key gefunden** auf dem Server
+5. **Whisper API** aufgerufen → Transkript erstellt
+6. Mit dem Transkript geantwortet ✅
+</div>
 
 </v-clicks>
 
 <v-click>
 
-<div class="bg-yellow-50 p-4 rounded-lg mt-4">
-<strong>Das ist kein Zukunftsszenario.</strong> Das passiert jetzt. Seit Oktober 2025.
+<div class="bg-yellow-50 p-4 rounded-lg">
+<strong>Peters Reaktion:</strong> "WTF" — Er hat seinen Agent gefragt wie er das gemacht hat.<br/>
+<strong>Niemand hat das programmiert.</strong> Der Agent hat sich selbst beigebracht, Voice zu verarbeiten.
 </div>
 
 </v-click>
@@ -568,7 +577,46 @@ class: text-center
 # Act 5
 ## How Agents Actually Evolved
 
-*Von Bash-Scripts zu Infrastruktur*
+*Von "ich nutze Agents" zu "ich verstehe Agents"*
+
+---
+
+# 🔬 Den Agent verstehen
+
+<v-clicks>
+
+<div class="bg-blue-50 p-4 rounded-lg mb-4">
+<div class="text-sm opacity-50">Juni 2025</div>
+<strong>"Ich nutze Agents jeden Tag — aber ich verstehe nicht wie sie funktionieren."</strong><br/>
+Nach dem Lesen von Amp's <em>"How to Build an Agent"</em> habe ich einen eigenen Agent in Go nachgebaut.
+<br/><code>github.com/plattenschieber/anthropic-golang-agent</code>
+</div>
+
+<div class="bg-purple-50 p-4 rounded-lg mb-4">
+<div class="text-sm opacity-50">Januar 2026</div>
+<strong>Dann: shittycodingagent.ai</strong> — der Pi Agent Harness (Grundlage für OpenClaw).<br/>
+Und plötzlich war es klar:
+</div>
+
+</v-clicks>
+
+<v-click>
+
+<div class="text-center text-3xl font-bold text-green-600 mb-6">
+Agents brauchen nur: Bash, Read, Write, Edit.
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="bg-green-50 p-4 rounded-lg">
+<strong>Alles andere baut der Agent für sich selbst.</strong> 🤯<br/>
+Siehe Peter in Morocco: Niemand hat Voice eingebaut — der Agent hat's einfach gelöst.<br/>
+Minimalismus als Architekturprinzip.
+</div>
+
+</v-click>
 
 ---
 
@@ -581,8 +629,8 @@ class: text-center
 <div class="bg-gray-100 p-4 rounded-lg flex items-center gap-4">
 <div class="text-3xl">🔧</div>
 <div>
-<strong>Bash + Read + Write</strong> — Die Primitives. Mehr braucht ein Agent nicht.<br/>
-<span class="text-sm opacity-75">Beispiel: Amp selbst gebaut mit nur diesen 3 Operationen</span>
+<strong>Bash + Read + Write + Edit</strong> — Die Primitives. Mehr braucht ein Agent nicht.<br/>
+<span class="text-sm opacity-75">Jun 2025: Selbst nachgebaut. Jan 2026: Pi Agent Harness bestätigt es.</span>
 </div>
 </div>
 
