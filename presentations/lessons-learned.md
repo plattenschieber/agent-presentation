@@ -55,8 +55,13 @@ onMounted(() => {
     a.addEventListener('canplaythrough', () => {
       audioEl.value = a
       a.play().catch(() => {
-        const handler = () => { a.play().catch(() => {}); document.removeEventListener('click', handler) }
+        const handler = () => {
+          a.play().catch(() => {})
+          document.removeEventListener('click', handler)
+          document.removeEventListener('keydown', handler)
+        }
         document.addEventListener('click', handler, { once: true })
+        document.addEventListener('keydown', handler, { once: true })
       })
     }, { once: true })
     a.addEventListener('error', () => tryLoad(i + 1), { once: true })
