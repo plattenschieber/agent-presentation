@@ -335,9 +335,12 @@ April 2025: Alles ändert sich.
 
 <v-click>
 
-<div class="bg-green-50 p-3 rounded-lg mt-4">
+<div class="grid grid-cols-2 gap-4 mt-4">
+<div class="bg-green-50 p-3 rounded-lg">
 <strong>Es fühlte sich an wie ein Co-Founder.</strong> Einer der um 4 Uhr morgens noch da ist und nicht müde wird.
-<div class="text-xs italic mt-1">"Most software does not require hard thinking. Most apps shove data from one form to another." — @steipete</div>
+<div class="text-xs italic mt-1">"Most software does not require hard thinking." — @steipete</div>
+</div>
+<img src="../public/4am-flow.png" alt="4AM Flow State" class="rounded-lg shadow-md" style="max-height: 180px; object-fit: cover;">
 </div>
 
 </v-click>
