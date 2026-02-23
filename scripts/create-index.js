@@ -159,6 +159,13 @@ const html = `<!DOCTYPE html>
                 <span class="cta">View Slides →</span>
             </a>
 
+            <a href="./lessons/" class="presentation-card">
+                <h2>Lessons Learned from One Year of Agentic Coding</h2>
+                <p>The full journey: from tab completion to agents that present themselves. AI Psychosis, Death of the IDE, and how knowledge must flow in teams.</p>
+                <p class="date">February 2026</p>
+                <span class="cta">View Slides →</span>
+            </a>
+
             <a href="./ast-grep/" class="presentation-card">
                 <h2>ast-grep + Claude Code</h2>
                 <p>Automated architectural enforcement for AI-assisted development. How to prevent pattern drift and security issues.</p>
