@@ -36,9 +36,31 @@ mdc: true
 
 # 🧵 Worum geht's?
 
-<div class="flex justify-center mb-2">
-  <audio controls src="alfred-intro.mp3" preload="auto"></audio>
-</div>
+<audio id="alfred-intro" src="/alfred-intro.mp3" preload="auto" style="display:none"></audio>
+
+<script setup>
+import { onMounted, onUnmounted } from 'vue'
+
+let audio
+onMounted(() => {
+  audio = document.getElementById('alfred-intro')
+  if (!audio) return
+  audio.volume = 1.0
+  audio.play().catch(() => {
+    // Safari/Edge: autoplay blocked, play on next interaction
+    const tryPlay = () => {
+      audio.play().catch(() => {})
+      document.removeEventListener('click', tryPlay)
+      document.removeEventListener('keydown', tryPlay)
+    }
+    document.addEventListener('click', tryPlay, { once: true })
+    document.addEventListener('keydown', tryPlay, { once: true })
+  })
+})
+onUnmounted(() => {
+  if (audio) { audio.pause(); audio.currentTime = 0 }
+})
+</script>
 
 <v-click>
 
