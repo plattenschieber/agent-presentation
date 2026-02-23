@@ -331,8 +331,9 @@ April 2025: Alles ändert sich.
 
 <v-click>
 
-<div class="bg-green-50 p-4 rounded-lg mt-6">
+<div class="bg-green-50 p-3 rounded-lg mt-4">
 <strong>Es fühlte sich an wie ein Co-Founder.</strong> Einer der um 4 Uhr morgens noch da ist und nicht müde wird.
+<div class="text-xs italic mt-1">"Most software does not require hard thinking. Most apps shove data from one form to another." — @steipete</div>
 </div>
 
 </v-click>
@@ -516,9 +517,16 @@ Terminal, Filesystem, Git — keine Syntax-Highlighting-GUI.
 
 <v-click>
 
-<div class="bg-blue-50 p-4 rounded-lg mt-6">
-<strong>Die IDE wird zum Viewer, nicht zum Editor.</strong><br/>
-Du schaust dir an was der Agent gemacht hat. Du tippst nicht mehr selbst.
+<div class="bg-blue-50 p-4 rounded-lg mt-4">
+<strong>Die IDE wird zum Viewer, nicht zum Editor.</strong>
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="bg-gray-100 p-3 rounded-lg mt-2 text-sm italic">
+"I don't read much code anymore. I watch the stream and sometimes look at key parts." — <strong>@steipete</strong>
 </div>
 
 </v-click>
@@ -802,7 +810,8 @@ Nicht Wiki. Nicht Confluence. Dort wo der Agent es liest.
 <v-clicks>
 
 <div class="bg-green-50 p-2 rounded-lg mb-2">
-<strong>Intuition entwickeln</strong> — Du FÜHLST wenn das Model struggelt
+<strong>Intuition entwickeln</strong> — Du FÜHLST wenn das Model struggelt<br/>
+<span class="text-xs italic">"When you spend enough time with agents, you know exactly how long sth should take" — @steipete</span>
 </div>
 
 <div class="bg-green-50 p-2 rounded-lg mb-2">
