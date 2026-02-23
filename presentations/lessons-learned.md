@@ -36,19 +36,9 @@ mdc: true
 
 # 🧵 Worum geht's?
 
-<audio id="alfred-intro" src="/alfred-intro.mp3" style="display:none"></audio>
-
-<script setup>
-import { onMounted } from 'vue'
-import { useNav } from '@slidev/client'
-
-const { currentPage } = useNav()
-
-onMounted(() => {
-  const audio = document.getElementById('alfred-intro')
-  if (audio) audio.play().catch(() => {})
-})
-</script>
+<div class="flex justify-center mb-2">
+  <audio controls src="../public/alfred-intro.mp3" preload="auto"></audio>
+</div>
 
 <v-click>
 
