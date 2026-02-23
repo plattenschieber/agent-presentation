@@ -18,7 +18,7 @@ mdc: true
 *From tab completion to agents that present themselves*
 
 <div class="text-center mt-4">
-<img src="/lessons-learned-cover.png" alt="From Hype to Flow" class="mx-auto rounded-lg shadow-md" style="max-height: 280px;">
+<img src="../public/lessons-learned-cover.png" alt="From Hype to Flow" class="mx-auto rounded-lg shadow-md" style="max-height: 280px;">
 </div>
 
 <div class="pt-4">
@@ -263,7 +263,7 @@ class: text-center
 <v-click>
 
 <div class="text-center mt-4">
-<img src="/10xprompt.jpeg" alt="The 10x Prompt Engineering Hype" class="mx-auto rounded-lg shadow-md" style="max-height: 180px;">
+<img src="../public/10xprompt.jpeg" alt="The 10x Prompt Engineering Hype" class="mx-auto rounded-lg shadow-md" style="max-height: 180px;">
 </div>
 
 </v-click>
@@ -366,7 +366,7 @@ April 2025: Alles ändert sich.
 <strong>Es fühlte sich an wie ein Co-Founder.</strong> Einer der um 4 Uhr morgens noch da ist und nicht müde wird.
 <div class="text-xs italic mt-1">"Most software does not require hard thinking." — @steipete</div>
 </div>
-<img src="/4am-flow.png" alt="4AM Flow State" class="rounded-lg shadow-md" style="max-height: 180px; object-fit: cover;">
+<img src="../public/4am-flow.png" alt="4AM Flow State" class="rounded-lg shadow-md" style="max-height: 180px; object-fit: cover;">
 </div>
 
 </v-click>
