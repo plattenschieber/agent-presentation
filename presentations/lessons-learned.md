@@ -622,51 +622,37 @@ Minimalismus als Architekturprinzip.
 
 # 🦞 The Evolution of Agents
 
+<div class="grid grid-cols-4 gap-3 text-sm">
+
 <v-clicks>
 
-<div class="space-y-4">
-
-<div class="bg-gray-100 p-4 rounded-lg flex items-center gap-4">
-<div class="text-3xl">🔧</div>
-<div>
-<strong>Bash + Read + Write + Edit</strong> — Die Primitives. Mehr braucht ein Agent nicht.<br/>
-<span class="text-sm opacity-75">Jun 2025: Selbst nachgebaut. Jan 2026: Pi Agent Harness bestätigt es.</span>
-</div>
+<div class="bg-gray-100 p-3 rounded-lg text-center">
+<div class="text-2xl mb-1">🔧</div>
+<strong>Bash + Read + Write</strong><br/>
+<span class="text-xs opacity-75">Die Primitives. Mehr braucht's nicht.</span>
 </div>
 
-<div class="text-center text-2xl">↓</div>
-
-<div class="bg-blue-50 p-4 rounded-lg flex items-center gap-4">
-<div class="text-3xl">⚡</div>
-<div>
-<strong>Claude Code CLI</strong> — Agent mit echten Tools. Terminal, Git, Tests.<br/>
-<span class="text-sm opacity-75">April 2025</span>
-</div>
+<div class="bg-blue-50 p-3 rounded-lg text-center">
+<div class="text-2xl mb-1">⚡</div>
+<strong>Claude Code CLI</strong><br/>
+<span class="text-xs opacity-75">Agent mit Tools. Apr 2025</span>
 </div>
 
-<div class="text-center text-2xl">↓</div>
-
-<div class="bg-purple-50 p-4 rounded-lg flex items-center gap-4">
-<div class="text-3xl">🦞</div>
-<div>
-<strong>Always-on Services</strong> — Clawdbot → Moltbot → OpenClaw<br/>
-<span class="text-sm opacity-75">WhatsApp, Telegram, Cron, Second Brain, Browser — Dez 2025 bis heute</span>
-</div>
+<div class="bg-purple-50 p-3 rounded-lg text-center">
+<div class="text-2xl mb-1">🦞</div>
+<strong>Always-on Services</strong><br/>
+<span class="text-xs opacity-75">Clawdbot → OpenClaw. Dez 2025</span>
 </div>
 
-<div class="text-center text-2xl">↓</div>
-
-<div class="bg-green-50 p-4 rounded-lg flex items-center gap-4">
-<div class="text-3xl">🏢</div>
-<div>
-<strong>Enterprise Agents</strong> — Managed Platforms, Token Rotation, Team-Infrastruktur<br/>
-<span class="text-sm opacity-75">Die Zukunft für Unternehmen</span>
-</div>
-</div>
-
+<div class="bg-green-50 p-3 rounded-lg text-center">
+<div class="text-2xl mb-1">🏢</div>
+<strong>Enterprise Agents</strong><br/>
+<span class="text-xs opacity-75">Team-Infrastruktur. Die Zukunft.</span>
 </div>
 
 </v-clicks>
+
+</div>
 
 ---
 
