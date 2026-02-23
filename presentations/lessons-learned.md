@@ -36,6 +36,11 @@ mdc: true
 
 </v-click>
 
+<!--
+🎵 Click once → Alfred's surprise intro plays automatically.
+Wait for it to finish, then advance to "Worum geht's".
+-->
+
 ---
 
 # 🧵 Worum geht's?
@@ -83,6 +88,10 @@ Seitdem hat sich <strong>alles</strong> verändert — wie ich code, wie ich den
 </div>
 
 </v-click>
+
+<!--
+NEXT → Timeline-Übersicht (Nov 24 – heute). Kurz durchklicken, jeder Punkt wird ein Act.
+-->
 
 ---
 
@@ -149,6 +158,10 @@ Seitdem hat sich <strong>alles</strong> verändert — wie ich code, wie ich den
 
 </div>
 
+<!--
+NEXT → Act 1: Stone Age. Erzähl vom Copy-Paste-Workflow mit ChatGPT, Cursor Autocomplete.
+-->
+
 ---
 layout: center
 class: text-center
@@ -161,6 +174,11 @@ class: text-center
 *Tab Tab Complete → erste Zweifel*
 
 <div class="text-sm opacity-50 mt-4">November 2024</div>
+
+<!--
+Kurze Act-Karte, einfach weiterklicken.
+NEXT → Tab Completion Detail-Slide mit dem 6-Schritt-Workflow.
+-->
 
 ---
 
@@ -195,6 +213,10 @@ class: text-center
 
 </v-click>
 
+<!--
+NEXT → Act 2: Hype & AI Psychosis. Reddit Rabbit Hole, RIPER, Prompt-Hype. Die dunkle Phase.
+-->
+
 ---
 layout: center
 class: text-center
@@ -207,6 +229,10 @@ class: text-center
 *Alles ausprobiert, nichts funktioniert*
 
 <div class="text-sm opacity-50 mt-4">The ongoing disease</div>
+
+<!--
+NEXT → Reddit Rabbit Hole: RIPER 5, tmux-Setups, 10x Prompt Meme. Dann AI Psychosis.
+-->
 
 ---
 
@@ -252,6 +278,10 @@ class: text-center
 
 </v-click>
 
+<!--
+NEXT → AI Psychosis: Symptome + "Honest moment" Hand heben lassen. Crowd-Interaktion!
+-->
+
 ---
 
 # 🧠 AI Psychosis
@@ -291,6 +321,11 @@ Der Zustand, wo du mehr Zeit mit Prompting verbringst als mit Denken.
 
 </v-click>
 
+<!--
+Hände heben lassen! Kurze Pause, Lacher abwarten.
+NEXT → Act 3: Die echten Durchbrüche. Claude Code, Spec-Driven, Socratic, Permissions.
+-->
+
 ---
 layout: center
 class: text-center
@@ -303,6 +338,10 @@ class: text-center
 *Claude Code = Co-Founder, nicht Autocomplete*
 
 <div class="text-sm opacity-50 mt-4">April – Juni 2025</div>
+
+<!--
+NEXT → Claude Code Detail: Sonnet Qualitätssprung, Mindset-Shift, 4AM Flow + steipete Quote.
+-->
 
 ---
 
@@ -358,6 +397,10 @@ April 2025: Alles ändert sich.
 
 </v-click>
 
+<!--
+NEXT → Spec-Driven Development: brainstorm.md → spec.md → tasks.md Pipeline.
+-->
+
 ---
 
 # 📝 Spec-Driven Development
@@ -410,6 +453,10 @@ Actionable Steps — Agent kann sofort loslegen
 
 </v-click>
 
+<!--
+NEXT → Socratic Approach: AI fragt DICH. Alter vs. neuer Weg. Plan Mode Referenz.
+-->
+
 ---
 
 # 🏛️ The Socratic Approach
@@ -437,6 +484,10 @@ Anthropic hat das später offiziell als "Plan Mode" eingebaut — wir haben's vo
 </div>
 
 </v-click>
+
+<!--
+NEXT → dangerously-skip-permissions + dein Tweet. Show of hands: Permission rage-quit?
+-->
 
 ---
 
@@ -486,6 +537,11 @@ Tweet von @plattenschieber: "Meanwhile I'm using --dangerously-skip-permissions 
 
 </v-click>
 
+<!--
+Wieder Hände heben lassen!
+NEXT → Act 4: Death of the IDE. Amp killed their extension + steipete "I don't read code anymore".
+-->
+
 ---
 layout: center
 class: text-center
@@ -498,6 +554,10 @@ class: text-center
 *IDEs sind für Menschen gebaut, nicht für Agents*
 
 <div class="text-sm opacity-50 mt-4">February 2026</div>
+
+<!--
+NEXT → IDE Detail: Amp killed extensions, Read/Write/Bash reicht. Dann Peter Morocco Story.
+-->
 
 ---
 
@@ -556,6 +616,10 @@ Terminal, Filesystem, Git — keine Syntax-Highlighting-GUI.
 
 </v-click>
 
+<!--
+NEXT → Peter Morocco Story! Die Killer-Anekdote. Agent findet eigenständig Whisper API. Lass dir Zeit hier.
+-->
+
 ---
 
 # 🏖️ Peter in Morocco
@@ -598,6 +662,11 @@ Er hat seinen Agent gefragt wie er das gemacht hat.<br/><br/>
 
 </v-click>
 
+<!--
+Lass die "WTF"-Reaktion sacken. Pause.
+NEXT → Act 5: Wie Agents wirklich evolviert sind. Go-Agent, shittycodingagent.ai, Minimalismus.
+-->
+
 ---
 layout: center
 class: text-center
@@ -608,6 +677,10 @@ class: text-center
 ## How Agents Actually Evolved
 
 *Von "ich nutze Agents" zu "ich verstehe Agents"*
+
+<!--
+NEXT → Go-Agent + shittycodingagent.ai: Selbst einen Agent bauen um es zu verstehen.
+-->
 
 ---
 
@@ -649,6 +722,10 @@ Minimalismus als Architekturprinzip.
 
 </v-click>
 
+<!--
+NEXT → Evolution 4-Stufen: Primitives → CLI → Always-on → Enterprise. Schnell durchklicken.
+-->
+
 ---
 
 # 🦞 The Evolution of Agents
@@ -686,6 +763,10 @@ Minimalismus als Architekturprinzip.
 
 </div>
 
+<!--
+NEXT → Agent schreibt eigene Presentation. CCA Round 4 + ClawCon Inception-Moment.
+-->
+
 ---
 
 # 🪄 Agent Generates Its Own Presentation
@@ -719,6 +800,10 @@ Alfred hat nicht nur die Präsentation erstellt — <strong>er hat sich selbst p
 
 </v-click>
 
+<!--
+NEXT → Act 6: Knowledge Flow für Companies. Der "was heißt das für euch"-Teil.
+-->
+
 ---
 layout: center
 class: text-center
@@ -729,6 +814,10 @@ class: text-center
 ## How to Move Forward as a Company
 
 *Knowledge muss fließen*
+
+<!--
+NEXT → Knowledge Flow Problem: CLAUDE.md auf 3 Ebenen (persönlich → Team → Org).
+-->
 
 ---
 
@@ -771,6 +860,10 @@ Org-wide Patterns<br/>
 </v-clicks>
 
 </div>
+
+<!--
+NEXT → CLAUDE.md als lebende Doku: Confluence stirbt, Code-nahe Docs leben. Convention > Config.
+-->
 
 ---
 
@@ -824,6 +917,10 @@ Nicht Wiki. Nicht Confluence. Dort wo der Agent es liest.
 </div>
 
 </v-click>
+
+<!--
+NEXT → Patterns That Stuck vs. Died. Viele v-clicks — kannst schnell durchgehen oder einzeln betonen.
+-->
 
 ---
 
@@ -903,6 +1000,10 @@ Nicht Wiki. Nicht Confluence. Dort wo der Agent es liest.
 
 </div>
 
+<!--
+NEXT → Die 3 Takes: Intent > Code, Simplicity > Complexity, Knowledge must flow. Dein Closer.
+-->
+
 ---
 layout: center
 class: text-center
@@ -938,6 +1039,11 @@ CLAUDE.md: Lokal → Team → Organisation
 </div>
 
 </v-clicks>
+
+<!--
+Lass jeden Take sacken. Pause zwischen den Clicks.
+NEXT → Resources-Slide, dann Diskussion.
+-->
 
 ---
 
@@ -980,6 +1086,11 @@ CLAUDE.md: Lokal → Team → Organisation
 
 </div>
 
+<!--
+Kurz stehen lassen, nicht vorlesen. Leute können Foto machen.
+NEXT → Diskussion! Drei Fragen als Gesprächsstarter.
+-->
+
 ---
 layout: center
 class: text-center
@@ -1015,3 +1126,8 @@ class: text-center
 <div class="absolute bottom-10 left-10">
 <small>Slides: github.com/plattenschieber/agent-presentation</small>
 </div>
+
+<!--
+Letzte Slide! Drei Fragen aufdecken, dann offen für Diskussion.
+Du hast es geschafft 🎉
+-->
