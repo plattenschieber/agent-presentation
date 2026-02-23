@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ELEVENLABS_API_KEY = 'sk_f41b354ac95f8f91f214b800bff30b2f5ea7c9c2e9b03e79';
-const VOICE_ID = 'JBFqnCBsd6RMkjVDRZzb'; // George
+const VOICE_ID = 'rNzVNTrvSffyxdrTbLKv'; // Spicy British
 
 const SLIDES = [
   {
