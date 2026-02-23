@@ -17,9 +17,13 @@ mdc: true
 
 *From tab completion to agents that present themselves*
 
-<div class="pt-8">
+<div class="text-center mt-4">
+<img src="../public/lessons-learned-cover.png" alt="From Hype to Flow" class="mx-auto rounded-lg shadow-md" style="max-height: 280px;">
+</div>
+
+<div class="pt-4">
   <div class="text-lg opacity-75">Jeronim Morina — @plattenschieber</div>
-  <div class="text-sm opacity-50 mt-2">February 2026</div>
+  <div class="text-sm opacity-50 mt-1">February 2026</div>
 </div>
 
 <div class="pt-12">
