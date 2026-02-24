@@ -33,8 +33,8 @@ mdc: true
 </v-click>
 
 <!--
-🎵 Click → Alfred's surprise intro plays.
-Wait for it to finish, then advance.
+🎵 Click → Alfred drops in uninvited. Let him cook.
+Audience won't expect it. Wait for the laugh, then advance.
 -->
 
 ---
@@ -54,7 +54,7 @@ Wait for it to finish, then advance.
 </div>
 
 <div class="bg-blue-50 p-3 rounded-lg mb-3">
-<strong>17. Feb — Peter → OpenAI:</strong> OpenClaw geht in eine Foundation. 25k GitHub Stars in einer Woche.
+<strong>17. Feb — Peter → OpenAI:</strong> OpenClaw geht in eine Foundation. 224k GitHub Stars. Wikipedia-Eintrag.
 </div>
 
 <div class="bg-green-50 p-3 rounded-lg mb-3">
@@ -68,8 +68,8 @@ Wait for it to finish, then advance.
 </v-clicks>
 
 <!--
-Schnell durchklicken. Jeder Punkt ein Beat.
-NEXT → ClawCon Vienna + Alfred auf der Bühne.
+🌶️ Machine-gun style. Click-click-click. Let the absurdity of one month sink in.
+NEXT → ClawCon Vienna. Time to flex.
 -->
 
 ---
@@ -117,8 +117,8 @@ Auch Alfred.<br/><br/>
 </v-click>
 
 <!--
-Lass den Inception-Moment sacken.
-NEXT → DAS Foto + Peter → OpenAI.
+🌶️ "Inception Level 3" — pause for the existential crisis. You're presenting slides made by the AI that's narrating them.
+NEXT → DAS Foto. Peak clout.
 -->
 
 ---
@@ -136,15 +136,15 @@ NEXT → DAS Foto + Peter → OpenAI.
 <v-click>
 
 <div class="bg-blue-50 p-4 rounded-lg mt-4 text-center">
-<strong>Peter Steinberger → OpenAI.</strong> OpenClaw → Foundation. 25k Stars in einer Woche.<br/>
+<strong>Peter Steinberger → OpenAI.</strong> OpenClaw → Foundation. 224k Stars. Hat einen Wikipedia-Eintrag.<br/>
 <span class="text-sm opacity-75">steipete.me/posts/2026/openclaw</span>
 </div>
 
 </v-click>
 
 <!--
-Foto wirken lassen. Kurze Pause.
-NEXT → Dein eigenes Tooling in den offiziellen Docs.
+🌶️ Let the photo hit. That's 50+ people losing their minds over a lobster. You were there. Flex it.
+NEXT → Your tooling in the official docs. Humble brag incoming.
 -->
 
 ---
@@ -187,8 +187,8 @@ NEXT → Dein eigenes Tooling in den offiziellen Docs.
 </v-click>
 
 <!--
-Determinismus-Anekdote erzählen: "In einer Welt wo alles probabilistisch ist, will ich wenigstens meine Workflows kontrollieren."
-NEXT → 3 Takes von gestern.
+🌶️ Drop the determinism line: "Everything around me is stochastic bullshit — at least my pipelines do what I tell them."
+NEXT → Knowledge Flow. The corporate money slide.
 -->
 
 ---
@@ -238,8 +238,8 @@ NEXT → 3 Takes von gestern.
 <div class="grid grid-cols-2 gap-3 mt-2 text-sm">
 
 <div class="bg-blue-50 p-3 rounded-lg">
-<strong>📝 Prompts einchecken</strong><br/>
-Nicht nur Code committen — auch die Prompts. Zeigt die <em>Intention</em> hinter der Änderung.<br/>
+<strong>📝 Intent einchecken</strong><br/>
+Nicht nur Code committen — auch den <em>Intent</em>. Was war die Absicht hinter der Änderung?<br/>
 <span class="text-xs opacity-75">Tool: specstory.com</span>
 </div>
 
@@ -256,15 +256,15 @@ Nicht nur Code committen — auch die Prompts. Zeigt die <em>Intention</em> hint
 <v-click>
 
 <div class="bg-yellow-50 p-3 rounded-lg mt-2 text-sm text-center">
-<strong>Das Ziel:</strong> CLAUDE.md wächst → wird zu groß → wird in <strong>Skills</strong> ausgelagert → Company wird systematisch schneller. Wissen, das Agents effektiv nutzen können.
+<strong>Egal ob solo oder im Team:</strong> Sobald deine CLAUDE.md zu groß wird → in <strong>Skills</strong> auslagern. Du baust ein System das sich mit jedem Commit selbst verbessert.
 </div>
 
 </v-click>
 
 <!--
-Actionable Takeaway: Prompts einchecken (specstory.com), tägliche + wöchentliche Reviews, CLAUDE.md → Skills Pipeline.
-Die Company baut ein System das sich selbst verbessert.
-NEXT → Lightning Round.
+🌶️ THIS is the slide people will screenshot. Intent > Code, daily reviews, Skills when it gets big.
+Tell them: "You can start this TODAY. Alone. No permission needed."
+NEXT → Lightning Round. Hand the mic to the audience.
 -->
 
 ---
@@ -314,6 +314,6 @@ class: text-center
 </div>
 
 <!--
-Lightning Round öffnen. Dann Diskussion.
-Du hast es geschafft 🎉
+🌶️ Your job is done. Now make THEM talk. The best CCA rounds are the ones where the audience doesn't shut up.
+Grab a beer. You earned it. 🍺
 -->
