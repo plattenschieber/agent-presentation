@@ -50,7 +50,7 @@ const round5AudioMap: Record<number, string> = {
   3: 'audio-r5/r5-slide03-clawcon.mp3',
   4: 'audio-r5/r5-slide04-photo.mp3',
   5: 'audio-r5/r5-slide05-docs.mp3',
-  6: 'audio-r5/r5-slide06-takes.mp3',
+  6: 'audio-r5/r5-slide06-knowledge.mp3',
   7: 'audio-r5/r5-slide07-lightning.mp3',
 }
 

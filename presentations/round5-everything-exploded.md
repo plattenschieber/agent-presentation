@@ -193,31 +193,66 @@ NEXT → 3 Takes von gestern.
 
 ---
 
-# 🎯 3 Takes (von gestern)
+# 🏢 Knowledge Must Flow
 
-<v-clicks>
+<v-click>
 
-<div class="text-center mb-6">
-<div class="text-3xl font-bold text-blue-600 mb-2">1. Intent > Code</div>
-<div class="text-base opacity-75">Hör auf zu tippen. Fang an zu formulieren.</div>
+<div class="text-center text-xl font-bold text-red-600 mb-4">
+Jede Erkenntnis die in deinem lokalen Repo bleibt, ist für die Organisation verloren.
 </div>
 
-<div class="text-center mb-6">
-<div class="text-3xl font-bold text-green-600 mb-2">2. Simplicity > Complexity</div>
-<div class="text-base opacity-75">Alles was funktioniert hat, kam durch Weglassen. Bash, Read, Write, Edit — mehr braucht's nicht.</div>
+</v-click>
+
+<v-click>
+
+<div class="flex items-center justify-center gap-3 text-sm mb-4">
+
+<div class="bg-blue-50 p-3 rounded-lg text-center" style="min-width: 140px">
+<div class="text-2xl mb-1">👤</div>
+<strong>CLAUDE.md</strong><br/>
+<span class="text-xs">Dein lokales Repo</span>
 </div>
 
-<div class="text-center mb-6">
-<div class="text-3xl font-bold text-purple-600 mb-2">3. Knowledge must flow</div>
-<div class="text-base opacity-75">CLAUDE.md: Lokal → Team → Organisation. Dort wo der Agent es liest.</div>
+<div class="text-2xl opacity-50">→</div>
+
+<div class="bg-purple-50 p-3 rounded-lg text-center" style="min-width: 140px">
+<div class="text-2xl mb-1">👥</div>
+<strong>Team-CLAUDE.md</strong><br/>
+<span class="text-xs">Shared Repo / Monorepo</span>
 </div>
 
-</v-clicks>
+<div class="text-2xl opacity-50">→</div>
+
+<div class="bg-green-50 p-3 rounded-lg text-center" style="min-width: 140px">
+<div class="text-2xl mb-1">🏢</div>
+<strong>Org-CLAUDE.md</strong><br/>
+<span class="text-xs">Company-wide Patterns</span>
+</div>
+
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="grid grid-cols-2 gap-4 mt-2">
+
+<div class="bg-red-50 p-3 rounded-lg text-sm">
+<strong>❌ Alter Weg:</strong> Confluence-Seite → niemand liest sie → veraltet nach 2 Wochen → Wissen stirbt still
+</div>
+
+<div class="bg-green-50 p-3 rounded-lg text-sm">
+<strong>✅ Neuer Weg:</strong> Code-nah, agent-lesbar, versioniert, lebendig. Nicht Wiki — dort wo der Agent es liest.
+</div>
+
+</div>
+
+</v-click>
 
 <!--
-Jeden Take kurz anteasen, nicht tief einsteigen — war gestern der 30-min Talk.
-Full Slides: github.com/plattenschieber/agent-presentation → lessons/
-NEXT → Discussion.
+DAS ist der actionable Takeaway für Companies. Jeder kann heute anfangen mit seiner lokalen CLAUDE.md.
+Dann ins Team-Repo heben. Dann org-wide.
+NEXT → Lightning Round.
 -->
 
 ---
