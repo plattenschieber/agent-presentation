@@ -197,36 +197,36 @@ NEXT → 3 Takes von gestern.
 
 <v-click>
 
-<div class="text-center text-xl font-bold text-red-600 mb-4">
-Jede Erkenntnis die in deinem lokalen Repo bleibt, ist für die Organisation verloren.
-</div>
+<div class="flex items-center justify-center gap-2 text-sm mb-3">
 
-</v-click>
-
-<v-click>
-
-<div class="flex items-center justify-center gap-3 text-sm mb-4">
-
-<div class="bg-blue-50 p-3 rounded-lg text-center" style="min-width: 140px">
-<div class="text-2xl mb-1">👤</div>
+<div class="bg-blue-50 p-2 rounded-lg text-center" style="min-width: 120px">
+<div class="text-xl mb-1">👤</div>
 <strong>CLAUDE.md</strong><br/>
-<span class="text-xs">Dein lokales Repo</span>
+<span class="text-xs">Lokales Repo</span>
 </div>
 
-<div class="text-2xl opacity-50">→</div>
+<div class="text-xl opacity-50">→</div>
 
-<div class="bg-purple-50 p-3 rounded-lg text-center" style="min-width: 140px">
-<div class="text-2xl mb-1">👥</div>
-<strong>Team-CLAUDE.md</strong><br/>
-<span class="text-xs">Shared Repo / Monorepo</span>
+<div class="bg-purple-50 p-2 rounded-lg text-center" style="min-width: 120px">
+<div class="text-xl mb-1">👥</div>
+<strong>Team</strong><br/>
+<span class="text-xs">Shared Repo</span>
 </div>
 
-<div class="text-2xl opacity-50">→</div>
+<div class="text-xl opacity-50">→</div>
 
-<div class="bg-green-50 p-3 rounded-lg text-center" style="min-width: 140px">
-<div class="text-2xl mb-1">🏢</div>
-<strong>Org-CLAUDE.md</strong><br/>
-<span class="text-xs">Company-wide Patterns</span>
+<div class="bg-green-50 p-2 rounded-lg text-center" style="min-width: 120px">
+<div class="text-xl mb-1">🏢</div>
+<strong>Org</strong><br/>
+<span class="text-xs">Company-wide</span>
+</div>
+
+<div class="text-xl opacity-50">→</div>
+
+<div class="bg-orange-50 p-2 rounded-lg text-center" style="min-width: 120px">
+<div class="text-xl mb-1">🧩</div>
+<strong>Skills</strong><br/>
+<span class="text-xs">Ausgelagert</span>
 </div>
 
 </div>
@@ -235,23 +235,35 @@ Jede Erkenntnis die in deinem lokalen Repo bleibt, ist für die Organisation ver
 
 <v-click>
 
-<div class="grid grid-cols-2 gap-4 mt-2">
+<div class="grid grid-cols-2 gap-3 mt-2 text-sm">
 
-<div class="bg-red-50 p-3 rounded-lg text-sm">
-<strong>❌ Alter Weg:</strong> Confluence-Seite → niemand liest sie → veraltet nach 2 Wochen → Wissen stirbt still
+<div class="bg-blue-50 p-3 rounded-lg">
+<strong>📝 Prompts einchecken</strong><br/>
+Nicht nur Code committen — auch die Prompts. Zeigt die <em>Intention</em> hinter der Änderung.<br/>
+<span class="text-xs opacity-75">Tool: specstory.com</span>
 </div>
 
-<div class="bg-green-50 p-3 rounded-lg text-sm">
-<strong>✅ Neuer Weg:</strong> Code-nah, agent-lesbar, versioniert, lebendig. Nicht Wiki — dort wo der Agent es liest.
+<div class="bg-green-50 p-3 rounded-lg">
+<strong>🔄 Review-Rhythmus</strong><br/>
+<strong>Täglich:</strong> Was hab ich gelernt? → CLAUDE.md<br/>
+<strong>Wöchentlich:</strong> Was hat das Team gelernt? → Team-CLAUDE.md
 </div>
 
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="bg-yellow-50 p-3 rounded-lg mt-2 text-sm text-center">
+<strong>Das Ziel:</strong> CLAUDE.md wächst → wird zu groß → wird in <strong>Skills</strong> ausgelagert → Company wird systematisch schneller. Wissen, das Agents effektiv nutzen können.
 </div>
 
 </v-click>
 
 <!--
-DAS ist der actionable Takeaway für Companies. Jeder kann heute anfangen mit seiner lokalen CLAUDE.md.
-Dann ins Team-Repo heben. Dann org-wide.
+Actionable Takeaway: Prompts einchecken (specstory.com), tägliche + wöchentliche Reviews, CLAUDE.md → Skills Pipeline.
+Die Company baut ein System das sich selbst verbessert.
 NEXT → Lightning Round.
 -->
 
