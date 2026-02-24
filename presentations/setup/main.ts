@@ -2,38 +2,66 @@ import { defineAppSetup } from '@slidev/types'
 import { watch } from 'vue'
 import { useNav } from '@slidev/client'
 
-const audioMap: Record<number, string> = {
-  2: 'slide02-worum.mp3',
-  3: 'slide03-timeline.mp3',
-  4: 'slide04-act1.mp3',
-  5: 'slide05-tab.mp3',
-  6: 'slide06-act2.mp3',
-  7: 'slide07-reddit.mp3',
-  8: 'slide08-psychosis.mp3',
-  9: 'slide09-act3.mp3',
-  10: 'slide10-claude.mp3',
-  11: 'slide11-specflow.mp3',
-  12: 'slide12-socratic.mp3',
-  13: 'slide13-permissions.mp3',
-  14: 'slide14-act4.mp3',
-  15: 'slide15-ide-detail.mp3',
-  16: 'slide16-peter.mp3',
-  17: 'slide17-act5.mp3',
-  18: 'slide18-understand.mp3',
-  19: 'slide19-evolution.mp3',
-  20: 'slide20-presentation.mp3',
-  21: 'slide21-act6.mp3',
-  22: 'slide22-knowledge.mp3',
-  23: 'slide23-claudemd.mp3',
-  24: 'slide24-patterns.mp3',
-  25: 'slide25-takes.mp3',
-  26: 'slide26-resources.mp3',
-  27: 'slide27-discussion.mp3',
+// Detect which presentation is running based on total slide count or URL
+function detectPresentation(): 'lessons' | 'round5' | 'unknown' {
+  const path = window.location.pathname
+  if (path.includes('round5')) return 'round5'
+  if (path.includes('lessons')) return 'lessons'
+  // Fallback: check document title
+  const title = document.title.toLowerCase()
+  if (title.includes('round 5')) return 'round5'
+  if (title.includes('lessons')) return 'lessons'
+  return 'unknown'
+}
+
+// Lessons Learned (27 slides)
+const lessonsAudioMap: Record<number, string> = {
+  2: 'audio/slide02-worum.mp3',
+  3: 'audio/slide03-timeline.mp3',
+  4: 'audio/slide04-act1.mp3',
+  5: 'audio/slide05-tab.mp3',
+  6: 'audio/slide06-act2.mp3',
+  7: 'audio/slide07-reddit.mp3',
+  8: 'audio/slide08-psychosis.mp3',
+  9: 'audio/slide09-act3.mp3',
+  10: 'audio/slide10-claude.mp3',
+  11: 'audio/slide11-specflow.mp3',
+  12: 'audio/slide12-socratic.mp3',
+  13: 'audio/slide13-permissions.mp3',
+  14: 'audio/slide14-act4.mp3',
+  15: 'audio/slide15-ide-detail.mp3',
+  16: 'audio/slide16-peter.mp3',
+  17: 'audio/slide17-act5.mp3',
+  18: 'audio/slide18-understand.mp3',
+  19: 'audio/slide19-evolution.mp3',
+  20: 'audio/slide20-presentation.mp3',
+  21: 'audio/slide21-act6.mp3',
+  22: 'audio/slide22-knowledge.mp3',
+  23: 'audio/slide23-claudemd.mp3',
+  24: 'audio/slide24-patterns.mp3',
+  25: 'audio/slide25-takes.mp3',
+  26: 'audio/slide26-resources.mp3',
+  27: 'audio/slide27-discussion.mp3',
+}
+
+// Round 5 (7 slides)
+const round5AudioMap: Record<number, string> = {
+  2: 'audio-r5/r5-slide02-since.mp3',
+  3: 'audio-r5/r5-slide03-clawcon.mp3',
+  4: 'audio-r5/r5-slide04-photo.mp3',
+  5: 'audio-r5/r5-slide05-docs.mp3',
+  6: 'audio-r5/r5-slide06-takes.mp3',
+  7: 'audio-r5/r5-slide07-lightning.mp3',
+}
+
+const introFiles: Record<string, string> = {
+  lessons: 'audio/slide02-intro.mp3',
+  round5: 'audio-r5/r5-slide01-intro.mp3',
 }
 
 const AUDIO_PATHS = [
-  (f: string) => `/audio/${f}`,
-  (f: string) => `/agent-presentation/public/audio/${f}`,
+  (f: string) => `/${f}`,
+  (f: string) => `/agent-presentation/public/${f}`,
 ]
 
 export default defineAppSetup(({ app }) => {
@@ -62,16 +90,19 @@ export default defineAppSetup(({ app }) => {
     tryPath(0)
   }
 
-  // Wait for router to be ready, then watch
   setTimeout(() => {
     try {
+      const pres = detectPresentation()
+      const audioMap = pres === 'round5' ? round5AudioMap : lessonsAudioMap
+      const introFile = introFiles[pres] || introFiles.lessons
+
       const { currentPage, clicks } = useNav()
 
-      // Play intro on first click on slide 1 (v-click step)
+      // Play intro on first click on slide 1
       watch(clicks, (newClicks) => {
         if (currentPage.value === 1 && newClicks >= 1 && !introPlayed) {
           introPlayed = true
-          playFile('slide02-intro.mp3')
+          playFile(introFile)
         }
       })
 

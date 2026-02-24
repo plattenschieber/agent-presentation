@@ -4,7 +4,7 @@
   "description": "Slidev presentations about agentic coding tools for Claude Code Anonymous meetup",
   "scripts": {
     "build": "npm run build:all",
-    "build:all": "npm run build:round1 && npm run build:round2 && npm run build:round3 && npm run build:round4 && npm run build:astgrep && npm run build:lessons && npm run build:index",
+    "build:all": "npm run build:round1 && npm run build:round2 && npm run build:round3 && npm run build:round4 && npm run build:round5 && npm run build:astgrep && npm run build:lessons && npm run build:index",
     "build:round1": "slidev build presentations/agentic-journey-slides.md --base /agent-presentation/round1/ --out ../dist/round1",
     "build:round2": "slidev build presentations/round2-hype-to-habits.md --base /agent-presentation/round2/ --out ../dist/round2",
     "build:round3": "slidev build presentations/round3-patterns-that-stuck.md --base /agent-presentation/round3/ --out ../dist/round3",
@@ -17,7 +17,9 @@
     "dev:round3": "slidev presentations/round3-patterns-that-stuck.md --open",
     "dev:round4": "slidev presentations/round4-claude-code-anonymous.md --open",
     "dev:astgrep": "slidev presentations/ast-grep-best-practice.md --open",
-    "dev:lessons": "slidev presentations/lessons-learned.md --open"
+    "dev:lessons": "slidev presentations/lessons-learned.md --open",
+    "dev:round5": "slidev presentations/round5-everything-exploded.md --open",
+    "build:round5": "slidev build presentations/round5-everything-exploded.md --base /agent-presentation/round5/ --out ../dist/round5"
   },
   "devDependencies": {
     "@slidev/cli": "^52.6.0",

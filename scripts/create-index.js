@@ -159,6 +159,13 @@ const html = `<!DOCTYPE html>
                 <span class="cta">View Slides →</span>
             </a>
 
+            <a href="./round5/" class="presentation-card">
+                <h2>Round 5: The Month Everything Exploded</h2>
+                <p>ClawCon Vienna, Peter → OpenAI, 25k Stars, and brain-cli in the official docs. One month that changed everything — with spicy AI narration.</p>
+                <p class="date">February 2026</p>
+                <span class="cta">View Slides →</span>
+            </a>
+
             <a href="./lessons/" class="presentation-card">
                 <h2>Lessons Learned from One Year of Agentic Coding</h2>
                 <p>The full journey: from tab completion to agents that present themselves. AI Psychosis, Death of the IDE, and how knowledge must flow in teams.</p>
