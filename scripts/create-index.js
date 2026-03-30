@@ -173,6 +173,13 @@ const html = `<!DOCTYPE html>
                 <span class="cta">View Slides →</span>
             </a>
 
+            <a href="./medicaldocu/" class="presentation-card">
+                <h2>MedicalDocu + Sokrates</h2>
+                <p>A technical 5-minute lightning talk on trustworthy medical documentation, operational AI, and WhatsApp → PR → preview workflows.</p>
+                <p class="date">March 2026</p>
+                <span class="cta">View Slides →</span>
+            </a>
+
             <a href="./ast-grep/" class="presentation-card">
                 <h2>ast-grep + Claude Code</h2>
                 <p>Automated architectural enforcement for AI-assisted development. How to prevent pattern drift and security issues.</p>
