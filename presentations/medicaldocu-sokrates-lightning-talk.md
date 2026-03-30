@@ -1,10 +1,9 @@
 ---
 theme: default
-title: MedicalDocu + Sokrates
-description: 5-minute lightning talk about MedicalDocu and Sokrates as an operational AI system
+title: Sokrates — Company OS
 info: |
-  ## MedicalDocu + Sokrates
-  A technical lightning talk on product quality, operational AI, and end-to-end execution
+  ## Sokrates — Company OS
+  A 5-minute lightning talk on operational AI, team coordination, and end-to-end execution with OpenClaw
 class: text-center
 highlighter: shiki
 drawings:
@@ -13,14 +12,14 @@ transition: slide-left
 mdc: true
 ---
 
-# MedicalDocu + Sokrates
-## From Chat Message to Shipped Change
+# Sokrates — Company OS
+## Built on OpenClaw
 
-*AI that doesn't just talk — it moves work across the whole system*
+*Not another chatbot. An operational system for building a company.*
 
 <div class="pt-4">
   <div class="text-lg opacity-75">Jeronim Morina + Team Brynk</div>
-  <div class="text-sm opacity-50 mt-1">5-minute lightning talk</div>
+  <div class="text-sm opacity-50 mt-1">ClawCon NRW — 5-minute lightning talk</div>
 </div>
 
 <div class="pt-8">
@@ -31,37 +30,35 @@ mdc: true
 
 ---
 
-# The Problem We Actually Care About
-## Documentation pressure destroys quality
+# The Problem With Most AI Usage
+## Smart tools, fragmented work
 
 <v-clicks>
 
 <div class="bg-red-50 p-3 rounded-lg mb-3 text-left">
-<strong>Medical reality:</strong> documentation steals time from patient care
+<strong>Everyone has their own Claude / ChatGPT tab.</strong><br/>
+Useful individually. Chaotic collectively.
 </div>
 
 <div class="bg-orange-50 p-3 rounded-lg mb-3 text-left">
-<strong>Process reality:</strong> under pressure, relevant information gets lost
+<strong>Context gets lost across chats, docs, repos, and tasks.</strong><br/>
+Good ideas die in copy-paste limbo.
 </div>
 
-<div class="bg-yellow-50 p-3 rounded-lg mb-3 text-left">
-<strong>Business reality:</strong> delayed or incomplete letters create rework and lost revenue
-</div>
-
-<div class="bg-blue-50 p-3 rounded-lg text-left">
-<strong>Our thesis:</strong> this is not mainly an automation problem. It's a <em>quality + trust</em> problem.
+<div class="bg-yellow-50 p-3 rounded-lg text-left">
+<strong>Our take:</strong> companies do not just need AI tools. They need an <em>AI operating system</em>.
 </div>
 
 </v-clicks>
 
 <!--
-Lead with pain, not AI. MedicalDocu makes more sense once the audience feels the actual constraint.
+Frame the enemy clearly: fragmented solo-AI usage.
 -->
 
 ---
 
-# What MedicalDocu Does
-## Trustworthy medical documentation for the DACH market
+# What Sokrates Is
+## Our Company OS
 
 <div class="grid grid-cols-2 gap-6">
 
@@ -70,18 +67,18 @@ Lead with pain, not AI. MedicalDocu makes more sense once the audience feels the
 <v-clicks>
 
 <div class="bg-blue-50 p-3 rounded-lg mb-3 text-left">
-<strong>1. Capture conversation</strong><br/>
-Patient conversation gets recorded in the background
+<strong>Built on OpenClaw</strong><br/>
+Messaging-native, tool-enabled, automatable AI runtime
 </div>
 
 <div class="bg-blue-50 p-3 rounded-lg mb-3 text-left">
-<strong>2. Generate draft</strong><br/>
-Structured, reviewable doctor letter in German medical language
+<strong>Skills</strong><br/>
+Domain-specific capabilities for repeatable execution
 </div>
 
 <div class="bg-blue-50 p-3 rounded-lg text-left">
-<strong>3. Doctor approves</strong><br/>
-Human-in-the-loop. The doctor stays author.
+<strong>Memory</strong><br/>
+Persistent context across people, projects, and decisions
 </div>
 
 </v-clicks>
@@ -93,67 +90,44 @@ Human-in-the-loop. The doctor stays author.
 <v-clicks>
 
 <div class="bg-green-50 p-3 rounded-lg mb-3 text-left">
-<strong>Positioning:</strong><br/>
-Not “AI for doctor letters”<br/>
-But: <em>trustworthy quality solution for medical documentation</em>
+<strong>Boards + workflows</strong><br/>
+Structured execution instead of chat chaos
 </div>
 
-<div class="bg-purple-50 p-3 rounded-lg text-left">
-<strong>Why this matters:</strong><br/>
-Automation without trust is a demo.<br/>
-Quality + reviewability is a product.
-</div>
-
-</v-clicks>
-
-</div>
-
-</div>
-
----
-
-# Where Sokrates Fits
-## Not in the product — in the operating system around it
-
-<v-clicks>
-
-<div class="bg-gray-100 p-3 rounded-lg mb-3 text-left">
-<strong>Sokrates is our Chief-of-Staff AI.</strong><br/>
-It supports the team across WhatsApp, files, repos, tasks, and workflows.
-</div>
-
-<div class="bg-blue-50 p-3 rounded-lg mb-3 text-left">
-<strong>It is not “just chat”.</strong><br/>
-It has memory, skills, repo access, automation, and deployment workflows.
+<div class="bg-green-50 p-3 rounded-lg mb-3 text-left">
+<strong>Integrations</strong><br/>
+WhatsApp, repos, previews, docs, browser automation, and more
 </div>
 
 <div class="bg-green-50 p-3 rounded-lg text-left">
-<strong>So the interesting part is:</strong><br/>
-Feedback no longer dies in chats. It can move directly into execution.
+<strong>Role logic</strong><br/>
+Support aligned to how the team actually works
 </div>
 
 </v-clicks>
 
-<!--
-Key distinction: product AI vs operational AI. That's the technical and organizational angle.
--->
+</div>
+
+</div>
 
 ---
 
-# End-to-End Flow
-## WhatsApp → repo change → PR → preview
+# Why This Is Different
+## Chatbot vs operational system
 
 <div class="grid grid-cols-2 gap-6 text-left">
 
 <div>
 
-### Input surface
+### Typical AI setup
 
 <v-clicks>
 
-- Team discusses landing page copy in WhatsApp
-- Concrete feedback lands in the group chat
-- Sokrates is mentioned directly in the thread
+- person asks model something
+- output lands in a private tab
+- someone manually copies it somewhere
+- ownership is fuzzy
+- execution depends on follow-through
 
 </v-clicks>
 
@@ -161,15 +135,15 @@ Key distinction: product AI vs operational AI. That's the technical and organiza
 
 <div>
 
-### Execution path
+### Sokrates setup
 
 <v-clicks>
 
-- Skill selected for MedicalDocu landing page changes
-- Copy updated in the dedicated repo
-- Build runs automatically
-- Draft PR opens
-- Preview URL gets posted back to the team
+- team asks in the channel they already use
+- context is attached to the request
+- the right skill executes real work
+- outputs return to the team loop
+- memory and structure improve over time
 
 </v-clicks>
 
@@ -179,133 +153,155 @@ Key distinction: product AI vs operational AI. That's the technical and organiza
 
 <v-click>
 
-<div class="bg-yellow-50 p-4 rounded-lg mt-6 text-left">
-<strong>This is the punchline:</strong> AI is not just generating artifacts. It's connecting communication, implementation, and feedback loops.
+<div class="bg-purple-50 p-4 rounded-lg mt-6 text-left">
+<strong>Claim:</strong> Sokrates is not mainly about generating text. It is about reducing the distance between team intent and shipped execution.
 </div>
 
 </v-click>
 
 ---
 
-# Why This Matters Technically
-## It compresses the distance between intent and output
-
-<v-clicks>
-
-<div class="bg-purple-50 p-3 rounded-lg mb-3 text-left">
-<strong>Before:</strong> Chat discussion → somebody writes ticket → context gets lost → someone implements later
-</div>
-
-<div class="bg-green-50 p-3 rounded-lg mb-3 text-left">
-<strong>After:</strong> Chat discussion → structured execution path → PR + preview while context is still hot
-</div>
-
-<div class="bg-blue-50 p-3 rounded-lg text-left">
-<strong>Technical lever:</strong> skills, memory, repo-aware automation, and channel-native interaction
-</div>
-
-</v-clicks>
-
----
-
-# Architecture Principle
-## Product system + operational system
-
-<div class="grid grid-cols-2 gap-6">
-
-<div>
-
-### MedicalDocu
-
-<v-clicks>
-
-- User-facing product
-- Medical workflow
-- Trust, correctness, reviewability
-- Core business value
-
-</v-clicks>
-
-</div>
-
-<div>
-
-### Sokrates
-
-<v-clicks>
-
-- Internal AI system
-- Coordination + execution layer
-- Moves context across tools
-- Helps the team ship faster with less friction
-
-</v-clicks>
-
-</div>
-
-</div>
-
-<v-click>
-
-<div class="bg-orange-50 p-4 rounded-lg mt-6 text-left">
-<strong>Opinionated takeaway:</strong> a lot of teams only think about AI inside the product. The bigger leverage is often AI around the product.
-</div>
-
-</v-click>
-
----
-
-# Demo Structure for 5 Minutes
-## Keep it brutally simple
+# The Team Layer
+## AI with role awareness
 
 <v-clicks>
 
 <div class="bg-gray-100 p-3 rounded-lg mb-3 text-left">
-<strong>Minute 1:</strong> the documentation problem and why trust matters
+We work with a 5-dimensional leadership model: Apostle, Prophet, Teacher, Evangelist, Pastor.
 </div>
 
 <div class="bg-blue-50 p-3 rounded-lg mb-3 text-left">
-<strong>Minute 2:</strong> what MedicalDocu actually does
+Sokrates does not just know <em>what</em> was said. It also knows <em>who should own what</em>.
 </div>
 
-<div class="bg-green-50 p-3 rounded-lg mb-3 text-left">
-<strong>Minutes 3–4:</strong> show one real end-to-end Sokrates workflow
-</div>
-
-<div class="bg-yellow-50 p-3 rounded-lg text-left">
-<strong>Minute 5:</strong> explain the architectural pattern: product AI + operational AI
+<div class="bg-green-50 p-3 rounded-lg text-left">
+That turns AI from individual helper into coordination infrastructure for real team collaboration.
 </div>
 
 </v-clicks>
 
 <!--
-If live demo is risky, use screenshots. The story matters more than the stunt.
+Keep roles compact. Just enough to make the governance layer feel real.
 -->
+
+---
+
+# Example Capabilities
+## Same system, different outcomes
+
+<div class="grid grid-cols-2 gap-6 text-left">
+
+<div>
+
+<v-clicks>
+
+<div class="bg-blue-50 p-3 rounded-lg mb-3">
+<strong>Landing page iteration</strong><br/>
+WhatsApp feedback → repo change → PR → preview
+</div>
+
+<div class="bg-blue-50 p-3 rounded-lg mb-3">
+<strong>StoryBrand / messaging work</strong><br/>
+Framework-guided artifact creation with project context
+</div>
+
+<div class="bg-blue-50 p-3 rounded-lg">
+<strong>Bug capture</strong><br/>
+Testing insights → structured board entries → prioritization
+</div>
+
+</v-clicks>
+
+</div>
+
+<div>
+
+<v-clicks>
+
+<div class="bg-green-50 p-3 rounded-lg mb-3">
+<strong>Knowledge continuity</strong><br/>
+Memory across sessions, projects, and people
+</div>
+
+<div class="bg-green-50 p-3 rounded-lg mb-3">
+<strong>Integrations</strong><br/>
+Files, browser automation, repos, docs, messaging
+</div>
+
+<div class="bg-green-50 p-3 rounded-lg">
+<strong>Future backbone: Omaship</strong><br/>
+Secure deployment layer for shipping these systems and the apps around them
+</div>
+
+</v-clicks>
+
+</div>
+
+</div>
+
+---
+
+# Live Demo
+## One WhatsApp message, real execution
+
+<div class="bg-gray-100 p-5 rounded-lg text-left text-sm leading-7">
+<strong>Quoted prompt on the slide:</strong><br/><br/>
+“@sokrates Bitte überarbeite die MedicalDocu-Landingpage:<br/>
+1. Stelle Vertrauen und medizinische Qualität stärker in den Vordergrund als reine Automatisierung.<br/>
+2. Passe den Hero so an, dass klar wird: weniger Dokumentationsaufwand ist das Ergebnis von besserer Qualität.<br/>
+3. Füge direkt unter dem Hero eine Trust-Leiste ein mit: gemeinsam mit Ärzt:innen entwickelt, deutsche medizinische Fachsprache, Arzt bleibt Autor, DSGVO-konform.<br/>
+4. Erstelle daraus einen PR mit Preview-Link.”
+</div>
+
+<v-click>
+
+<div class="bg-yellow-50 p-4 rounded-lg mt-6 text-left">
+<strong>Why this demo works:</strong> natural language, shared context, skill selection, repo execution, visible result. No AI slop. Just a team system doing real work.
+</div>
+
+</v-click>
+
+---
+
+# The Bigger Bet
+## Build the company through the system
+
+<v-clicks>
+
+<div class="bg-purple-50 p-3 rounded-lg mb-3 text-left">
+We are not just using Sokrates to support Brynk AI.
+</div>
+
+<div class="bg-purple-50 p-3 rounded-lg mb-3 text-left">
+We are actively building Brynk AI <em>through</em> Sokrates as a Company OS.
+</div>
+
+<div class="bg-orange-50 p-3 rounded-lg text-left">
+And with Omaship as the backbone, the long-term play is obvious: build, deploy, and automate company systems safely at scale.
+</div>
+
+</v-clicks>
 
 ---
 layout: center
 class: text-center
 ---
 
-# The Core Idea
+# The Thesis
 
 <div class="text-3xl font-bold text-blue-600 mb-6">
-Feedback should not have to wait for project management to become execution.
+Sokrates is our Company OS:
+</div>
+
+<div class="text-2xl mb-8">
+operational AI that connects people, memory, tools, roles, and execution.
 </div>
 
 <v-click>
 
 <div class="bg-green-100 p-5 rounded-lg inline-block text-left max-w-3xl">
-<strong>MedicalDocu</strong> improves documentation quality.<br/>
-<strong>Sokrates</strong> improves the team's ability to turn reality into shipped change.
-</div>
-
-</v-click>
-
-<v-click>
-
-<div class="mt-8 text-xl opacity-80">
-That's the system.
+Not AI for isolated individuals.<br/>
+AI for coherent team action.
 </div>
 
 </v-click>
