@@ -36,6 +36,13 @@ My journey from tab completion to building what matters.
 - **Topics:** Stone Age → Bronze Age → Iron Age evolution, SpecFlow methodology
 - **Duration:** 5 minutes
 
+### MedicalDocu + Sokrates (March 2026)
+A technical lightning talk about MedicalDocu and Sokrates as an operational AI system.
+
+- **Slides:** https://plattenschieber.github.io/agent-presentation/medicaldocu/
+- **Topics:** product AI vs operational AI, WhatsApp → PR → preview workflows, end-to-end execution
+- **Duration:** 5 minutes
+
 ### ast-grep + Claude Code (October 2024)
 Automated architectural enforcement for AI-assisted development.
 
@@ -67,6 +74,7 @@ npm run dev:round1    # Round 1: Intent → Impact
 npm run dev:round2    # Round 2: From Hype to Habits
 npm run dev:round3    # Round 3: Patterns That Stuck
 npm run dev:round4    # Round 4: Ralph Wiggum, Clawd Bot & Skills
+npm run dev:medicaldocu # MedicalDocu + Sokrates
 npm run dev:astgrep   # ast-grep + Claude Code
 
 # Build all presentations
