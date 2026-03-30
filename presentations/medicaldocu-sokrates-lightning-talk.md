@@ -28,6 +28,31 @@ mdc: true
 
 ---
 
+# Who am I — and why should you listen to me?
+## Somehow I ended up on that photo.
+
+<div class="text-center mt-4">
+<img src="../public/clawcon-photo.jpg" alt="ClawCon Group Photo" class="mx-auto rounded-lg shadow-lg" style="max-height: 320px;">
+</div>
+
+<v-clicks>
+
+<div class="bg-blue-50 p-3 rounded-lg mt-4 text-left">
+Peter Steinberger — yes, the guy who went to OpenAI — invited me to ClawCon Vienna.
+</div>
+
+<div class="bg-purple-50 p-3 rounded-lg mt-3 text-left">
+I got to present <strong>brain-cli</strong>, which later even made it into the official OpenClaw docs.
+</div>
+
+<div class="bg-yellow-50 p-3 rounded-lg mt-3 text-left">
+And somehow I ended up on <em>that</em> group photo in his article. So now I guess I have to earn it.
+</div>
+
+</v-clicks>
+
+---
+
 # The Problem
 ## AI is useful individually. Chaotic collectively.
 
@@ -325,8 +350,8 @@ Scan the QR code and try the product
 
 <div class="flex flex-col items-center justify-center">
   <div class="bg-white p-4 rounded-lg text-center shadow-md">
-    <img src="../public/workshop-qr.png" alt="QR Code" style="margin: 0 auto; max-height: 200px;" />
-    <div class="mt-2"><strong>Try Omaship</strong></div>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://omaship.com" alt="QR Code" style="margin: 0 auto; max-height: 200px;" />
+    <div class="mt-2"><strong>omaship.com</strong></div>
   </div>
 </div>
 
