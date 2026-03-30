@@ -29,27 +29,24 @@ mdc: true
 ---
 
 # Who am I — and why should you listen to me?
-## Somehow I ended up on that photo.
+## Honestly, I’m still not fully sure how I ended up on this photo.
 
 <div class="text-center mt-4">
 <img src="../public/clawcon-photo.jpg" alt="ClawCon Group Photo" class="mx-auto rounded-lg shadow-lg" style="max-height: 320px;">
 </div>
 
-<v-clicks>
-
-<div class="bg-blue-50 p-3 rounded-lg mt-4 text-left">
-Peter Steinberger — yes, the guy who went to OpenAI — invited me to ClawCon Vienna.
+<div class="mt-4 bg-gray-100 p-4 rounded-lg text-left">
+<ul>
+<li>Peter Steinberger invited me to ClawCon Vienna</li>
+<li>I got to present <strong>brain-cli</strong></li>
+<li>it later landed in the official OpenClaw docs</li>
+<li>and somehow I ended up in <em>that</em> article photo</li>
+</ul>
 </div>
 
-<div class="bg-purple-50 p-3 rounded-lg mt-3 text-left">
-I got to present <strong>brain-cli</strong>, which later even made it into the official OpenClaw docs.
+<div class="mt-4 bg-yellow-50 p-4 rounded-lg text-left">
+<strong>So now I guess I have to say something intelligent.</strong>
 </div>
-
-<div class="bg-yellow-50 p-3 rounded-lg mt-3 text-left">
-And somehow I ended up on <em>that</em> group photo in his article. So now I guess I have to earn it.
-</div>
-
-</v-clicks>
 
 ---
 
