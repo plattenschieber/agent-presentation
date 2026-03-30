@@ -236,8 +236,8 @@ Files, browser, repos, docs, messaging surfaces
 </div>
 
 <div class="bg-green-50 p-3 rounded-lg">
-<strong>Future backbone: Omaship</strong><br/>
-The deployment layer for shipping and scaling systems like this safely
+<strong>Omaship</strong><br/>
+The product and deployment backbone for shipping secure company systems like this
 </div>
 
 </v-clicks>
@@ -284,10 +284,53 @@ We are building Brynk AI through Sokrates as a Company OS.
 </div>
 
 <div class="bg-orange-50 p-3 rounded-lg text-left">
-And with Omaship as the backbone, the path is clear: build, deploy, and automate company systems safely at scale.
+With Omaship, this becomes a product path: build, deploy, and scale secure company operating systems and the apps around them.
 </div>
 
 </v-clicks>
+
+---
+layout: center
+class: text-center
+---
+
+# Try The Backbone
+
+<div class="grid grid-cols-2 gap-8 mt-4 items-center">
+
+<div class="text-left">
+
+### Omaship
+
+<v-clicks>
+
+<div class="bg-blue-50 p-3 rounded-lg mb-3">
+<strong>What it is</strong><br/>
+The backbone for deploying and operating secure company systems
+</div>
+
+<div class="bg-green-50 p-3 rounded-lg mb-3">
+<strong>Why it matters</strong><br/>
+If Sokrates is the Company OS, Omaship is the infrastructure that makes it shippable
+</div>
+
+<div class="bg-purple-50 p-3 rounded-lg">
+<strong>CTA</strong><br/>
+Scan the QR code and try the product
+</div>
+
+</v-clicks>
+
+</div>
+
+<div class="flex flex-col items-center justify-center">
+  <div class="bg-white p-4 rounded-lg text-center shadow-md">
+    <img src="../public/workshop-qr.png" alt="QR Code" style="margin: 0 auto; max-height: 200px;" />
+    <div class="mt-2"><strong>Try Omaship</strong></div>
+  </div>
+</div>
+
+</div>
 
 ---
 layout: center
