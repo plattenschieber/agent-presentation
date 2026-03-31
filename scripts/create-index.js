@@ -6,7 +6,7 @@ const html = `<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Code Anonymous - Agentic Coding Presentations</title>
+    <title>Agents Anonymous - Agentic Coding Presentations</title>
     <style>
         * {
             margin: 0;
@@ -126,8 +126,9 @@ const html = `<!DOCTYPE html>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Claude Code Anonymous</h1>
+            <h1>Agents Anonymous</h1>
             <p>Agentic Coding: Real Talk from the Trenches</p>
+            <p style="font-size: 0.8em; opacity: 0.7; margin-top: 5px;">formerly Claude Code Anonymous — now tool-agnostic</p>
         </div>
 
         <div class="presentations">
@@ -177,6 +178,13 @@ const html = `<!DOCTYPE html>
                 <h2>MedicalDocu + Sokrates</h2>
                 <p>A technical 5-minute lightning talk on trustworthy medical documentation, operational AI, and WhatsApp → PR → preview workflows.</p>
                 <p class="date">March 2026</p>
+                <span class="cta">View Slides →</span>
+            </a>
+
+            <a href="./round6/" class="presentation-card">
+                <h2>Round 6: Make It Yours</h2>
+                <p>Customizing your agent harness — from config files to full extensions. Pi extensions, Armin Ronacher's agent-stuff, and why your setup IS the product.</p>
+                <p class="date">April 2026</p>
                 <span class="cta">View Slides →</span>
             </a>
 
