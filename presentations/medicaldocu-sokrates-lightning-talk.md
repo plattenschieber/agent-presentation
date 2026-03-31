@@ -1,8 +1,8 @@
 ---
 theme: default
-title: Sokrates — Company OS
+title: Sokrates — semanticOS
 info: |
-  ## Sokrates — Company OS
+  ## Sokrates — semanticOS
   A 5-minute lightning talk on operational AI, team coordination, and end-to-end execution with OpenClaw
 class: text-center
 highlighter: shiki
@@ -12,8 +12,8 @@ transition: slide-left
 mdc: true
 ---
 
-# Sokrates — Company OS
-## Not another chatbot. An operational system for real team work.
+# Sokrates — semanticOS
+## Not another chatbot. An operating system for real team work.
 
 <div class="pt-4">
   <div class="text-lg opacity-75">Jeronim Morina + Team Brynk</div>
@@ -29,42 +29,43 @@ mdc: true
 ---
 
 # Who am I — and why should you listen to me?
-## Honestly, I’m still not fully sure how I ended up on this photo.
+## Short version: I build the systems behind this stuff.
 
 <div class="text-center mt-4">
-<img src="../public/clawcon-photo.jpg" alt="ClawCon Group Photo" class="mx-auto rounded-lg shadow-lg" style="max-height: 320px;">
+<img src="../public/clawcon-photo.jpg" alt="ClawCon Group Photo" class="mx-auto rounded-lg shadow-lg" style="max-height: 250px;">
 </div>
 
-<div class="mt-4 bg-gray-100 p-4 rounded-lg text-left">
+<div class="mt-3 bg-gray-100 p-4 rounded-lg text-left text-base">
 <ul>
 <li>Peter Steinberger invited me to ClawCon Vienna</li>
 <li>I got to present <strong>brain-cli</strong></li>
-<li>it later landed in the official OpenClaw docs</li>
-<li>and somehow I ended up in <em>that</em> article photo</li>
+<li>brain-cli later landed in the official OpenClaw docs</li>
+<li>I build agent systems, infrastructure, and practical workflows that teams can actually use</li>
+<li>and yes, somehow I ended up in <em>that</em> article photo</li>
 </ul>
 </div>
 
-<div class="mt-4 bg-yellow-50 p-4 rounded-lg text-left">
-<strong>So now I guess I have to say something intelligent.</strong>
+<div class="mt-3 bg-yellow-50 p-4 rounded-lg text-left">
+<strong>So this talk is not theory. It is field notes from building the thing.</strong>
 </div>
 
 ---
 
 # The Problem
-## AI is useful individually. Chaotic collectively.
+## The real problem is lack of clarity and focus.
 
 <v-clicks>
 
 <div class="bg-red-50 p-3 rounded-lg mb-3 text-left">
-<strong>Today:</strong> everyone has their own Claude or ChatGPT tab.
+<strong>Today:</strong> teams often use AI without shared clarity on purpose or relevance.
 </div>
 
 <div class="bg-orange-50 p-3 rounded-lg mb-3 text-left">
-<strong>Result:</strong> prompts, outputs, and decisions stay trapped in private workflows.
+<strong>Result:</strong> effort fragments across tabs, threads, and disconnected outputs.
 </div>
 
 <div class="bg-yellow-50 p-3 rounded-lg text-left">
-<strong>Consequence:</strong> teams get smarter tools — but not coherent execution.
+<strong>Consequence:</strong> you get motion, noise, and weak efficiency gains instead of focused execution.
 </div>
 
 </v-clicks>
@@ -72,7 +73,7 @@ mdc: true
 ---
 
 # The Thesis
-## Companies need more than AI tools. They need a Company OS.
+## Companies need more than AI tools. They need a semanticOS.
 
 <v-clicks>
 
@@ -85,7 +86,7 @@ A system where good ideas do not die in chat threads, docs, or tabs.
 </div>
 
 <div class="bg-green-50 p-3 rounded-lg text-left">
-That is what Sokrates is for us.
+That is what Sokrates is for us: a semanticOS for turning intent into execution.
 </div>
 
 </v-clicks>
@@ -275,11 +276,11 @@ The product and deployment backbone for shipping secure company systems like thi
 
 <div class="bg-gray-100 p-5 rounded-lg text-left text-sm leading-7">
 <strong>Prompt on the slide:</strong><br/><br/>
-“@sokrates Bitte überarbeite die MedicalDocu-Landingpage:<br/>
-1. Stelle Vertrauen und medizinische Qualität stärker in den Vordergrund als reine Automatisierung.<br/>
-2. Passe den Hero so an, dass klar wird: weniger Dokumentationsaufwand ist das Ergebnis von besserer Qualität.<br/>
-3. Füge direkt unter dem Hero eine Trust-Leiste ein mit: gemeinsam mit Ärzt:innen entwickelt, deutsche medizinische Fachsprache, Arzt bleibt Autor, DSGVO-konform.<br/>
-4. Erstelle daraus einen PR mit Preview-Link.”
+“@sokrates Please revise the MedicalDocu landing page:<br/>
+1. Put trust and medical quality more in the foreground than pure automation.<br/>
+2. Rework the hero so it is clear that less documentation effort is the result of better quality.<br/>
+3. Add a trust bar directly below the hero with: built with physicians, German medical language, physician remains the author, GDPR-compliant.<br/>
+4. Turn it into a PR with a preview link.”
 </div>
 
 <v-click>
@@ -302,7 +303,7 @@ We are not just using Sokrates to support Brynk AI.
 </div>
 
 <div class="bg-purple-50 p-3 rounded-lg mb-3 text-left">
-We are building Brynk AI through Sokrates as a Company OS.
+We are building Brynk through Sokrates as a semanticOS.
 </div>
 
 <div class="bg-orange-50 p-3 rounded-lg text-left">
@@ -333,7 +334,7 @@ The backbone for deploying and operating secure company systems
 
 <div class="bg-green-50 p-3 rounded-lg mb-3">
 <strong>Why it matters</strong><br/>
-If Sokrates is the Company OS, Omaship is the infrastructure that makes it shippable
+If Sokrates is the semanticOS, Omaship is the infrastructure that makes it shippable
 </div>
 
 <div class="bg-purple-50 p-3 rounded-lg">
@@ -362,7 +363,7 @@ class: text-center
 # The Thesis
 
 <div class="text-3xl font-bold text-blue-600 mb-6">
-Sokrates is our Company OS.
+Sokrates is our semanticOS.
 </div>
 
 <div class="text-2xl mb-8">
