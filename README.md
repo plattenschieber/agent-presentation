@@ -36,10 +36,10 @@ My journey from tab completion to building what matters.
 - **Topics:** Stone Age → Bronze Age → Iron Age evolution, SpecFlow methodology
 - **Duration:** 5 minutes
 
-### MedicalDocu + Sokrates (March 2026)
-A technical lightning talk about MedicalDocu and Sokrates as an operational AI system.
+### Sokrates — semanticOS (March 2026)
+A technical lightning talk about Sokrates as a semanticOS for operational AI and end-to-end execution.
 
-- **Slides:** https://plattenschieber.github.io/agent-presentation/medicaldocu/
+- **Slides:** https://plattenschieber.github.io/agent-presentation/semanticos/
 - **Topics:** product AI vs operational AI, WhatsApp → PR → preview workflows, end-to-end execution
 - **Duration:** 5 minutes
 
@@ -74,7 +74,7 @@ npm run dev:round1    # Round 1: Intent → Impact
 npm run dev:round2    # Round 2: From Hype to Habits
 npm run dev:round3    # Round 3: Patterns That Stuck
 npm run dev:round4    # Round 4: Ralph Wiggum, Clawd Bot & Skills
-npm run dev:medicaldocu # MedicalDocu + Sokrates
+npm run dev:semanticos # Sokrates — semanticOS
 npm run dev:astgrep   # ast-grep + Claude Code
 
 # Build all presentations

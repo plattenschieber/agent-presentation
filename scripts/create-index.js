@@ -174,9 +174,9 @@ const html = `<!DOCTYPE html>
                 <span class="cta">View Slides →</span>
             </a>
 
-            <a href="./medicaldocu/" class="presentation-card">
-                <h2>MedicalDocu + Sokrates</h2>
-                <p>A technical 5-minute lightning talk on trustworthy medical documentation, operational AI, and WhatsApp → PR → preview workflows.</p>
+            <a href="./semanticos/" class="presentation-card">
+                <h2>Sokrates — semanticOS</h2>
+                <p>A technical 5-minute lightning talk on Sokrates as a semanticOS: operational AI, team coordination, and WhatsApp → PR → preview workflows.</p>
                 <p class="date">March 2026</p>
                 <span class="cta">View Slides →</span>
             </a>
