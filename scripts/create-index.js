@@ -188,6 +188,13 @@ const html = `<!DOCTYPE html>
                 <span class="cta">View Slides →</span>
             </a>
 
+            <a href="./round7/" class="presentation-card">
+                <h2>Round 7: Proof, Not Prompts</h2>
+                <p>When is agent work actually done? An advanced, tool-agnostic opener on acceptance criteria, tests, traces, reviews, and risk-shaped evidence.</p>
+                <p class="date">August 2026</p>
+                <span class="cta">View Slides →</span>
+            </a>
+
             <a href="./ast-grep/" class="presentation-card">
                 <h2>ast-grep + Claude Code</h2>
                 <p>Automated architectural enforcement for AI-assisted development. How to prevent pattern drift and security issues.</p>

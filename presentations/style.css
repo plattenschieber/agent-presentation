@@ -1,0 +1,170 @@
+:root {
+  --r7-navy: #07152f;
+  --r7-indigo: #253c88;
+  --r7-cyan: #35d7ff;
+  --r7-green: #41d98b;
+  --r7-amber: #f6b84a;
+  --r7-white: #eefbff;
+}
+
+.slidev-layout.r7-slide {
+  background-color: var(--r7-navy);
+  color: var(--r7-white);
+}
+
+.r7-slide h1,
+.r7-slide h2,
+.r7-slide h3 {
+  color: var(--r7-white);
+}
+
+.r7-slide h1 {
+  font-weight: 750;
+  letter-spacing: -0.025em;
+}
+
+.slidev-layout.r7-cover {
+  background-color: transparent;
+}
+
+.cover-credit {
+  position: absolute;
+  right: 32px;
+  bottom: 24px;
+  padding: 10px 14px;
+  border: 1px solid rgba(53, 215, 255, 0.48);
+  border-radius: 10px;
+  background: rgba(7, 21, 47, 0.82);
+  color: #d9f8ff;
+  font-size: 13px;
+  line-height: 1.45;
+  text-align: right;
+}
+
+.evidence-card,
+.receipt-card,
+.risk-column,
+.discussion-card {
+  border: 1px solid rgba(53, 215, 255, 0.24);
+  border-radius: 14px;
+  background: rgba(20, 43, 82, 0.7);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
+}
+
+.evidence-card {
+  min-height: 245px;
+  padding: 20px 22px;
+}
+
+.evidence-card h3 { margin: 0 0 12px; }
+.amber-card { border-top: 4px solid var(--r7-amber); }
+.cyan-card { border-top: 4px solid var(--r7-cyan); }
+.signal-list { font-size: 17px; line-height: 1.7; }
+.signal-list ul { margin: 0; }
+.card-caption { margin-top: 10px; color: #9fc5dc; font-size: 13px; }
+
+.gate-line,
+.question-line,
+.ritual-line {
+  border-radius: 12px;
+  padding: 12px 18px;
+  text-align: center;
+  background: rgba(65, 217, 139, 0.11);
+  border: 1px solid rgba(65, 217, 139, 0.42);
+  color: #c9ffe2;
+  font-size: 18px;
+}
+
+.question-line {
+  background: rgba(53, 215, 255, 0.09);
+  border-color: rgba(53, 215, 255, 0.36);
+  color: #c9f5ff;
+}
+
+.failure-card {
+  min-height: 230px;
+  padding: 15px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(246, 184, 74, 0.14), rgba(20, 43, 82, 0.68));
+  border: 1px solid rgba(246, 184, 74, 0.28);
+}
+
+.failure-card p { margin: 10px 0 0; color: #c5d8e7; line-height: 1.45; }
+.failure-index { color: var(--r7-amber); font: 700 12px ui-monospace, monospace; margin-bottom: 10px; }
+
+.proof-stack { display: grid; gap: 5px; }
+.proof-layer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 5px 16px;
+  border: 1px solid rgba(53, 215, 255, 0.22);
+  border-radius: 10px;
+  background: rgba(20, 43, 82, 0.65);
+}
+
+.proof-layer small { color: #b9d7e6; }
+.proof-summary { padding: 8px 16px; font-size: 16px; }
+.layer-number {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border-radius: 9px;
+  color: #07152f;
+  background: var(--r7-cyan);
+  font-weight: 800;
+}
+
+.layer-4 .layer-number { background: var(--r7-amber); }
+.layer-5 .layer-number { background: var(--r7-green); }
+
+.risk-column { padding: 14px; min-height: 245px; }
+.risk-column h3 { margin: 13px 0 8px; font-size: 17px; }
+.risk-column ul { margin: 0; padding-left: 18px; color: #c5d8e7; line-height: 1.65; }
+.risk-label { display: inline-block; padding: 4px 8px; border-radius: 999px; font: 700 10px ui-monospace, monospace; letter-spacing: 0.12em; }
+.risk-low { background: rgba(53, 215, 255, 0.18); color: #8feaff; }
+.risk-medium { background: rgba(65, 217, 139, 0.18); color: #9fffc8; }
+.risk-high { background: rgba(246, 184, 74, 0.18); color: #ffd58b; }
+.risk-critical { background: rgba(255, 115, 115, 0.18); color: #ffaaaa; }
+
+.receipt-card { padding: 18px; min-height: 280px; }
+.receipt-title { color: var(--r7-cyan); font-weight: 750; font-size: 18px; margin-bottom: 14px; }
+.receipt-card p { color: #c5d8e7; line-height: 1.5; }
+.receipt-card p strong { color: white; }
+.receipt-card .receipt-fail { color: #ffd18a; }
+
+.evidence-table {
+  display: grid;
+  grid-template-columns: 0.85fr 1.35fr 1.65fr;
+  border: 1px solid rgba(53, 215, 255, 0.25);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.evidence-table > div { padding: 11px 14px; border-bottom: 1px solid rgba(53, 215, 255, 0.14); background: rgba(20, 43, 82, 0.58); }
+.evidence-table > div:nth-last-child(-n+3) { border-bottom: 0; }
+.evidence-table .table-head { color: #9eeeff; background: rgba(37, 60, 136, 0.78); font-weight: 750; text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; }
+
+.gate-flow { display: flex; align-items: stretch; gap: 8px; }
+.gate-step { flex: 1; min-width: 0; padding: 14px; border-radius: 12px; border: 1px solid rgba(53, 215, 255, 0.28); background: rgba(20, 43, 82, 0.68); }
+.gate-step span { display: inline-grid; place-items: center; width: 25px; height: 25px; margin-bottom: 10px; border-radius: 7px; color: #07152f; background: var(--r7-cyan); font-weight: 800; }
+.gate-step strong, .gate-step small { display: block; }
+.gate-step small { margin-top: 7px; color: #b9d7e6; line-height: 1.35; }
+.gate-arrow { align-self: center; color: var(--r7-green); font-size: 24px; }
+.gate-status { padding: 15px 18px; border-radius: 12px; display: flex; gap: 14px; align-items: center; }
+.gate-status strong { white-space: nowrap; }
+.gate-status span { font-size: 13px; line-height: 1.35; }
+.gate-open { background: rgba(65, 217, 139, 0.13); border: 1px solid rgba(65, 217, 139, 0.48); color: #caffdf; }
+.gate-hold { background: rgba(246, 184, 74, 0.13); border: 1px solid rgba(246, 184, 74, 0.48); color: #ffe0a8; }
+
+.prompt-card { display: flex; flex-direction: column; gap: 5px; padding: 16px 18px; border-radius: 12px; background: rgba(20, 43, 82, 0.7); border-left: 4px solid var(--r7-cyan); }
+.prompt-card strong { color: white; }
+.prompt-card span { color: #bdd7e7; font-size: 14px; }
+.ritual-line { border-color: rgba(246, 184, 74, 0.48); background: rgba(246, 184, 74, 0.11); color: #ffe1ab; }
+
+.definition-template { padding: 20px 24px; border: 1px solid rgba(65, 217, 139, 0.5); border-radius: 14px; background: rgba(65, 217, 139, 0.1); color: #d9f8e7; font: 19px/1.65 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.definition-template strong { color: var(--r7-green); }
+.discussion-card { padding: 14px 16px; min-height: 62px; display: flex; align-items: center; color: #ccecff; }
+.event-footer { position: absolute; left: 48px; right: 48px; bottom: 22px; color: #9fc5dc; font-size: 12px; line-height: 1.45; text-align: center; }
