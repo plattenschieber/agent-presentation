@@ -33,18 +33,7 @@ There are no automated tests. After any change, verify by building:
 npm run build
 ```
 
-A successful build produces `dist/` with subdirectories: `round1/`, `round2/`, `round3/`, `round4/`, `ast-grep/`, `lessons/`, `round6/`, `round7/`, and an `index.html`.
-
-**Check the build succeeded** by confirming these files exist:
-- `dist/index.html`
-- `dist/round1/index.html`
-- `dist/round2/index.html`
-- `dist/round3/index.html`
-- `dist/round4/index.html`
-- `dist/ast-grep/index.html`
-- `dist/lessons/index.html`
-- `dist/round6/index.html`
-- `dist/round7/index.html`
+The scripts in `package.json` are authoritative for presentation output paths. After a successful build, confirm `dist/index.html` and the `index.html` for each presentation in the `build:all` chain exist.
 
 ## Common Mistakes
 
