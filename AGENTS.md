@@ -33,17 +33,7 @@ There are no automated tests. After any change, verify by building:
 npm run build
 ```
 
-A successful build produces `dist/` with subdirectories: `round1/`, `round2/`, `round3/`, `round4/`, `ast-grep/`, `lessons/`, `round6/`, and an `index.html`.
-
-**Check the build succeeded** by confirming these files exist:
-- `dist/index.html`
-- `dist/round1/index.html`
-- `dist/round2/index.html`
-- `dist/round3/index.html`
-- `dist/round4/index.html`
-- `dist/ast-grep/index.html`
-- `dist/lessons/index.html`
-- `dist/round6/index.html`
+The scripts in `package.json` are authoritative for presentation output paths. After a successful build, confirm `dist/index.html` and the `index.html` for each presentation in the `build:all` chain exist.
 
 ## Common Mistakes
 
@@ -105,3 +95,10 @@ Minimal on purpose. Only `@slidev/cli` and `@slidev/theme-default`. Don't add de
 ## Commit Convention
 
 Conventional commits with gitmoji: `feat: ✨`, `fix: 🐛`, `docs: 📝`, `style: 💄`, `refactor: ♻️`, `chore: 🔧`. Short one-line messages.
+
+## Maintaining this file
+
+Keep this file for knowledge useful to almost every future agent session in this project.
+Do not repeat what the codebase already shows; point to the authoritative file or command instead.
+Prefer rewriting or pruning existing entries over appending new ones.
+When updating this file, preserve this bar for all agents and keep entries concise.
