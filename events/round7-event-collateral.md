@@ -133,8 +133,8 @@ Apply: [LUMA LINK]
 Agents Anonymous Cologne — Round 7\
 Proof, Not Prompts: When Is Agent Work Done?
 
-Tuesday 4 August 2026 · 18:00–20:30 · STARTPLATZ Cologne\
-Advanced + tool-agnostic. Private/no recording. 50 free seats; approval required. Lightning talks welcome.\
+Tuesday 4 Aug 2026 · 18:00–20:30 · STARTPLATZ Cologne\
+Advanced/tool-agnostic. Private, unrecorded. 50 free seats by approval. Lightning talks welcome.\
 Jeronim + Lorenz Gräf · [LUMA LINK]
 
 ## Image and export references
