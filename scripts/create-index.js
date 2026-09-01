@@ -188,6 +188,13 @@ const html = `<!DOCTYPE html>
                 <span class="cta">View Slides →</span>
             </a>
 
+            <a href="./round7/" class="presentation-card">
+                <h2>Round 7: Less Steering, More Alignment</h2>
+                <p>How lean skills, decision-first reviews, and cloud agents shift the work from supervising execution to aligning intent.</p>
+                <p class="date">September 2026</p>
+                <span class="cta">View Slides →</span>
+            </a>
+
             <a href="./ast-grep/" class="presentation-card">
                 <h2>ast-grep + Claude Code</h2>
                 <p>Automated architectural enforcement for AI-assisted development. How to prevent pattern drift and security issues.</p>
