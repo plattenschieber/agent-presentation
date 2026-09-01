@@ -4,7 +4,7 @@
   "description": "Slidev presentations about agentic coding tools for Agents Anonymous meetup",
   "scripts": {
     "build": "npm run build:all",
-    "build:all": "npm run build:round1 && npm run build:round2 && npm run build:round3 && npm run build:round4 && npm run build:round5 && npm run build:semanticos && npm run build:astgrep && npm run build:lessons && npm run build:round6 && npm run build:index",
+    "build:all": "npm run build:round1 && npm run build:round2 && npm run build:round3 && npm run build:round4 && npm run build:round5 && npm run build:semanticos && npm run build:astgrep && npm run build:lessons && npm run build:round6 && npm run build:round7 && npm run build:index",
     "build:round1": "slidev build presentations/agentic-journey-slides.md --base /agent-presentation/round1/ --out ../dist/round1",
     "build:round2": "slidev build presentations/round2-hype-to-habits.md --base /agent-presentation/round2/ --out ../dist/round2",
     "build:round3": "slidev build presentations/round3-patterns-that-stuck.md --base /agent-presentation/round3/ --out ../dist/round3",
@@ -14,6 +14,7 @@
     "build:lessons": "slidev build presentations/lessons-learned.md --base /agent-presentation/lessons/ --out ../dist/lessons",
     "build:semanticos": "slidev build presentations/semanticos-sokrates-lightning-talk.md --base /agent-presentation/semanticos/ --out ../dist/semanticos",
     "build:round6": "slidev build presentations/round6-agents-anonymous.md --base /agent-presentation/round6/ --out ../dist/round6",
+    "build:round7": "slidev build presentations/round7-tonight.md --base /agent-presentation/round7/ --out ../dist/round7",
     "build:index": "node scripts/create-index.js",
     "dev:round1": "slidev presentations/agentic-journey-slides.md --open",
     "dev:round2": "slidev presentations/round2-hype-to-habits.md --open",
@@ -23,7 +24,8 @@
     "dev:astgrep": "slidev presentations/ast-grep-best-practice.md --open",
     "dev:lessons": "slidev presentations/lessons-learned.md --open",
     "dev:semanticos": "slidev presentations/semanticos-sokrates-lightning-talk.md --open",
-    "dev:round6": "slidev presentations/round6-agents-anonymous.md --open"
+    "dev:round6": "slidev presentations/round6-agents-anonymous.md --open",
+    "dev:round7": "slidev presentations/round7-tonight.md --open"
   },
   "devDependencies": {
     "@slidev/cli": "^52.6.0",
