@@ -4,7 +4,7 @@ title: Less Steering, More Alignment
 info: |
   ## Agents Anonymous - Round 7
   Cologne Edition
-class: text-center
+class: round7 round7-cover text-center
 highlighter: shiki
 drawings:
   persist: false
@@ -24,6 +24,8 @@ which agent won. It is what disappeared from my daily work—and what became mor
 important instead.
 -->
 
+---
+class: round7 round7-content
 ---
 
 # My daily harness got smaller.
@@ -69,6 +71,8 @@ CONTEXT.md and hard decisions to ADRs while we work.
 -->
 
 ---
+class: round7 round7-content
+---
 
 # We stopped reviewing the generated code first.
 
@@ -100,6 +104,8 @@ architecture decision and the new context. The conversation moved from syntax to
 intent—and the team became more aligned.
 -->
 
+---
+class: round7 round7-content
 ---
 
 # Now even the machine is disappearing.
@@ -137,6 +143,8 @@ review, portals, and multiplayer built around it.
 -->
 
 ---
+class: round7 round7-content
+---
 
 # Fresh machines change how you ask.
 
@@ -170,7 +178,7 @@ validate the result and present evidence back to you.
 
 ---
 layout: center
-class: text-center
+class: round7 round7-statement text-center
 ---
 
 # The work shifted.
@@ -198,6 +206,8 @@ remove the machine. What remains is context, desired outcome, and proof.
 -->
 
 ---
+class: round7 round7-content
+---
 
 # Execution got cheap. Purpose did not.
 
@@ -221,7 +231,7 @@ aligned-looking software for an unaligned goal.
 
 ---
 layout: center
-class: text-center
+class: round7 round7-question text-center
 ---
 
 <div class="eyebrow">ONE QUESTION FOR TONIGHT</div>
@@ -240,40 +250,3 @@ class: text-center
 <!--
 Use this question as the handoff into tonight's participant lightning talks.
 -->
-
-<style>
-:root { --ink:#171717; --muted:#85817a; --paper:#faf8f3; --line:#d8d2c8; --accent:#df5b32; }
-.slidev-layout {
-  background: radial-gradient(circle at 88% 12%, rgba(223,91,50,.10), transparent 24%), var(--paper);
-  color:var(--ink); padding:3.2rem 4.2rem;
-}
-.slidev-layout h1 { font-size:3.3rem!important; line-height:1.05!important; letter-spacing:-.045em; font-weight:820; }
-.eyebrow { color:var(--accent); font-size:.85rem; font-weight:800; letter-spacing:.18em; margin-bottom:1.7rem; }
-.accent { color:var(--accent); } .muted { color:var(--muted); }
-.strike { text-decoration:line-through; text-decoration-thickness:3px; }
-.subtitle { color:var(--muted); font-size:1.65rem; }
-.statement { font-size:1.55rem; line-height:1.5; font-weight:650; }
-.thesis,.takeaway { color:var(--accent); font-size:1.4rem; font-weight:800; }
-.footnote { color:var(--muted); font-size:.72rem; margin-top:1rem; }
-.label { font-size:.8rem; letter-spacing:.14em; font-weight:850; margin-bottom:.7rem; }
-.big { font-size:2.15rem; line-height:1.08; font-weight:820; }
-.caption { color:var(--muted); font-size:1rem; margin-top:.8rem; }
-.arrow { color:var(--accent); font-size:2.5rem; font-weight:350; }
-.stack { border-top:1px solid var(--line); }
-.stack-row { display:grid; grid-template-columns:9rem 1fr 13rem; gap:1.1rem; align-items:baseline; border-bottom:1px solid var(--line); padding:1rem 0; text-align:left; }
-.stack-row strong { color:var(--accent); font-size:1.35rem; }
-.stack-row span { font-size:1.2rem; font-weight:700; }
-.stack-row small { color:var(--muted); font-size:.86rem; }
-.two-side { display:grid; grid-template-columns:1fr auto 1fr; gap:3rem; align-items:center; text-align:left; }
-.sequence { display:grid; grid-template-columns:repeat(4,1fr); gap:1.4rem; text-align:left; }
-.sequence div { border-top:4px solid var(--accent); padding-top:.9rem; }
-.sequence strong { color:var(--accent); display:block; font-size:.8rem; margin-bottom:.5rem; }
-.sequence span { font-size:1.2rem; line-height:1.25; font-weight:760; }
-.hero-contrast { display:flex; align-items:center; justify-content:center; gap:2rem; font-size:2rem; font-weight:800; }
-.purpose { max-width:52rem; margin-left:auto; margin-right:auto; }
-.purpose div { border-bottom:1px solid var(--line); padding:1rem 0; font-size:1.3rem; line-height:1.35; text-align:left; }
-.question { color:var(--accent); font-size:1.75rem; line-height:1.35; font-weight:800; }
-.your-turn { display:flex; flex-direction:column; gap:.5rem; }
-.your-turn strong { font-size:1.7rem; }
-.your-turn span { color:var(--muted); font-size:1rem; }
-</style>
