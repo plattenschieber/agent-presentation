@@ -5,7 +5,7 @@ title: Intent → Impact
 info: |
   ## Intent → Impact: My Agentic Evolution
   A 5-minute lightning talk on finding what actually works in AI-powered development
-class: text-center
+class: text-center aa-deck aa-round1 aa-cover
 highlighter: shiki
 drawings:
   persist: false
@@ -29,6 +29,8 @@ mdc: true
 </div>
 
 ---
+class: aa-deck aa-round1
+---
 
 # Intent → Impact
 ## My Agentic Evolution
@@ -42,7 +44,7 @@ mdc: true
 
 ---
 layout: center
-class: text-center
+class: text-center aa-deck aa-round1
 ---
 
 # The Motivation 💡
@@ -77,6 +79,8 @@ That dream became my mission
 </v-click>
 
 ---
+class: aa-deck aa-round1
+---
 
 # Act I: The Stone Age
 ## Tab Completion Era
@@ -98,6 +102,8 @@ That dream became my mission
 
 </v-click>
 
+---
+class: aa-deck aa-round1
 ---
 
 # Act II: The Bronze Age
@@ -124,6 +130,8 @@ That dream became my mission
 
 </v-click>
 
+---
+class: aa-deck aa-round1
 ---
 
 # The Reality Check
@@ -154,6 +162,8 @@ That dream became my mission
 </v-click>
 
 ---
+class: aa-deck aa-round1
+---
 
 # Act III: The Iron Age
 ## The Real Breakthrough
@@ -176,6 +186,8 @@ That dream became my mission
 
 </v-click>
 
+---
+class: aa-deck aa-round1
 ---
 
 # The SpecFlow Revolution
@@ -203,6 +215,8 @@ That dream became my mission
 
 </v-click>
 
+---
+class: aa-deck aa-round1
 ---
 
 # The Clean Context Protocol
@@ -240,6 +254,8 @@ Flow state with focused, iterative sessions.
 
 </v-click>
 
+---
+class: aa-deck aa-round1
 ---
 
 # "Multi-Agent Orchestration"
@@ -296,6 +312,8 @@ Flow state with focused, iterative sessions.
 </v-click>
 
 ---
+class: aa-deck aa-round1
+---
 
 # Act IV: Scaling the Methodology
 ## From Personal Workflow to System
@@ -343,7 +361,7 @@ Flow state with focused, iterative sessions.
 
 ---
 layout: center
-class: text-center
+class: text-center aa-deck aa-round1
 ---
 
 # The Core Philosophy
@@ -377,7 +395,7 @@ class: text-center
 
 ---
 layout: center
-class: text-center
+class: text-center aa-deck aa-round1
 ---
 
 # The Beauty of Agentic Development
@@ -418,7 +436,7 @@ Find what works for you
 
 ---
 layout: center
-class: text-center
+class: text-center aa-deck aa-round1
 ---
 
 # Next: Lightning Talks! ⚡

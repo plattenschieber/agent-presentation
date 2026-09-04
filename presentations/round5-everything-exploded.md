@@ -4,7 +4,7 @@ title: Claude Code Anonymous - Round 5
 info: |
   ## Claude Code Anonymous - Round 5
   Cologne Edition — The Month Everything Exploded
-class: text-center
+class: text-center aa-deck aa-round5 aa-cover
 highlighter: shiki
 drawings:
   persist: false
@@ -37,6 +37,8 @@ mdc: true
 Audience won't expect it. Wait for the laugh, then advance.
 -->
 
+---
+class: aa-deck aa-round5
 ---
 
 # 🔄 Since Round 4...
@@ -72,6 +74,8 @@ Audience won't expect it. Wait for the laugh, then advance.
 NEXT → ClawCon Vienna. Time to flex.
 -->
 
+---
+class: aa-deck aa-round5
 ---
 
 # 🎩 ClawCon Vienna — Alfred auf der Bühne
@@ -122,6 +126,8 @@ NEXT → DAS Foto. Peak clout.
 -->
 
 ---
+class: aa-deck aa-round5
+---
 
 # 📸 "And somehow I ended up on THAT photo"
 
@@ -147,6 +153,8 @@ NEXT → DAS Foto. Peak clout.
 NEXT → Your tooling in the official docs. Humble brag incoming.
 -->
 
+---
+class: aa-deck aa-round5
 ---
 
 # 🦞 From Pi Project to Official Docs
@@ -191,6 +199,8 @@ NEXT → Your tooling in the official docs. Humble brag incoming.
 NEXT → Knowledge Flow. The corporate money slide.
 -->
 
+---
+class: aa-deck aa-round5
 ---
 
 # 🏢 Knowledge Must Flow
@@ -269,7 +279,7 @@ NEXT → Lightning Round. Hand the mic to the audience.
 
 ---
 layout: center
-class: text-center
+class: text-center aa-deck aa-round5
 ---
 
 # ⚡ Lightning Round

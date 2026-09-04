@@ -4,7 +4,7 @@ title: Agents Anonymous - Round 6
 info: |
   ## Agents Anonymous - Round 6
   Cologne Edition
-class: text-center
+class: text-center aa-deck aa-round6 aa-cover
 highlighter: shiki
 drawings:
   persist: false
@@ -27,6 +27,8 @@ formerly Claude Code Anonymous — now for everyone
   </span>
 </div>
 
+---
+class: aa-deck aa-round6
 ---
 
 # 🧰 The Tool Is Not The Product
@@ -86,6 +88,8 @@ The patterns transferred. The harness is portable.
 
 </div>
 
+---
+class: aa-deck aa-round6
 ---
 
 # 🎚️ The Customization Spectrum
@@ -155,6 +159,8 @@ Start left. Move right as you feel the friction.
 </v-click>
 
 ---
+class: aa-deck aa-round6
+---
 
 # 🛸 My Cockpit: Pi Extensions
 
@@ -210,6 +216,8 @@ Start left. Move right as you feel the friction.
 
 </v-click>
 
+---
+class: aa-deck aa-round6
 ---
 
 # 🧬 Standing on Shoulders
@@ -271,7 +279,7 @@ Intercepted pip/python, release automation
 
 ---
 layout: center
-class: text-center
+class: text-center aa-deck aa-round6
 ---
 
 # 🥛 Your Turn!

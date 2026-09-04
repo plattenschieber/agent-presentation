@@ -5,7 +5,7 @@ title: From Hype to Habits
 info: |
   ## From Hype to Habits: A Month in the Trenches
   Real learnings from 30 days of refined agentic development
-class: text-center
+class: text-center aa-deck aa-round2 aa-cover
 highlighter: shiki
 drawings:
   persist: false
@@ -30,7 +30,7 @@ mdc: true
 
 ---
 layout: center
-class: text-center
+class: text-center aa-deck aa-round2
 ---
 
 # Why Are We Here?
@@ -68,6 +68,8 @@ Nerds being addicted to using Claude and the like
 </v-click>
 
 ---
+class: aa-deck aa-round2
+---
 
 # Quick Recap: The Journey
 ## For those who missed last time
@@ -98,7 +100,7 @@ Nerds being addicted to using Claude and the like
 
 ---
 layout: center
-class: text-center
+class: text-center aa-deck aa-round2
 ---
 
 # The Real Learning?
@@ -112,6 +114,8 @@ I learned to work WITH the harnesses, not against them
 
 </v-click>
 
+---
+class: aa-deck aa-round2
 ---
 
 # Problem #1: Too Much Friction
@@ -159,6 +163,8 @@ Tweet from @plattenschieber: "Meanwhile I'm using --dangerously-skip-permissions
 </v-click>
 
 ---
+class: aa-deck aa-round2
+---
 
 # Problem #2: One-Way Conversations
 ## I talk, AI codes, repeat
@@ -195,6 +201,8 @@ https://x.com/trq212/status/1979215901577875812
 
 </v-click>
 
+---
+class: aa-deck aa-round2
 ---
 
 # Problem #3: Context Switching Death
@@ -243,6 +251,8 @@ https://x.com/trq212/status/1979215901577875812
 </v-click>
 
 ---
+class: aa-deck aa-round2
+---
 
 # Problem #4: Over-Engineering Everything
 ## Not everything needs Kubernetes
@@ -285,7 +295,7 @@ Tweet from @plattenschieber: "So true. I've been educated to make everything run
 
 ---
 layout: center
-class: text-center
+class: text-center aa-deck aa-round2
 ---
 
 # The Pattern
@@ -313,7 +323,7 @@ class: text-center
 
 ---
 layout: center
-class: text-center
+class: text-center aa-deck aa-round2
 ---
 
 # Your Turn: Lightning Talks! ⚡

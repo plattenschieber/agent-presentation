@@ -1,3 +1,153 @@
+/* Shared Agents Anonymous system for the archive decks. */
+.slidev-layout.aa-deck {
+  --aa-accent: #63e6ff;
+  --aa-accent-soft: rgba(99, 230, 255, 0.12);
+  --aa-round: "ARCHIVE";
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 48px 58px;
+  background:
+    radial-gradient(circle at 92% 8%, var(--aa-accent-soft), transparent 28%),
+    linear-gradient(145deg, #11131a, #090b10) !important;
+  color: #f5f2e9;
+  font-family: "Avenir Next", Avenir, Inter, ui-sans-serif, system-ui, sans-serif;
+}
+.slidev-layout.aa-round1 { --aa-accent: #ffb454; --aa-accent-soft: rgba(255,180,84,.14); --aa-round: "ROUND / 01"; }
+.slidev-layout.aa-round2 { --aa-accent: #53ddff; --aa-accent-soft: rgba(83,221,255,.14); --aa-round: "ROUND / 02"; }
+.slidev-layout.aa-round3 { --aa-accent: #cfff63; --aa-accent-soft: rgba(207,255,99,.12); --aa-round: "ROUND / 03"; }
+.slidev-layout.aa-round4 { --aa-accent: #b794ff; --aa-accent-soft: rgba(183,148,255,.14); --aa-round: "ROUND / 04"; }
+.slidev-layout.aa-round5 { --aa-accent: #ff718d; --aa-accent-soft: rgba(255,113,141,.14); --aa-round: "ROUND / 05"; }
+.slidev-layout.aa-round6 { --aa-accent: #65a8ff; --aa-accent-soft: rgba(101,168,255,.15); --aa-round: "ROUND / 06"; }
+
+.slidev-layout.aa-deck::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 17px;
+  border: 1px solid rgba(245,242,233,.09);
+  pointer-events: none;
+}
+.slidev-layout.aa-deck::after {
+  content: var(--aa-round);
+  position: absolute;
+  right: 31px;
+  bottom: 22px;
+  color: rgba(245,242,233,.35);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .17em;
+}
+.slidev-layout.aa-deck h1 {
+  max-width: 860px;
+  margin: 0 0 16px;
+  color: #f7f3e9;
+  font-size: 39px !important;
+  font-weight: 760;
+  line-height: 1 !important;
+  letter-spacing: -.047em;
+}
+.slidev-layout.aa-deck:not(.text-center) h1::before {
+  content: "";
+  display: inline-block;
+  width: 27px;
+  height: 7px;
+  margin: 0 12px 5px 0;
+  border-radius: 99px;
+  background: var(--aa-accent);
+}
+.slidev-layout.aa-deck h2 {
+  color: var(--aa-accent);
+  font-size: 24px;
+  font-weight: 680;
+  letter-spacing: -.025em;
+}
+.slidev-layout.aa-deck h3 {
+  color: #f5f2e9;
+  font-size: 18px;
+  font-weight: 700;
+}
+.slidev-layout.aa-deck p,
+.slidev-layout.aa-deck li { color: #b8bac4; }
+.slidev-layout.aa-deck strong { color: #f7f3e9; font-weight: 750; }
+.slidev-layout.aa-deck a { color: var(--aa-accent); }
+.slidev-layout.aa-deck code {
+  border: 1px solid rgba(245,242,233,.13);
+  background: rgba(255,255,255,.06);
+  color: var(--aa-accent);
+}
+.slidev-layout.aa-deck blockquote {
+  border-left: 3px solid var(--aa-accent);
+  background: var(--aa-accent-soft);
+  color: #f5f2e9;
+}
+.slidev-layout.aa-deck img {
+  border: 1px solid rgba(245,242,233,.16);
+  box-shadow: 0 18px 45px rgba(0,0,0,.35) !important;
+}
+.slidev-layout.aa-deck:not(.aa-cover) img { max-height: 240px !important; }
+
+/* Turn the old pastel utility cards into one coherent panel language. */
+.slidev-layout.aa-deck [class*="bg-gray-"],
+.slidev-layout.aa-deck [class*="bg-blue-"],
+.slidev-layout.aa-deck [class*="bg-green-"],
+.slidev-layout.aa-deck [class*="bg-yellow-"],
+.slidev-layout.aa-deck [class*="bg-red-"],
+.slidev-layout.aa-deck [class*="bg-purple-"],
+.slidev-layout.aa-deck [class*="bg-orange-"],
+.slidev-layout.aa-deck [class*="from-blue-"],
+.slidev-layout.aa-deck [class*="from-purple-"] {
+  border: 1px solid rgba(245,242,233,.14);
+  background: linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.035)) !important;
+  color: #b8bac4;
+  box-shadow: none !important;
+}
+.slidev-layout.aa-deck [class*="bg-"] strong { color: #f7f3e9; }
+.slidev-layout.aa-deck [class*="grid-cols-"] > [class*="bg-"] {
+  border-top: 3px solid var(--aa-accent);
+}
+.slidev-layout.aa-deck table {
+  overflow: hidden;
+  border: 1px solid rgba(245,242,233,.14);
+  background: rgba(255,255,255,.03);
+}
+.slidev-layout.aa-deck th {
+  border-color: rgba(245,242,233,.14);
+  background: var(--aa-accent-soft);
+  color: var(--aa-accent);
+}
+.slidev-layout.aa-deck td { border-color: rgba(245,242,233,.1); color: #b8bac4; }
+
+/* Covers and centered thesis slides get a stronger stage composition. */
+.slidev-layout.aa-deck.text-center { text-align: center; }
+.slidev-layout.aa-deck.center:not(.aa-cover) {
+  display: block !important;
+}
+.slidev-layout.aa-deck.center:not(.aa-cover) h1 { font-size: 35px !important; }
+.slidev-layout.aa-deck.center:not(.aa-cover) img { max-height: 160px !important; }
+.slidev-layout.aa-deck.aa-cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.slidev-layout.aa-deck.aa-cover h1 {
+  align-self: center;
+  max-width: 830px;
+  font-size: 58px !important;
+  line-height: .93 !important;
+}
+.slidev-layout.aa-deck.aa-cover h2 { font-size: 27px; }
+.slidev-layout.aa-deck.text-center::before {
+  background:
+    linear-gradient(90deg, transparent 49.9%, rgba(245,242,233,.045) 50%, transparent 50.1%),
+    linear-gradient(transparent 49.9%, rgba(245,242,233,.045) 50%, transparent 50.1%);
+}
+.slidev-layout.aa-deck .opacity-50 { opacity: .48; }
+.slidev-layout.aa-deck .opacity-75,
+.slidev-layout.aa-deck .opacity-80 { color: #a3a5af; }
+
 /* Round 7 — scoped so the other decks keep their own visual language. */
 .slidev-layout.round7 {
   --r7-ink: #f5f2e9;

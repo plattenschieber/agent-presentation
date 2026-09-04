@@ -5,7 +5,7 @@ title: Patterns That Stuck
 info: |
   ## Patterns That Stuck
   Claude Code Anonymous - Round 3
-class: text-center
+class: text-center aa-deck aa-round3 aa-cover
 highlighter: shiki
 drawings:
   persist: false
@@ -28,6 +28,8 @@ mdc: true
   </span>
 </div>
 
+---
+class: aa-deck aa-round3
 ---
 
 # What Actually Stuck?
@@ -102,7 +104,7 @@ mdc: true
 
 ---
 layout: center
-class: text-center
+class: text-center aa-deck aa-round3
 ---
 
 # Your Turn: Lightning Talks!

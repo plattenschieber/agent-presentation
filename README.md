@@ -15,6 +15,18 @@ How lean skills, decision-first reviews, and cloud agents shift the work from su
 - **Topics:** Pi, Grill with Docs, Bro, cloud agents, Amp Orbs, semanticOS
 - **Duration:** 5 minutes
 
+### Round 6: Make It Yours (2026)
+How to customize an agent harness around the way you actually work.
+
+- **Slides:** https://plattenschieber.github.io/agent-presentation/round6/
+- **Topics:** configuration, skills, plugins, extensions, reusable workflows
+
+### Round 5: The Month Everything Exploded (February 2026)
+A fast-moving update from ClawCon, OpenClaw, and the expanding agent ecosystem.
+
+- **Slides:** https://plattenschieber.github.io/agent-presentation/round5/
+- **Topics:** ClawCon, OpenClaw, agent workflows, lessons learned
+
 ### Round 4: Ralph Wiggum, Clawd Bot & Skills (January 2026)
 The patterns that are actually working right now.
 
@@ -61,8 +73,9 @@ Automated architectural enforcement for AI-assisted development.
 
 ```
 agent-presentation/
-├── presentations/     # Slide decks (Slidev markdown)
-├── public/           # Shared assets (images, logos)
+├── presentations/     # Slide decks and shared visual system
+├── .agents/skills/    # Project-local agent workflows
+├── public/            # Shared assets (images, logos)
 ├── scripts/          # Build scripts
 ├── docs/             # Methodology docs, notes
 ├── events/           # Event invitations, materials
@@ -74,13 +87,15 @@ agent-presentation/
 
 ```bash
 # Install dependencies
-npm install
+npm ci
 
 # Run presentations locally
 npm run dev:round1    # Round 1: Intent → Impact
 npm run dev:round2    # Round 2: From Hype to Habits
 npm run dev:round3    # Round 3: Patterns That Stuck
 npm run dev:round4    # Round 4: Ralph Wiggum, Clawd Bot & Skills
+npm run dev:round5    # Round 5: The Month Everything Exploded
+npm run dev:round6    # Round 6: Make It Yours
 npm run dev:semanticos # Sokrates — semanticOS
 npm run dev:astgrep   # ast-grep + Claude Code
 npm run dev:round7    # Round 7: Less Steering, More Alignment
@@ -88,6 +103,22 @@ npm run dev:round7    # Round 7: Less Steering, More Alignment
 # Build all presentations
 npm run build
 ```
+
+## 🎨 Presentation Design
+
+The Agents Anonymous archive uses a shared visual system in
+`presentations/styles/index.css`. Every deck scopes its styles with a unique
+class (`aa-round1`, `aa-round2`, and so on), so a deck can have its own accent
+without leaking styles into the others.
+
+The project-local `polish-slidev-deck` skill is automatically available to
+compatible coding agents from `.agents/skills/polish-slidev-deck/`. It applies
+when creating or redesigning a presentation in this repository. The workflow:
+
+1. Define a visual thesis for the talk.
+2. Assign cover, content, comparison, sequence, thesis, and question archetypes.
+3. Keep deck-wide CSS globally available but scoped to that deck's unique class.
+4. Render every slide at 16:9, inspect final click states, and run the full build.
 
 ## 🛠️ Tech Stack
 

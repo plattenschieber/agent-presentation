@@ -4,7 +4,7 @@ title: Claude Code Anonymous - Round 4
 info: |
   ## Claude Code Anonymous - Round 4
   Cologne Edition
-class: text-center
+class: text-center aa-deck aa-round4 aa-cover
 highlighter: shiki
 drawings:
   persist: false
@@ -27,6 +27,8 @@ mdc: true
   </span>
 </div>
 
+---
+class: aa-deck aa-round4
 ---
 
 # 🤪 The Ralph Wiggum Technique
@@ -92,6 +94,8 @@ Attended → Unattended → Check Results
 
 </div>
 
+---
+class: aa-deck aa-round4
 ---
 
 # 🦞 Meet Clawd Bot
@@ -165,7 +169,7 @@ This presentation was built WITH Robi!
 
 ---
 layout: center
-class: text-center
+class: text-center aa-deck aa-round4
 ---
 
 # 🎬 Live Demo Time!
@@ -212,6 +216,8 @@ class: text-center
 
 </v-click>
 
+---
+class: aa-deck aa-round4
 ---
 
 # 🎯 Skills: The Pattern That Stuck
@@ -284,6 +290,8 @@ When to use, what it does
 </v-click>
 
 ---
+class: aa-deck aa-round4
+---
 
 # ⛽ Gas Town: A Glimpse of the Future
 *Steve Yegge — 30yr veteran, Google/Amazon legend, vibe coding pioneer*
@@ -352,7 +360,7 @@ No human looked at the code 🤯
 
 ---
 layout: center
-class: text-center
+class: text-center aa-deck aa-round4
 ---
 
 # 📚 Resources
@@ -391,7 +399,7 @@ All links available at: github.com/plattenschieber/agent-presentation
 
 ---
 layout: center
-class: text-center
+class: text-center aa-deck aa-round4
 ---
 
 # ⚡ Lightning Round
@@ -429,7 +437,7 @@ class: text-center
 
 ---
 layout: center
-class: text-center
+class: text-center aa-deck aa-round4
 ---
 
 # 🍻 Thanks! + What's Next?
