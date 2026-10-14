@@ -27,13 +27,14 @@ npm run dev:round4   # Live dev server for a single presentation
 
 ### Build Verification
 
-There are no automated tests. After any change, verify by building:
+There is no general test suite. The Round 8 offline teaching exercise runs with
+`npm run test:round8`. After any change, verify by building:
 
 ```sh
 npm run build
 ```
 
-A successful build produces `dist/` with subdirectories: `round1/`, `round2/`, `round3/`, `round4/`, `ast-grep/`, `lessons/`, `round6/`, and an `index.html`.
+A successful build produces `dist/` with subdirectories: `round1/`, `round2/`, `round3/`, `round4/`, `ast-grep/`, `lessons/`, `round6/`, `round7/`, `round8/`, and an `index.html`.
 
 **Check the build succeeded** by confirming these files exist:
 - `dist/index.html`
@@ -44,6 +45,8 @@ A successful build produces `dist/` with subdirectories: `round1/`, `round2/`, `
 - `dist/ast-grep/index.html`
 - `dist/lessons/index.html`
 - `dist/round6/index.html`
+- `dist/round7/index.html`
+- `dist/round8/index.html`
 
 ## Common Mistakes
 

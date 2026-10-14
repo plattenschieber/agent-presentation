@@ -427,3 +427,55 @@
 }
 .round7 .your-turn strong { color: var(--r7-acid); font-size: 19px; }
 .round7 .your-turn span { color: var(--r7-muted); font-size: 12px; }
+
+/* Round 8: precise, skeptical, conversational. Evidence trail on a warm dark canvas. */
+.slidev-layout.round8 {
+  position: relative;
+  padding: 48px 58px;
+  background: #111716 !important;
+  color: #f4f1e8;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  --r8-accent: #b8ef81;
+}
+.slidev-layout.round8::after {
+  content: "AA / 08";
+  position: absolute;
+  right: 36px;
+  bottom: 19px;
+  font: 10px ui-monospace, monospace;
+  letter-spacing: .18em;
+  color: #899a92;
+}
+.round8 .r8-kicker { color: #a3b4aa; font: 12px ui-monospace, monospace; letter-spacing: .17em; margin-bottom: 24px; }
+.slidev-layout.round8 h1 { color: #f4f1e8; font-size: 42px; line-height: 1.08; font-weight: 750; letter-spacing: -.045em; margin: 0 0 30px; }
+.slidev-layout.round8.r8-cover h1 { font-size: 76px; line-height: .98; margin-top: 40px; margin-bottom: 24px; }
+.round8 .r8-subtitle { font-size: 30px; color: var(--r8-accent); }
+.round8 .r8-meta { margin-top: 38px; color: #b8c4bd; font-size: 17px; line-height: 1.6; }
+.round8 .r8-large { font-size: 32px; line-height: 1.5; letter-spacing: -.02em; margin-top: 36px; }
+.round8 .r8-accent { color: var(--r8-accent); }
+.round8 .r8-bottom { position: absolute; left: 58px; right: 70px; bottom: 48px; color: #b8c4bd; font-size: 16px; line-height: 1.45; border-top: 1px solid #425048; padding-top: 16px; }
+.round8 .r8-list { margin-top: 32px; }
+.round8 .r8-list > div { display: grid; grid-template-columns: 135px 1fr; gap: 18px; align-items: baseline; padding: 16px 0; border-top: 1px solid #425048; }
+.round8 .r8-list b { color: var(--r8-accent); font-size: 21px; }
+.round8 .r8-list span { font-size: 22px; line-height: 1.35; }
+.round8 .r8-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 46px; }
+.round8 .r8-columns > div + div { border-left: 1px solid #425048; padding-left: 36px; }
+.round8 .r8-columns h2 { color: var(--r8-accent); font-size: 27px; margin-bottom: 20px; }
+.round8 .r8-columns p { font-size: 24px; line-height: 1.4; color: #dce2dc; }
+.round8 .r8-columns small { color: #a3b4aa; font-size: 16px; }
+.round8 .r8-flow { margin-top: 55px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; }
+.round8 .r8-flow > div { border-top: 2px solid var(--r8-accent); position: relative; padding-top: 15px; }
+.round8 .r8-flow > div:not(:last-child)::after { content: "›"; position: absolute; right: -14px; top: -20px; color: var(--r8-accent); font-size: 25px; }
+.round8 .r8-flow b { display: block; color: #a3b4aa; font: 15px ui-monospace, monospace; margin-bottom: 26px; }
+.round8 .r8-flow strong { display: block; font-size: 24px; line-height: 1.12; min-height: 62px; }
+.round8 .r8-flow span { display: block; color: #b8c4bd; font-size: 17px; line-height: 1.5; margin-top: 12px; }
+.round8 .r8-code-intent { font-size: 22px; color: var(--r8-accent); margin-bottom: 28px; }
+.round8 .slidev-code-wrapper { margin-top: 24px; }
+.round8 pre, .round8 code { font-size: 17px !important; line-height: 1.7 !important; }
+.round8 .r8-policy { margin-top: 30px; font-size: 30px; }
+.round8 .r8-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 44px; }
+.round8 .r8-stats strong { display: block; color: var(--r8-accent); font-size: 79px; letter-spacing: -.06em; }
+.round8 .r8-stats span { display: block; color: #dce2dc; font-size: 20px; line-height: 1.3; }
+.round8 .r8-caveat { margin-top: 36px; padding-top: 20px; border-top: 1px solid #425048; font-size: 18px; line-height: 1.55; color: #b8c4bd; }
+.round8.r8-sources li { font-size: 20px; line-height: 1.65; }
+.round8 a { color: var(--r8-accent); }

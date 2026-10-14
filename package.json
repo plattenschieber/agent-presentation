@@ -4,7 +4,7 @@
   "description": "Slidev presentations about agentic coding tools for Agents Anonymous meetup",
   "scripts": {
     "build": "npm run build:all",
-    "build:all": "npm run build:round1 && npm run build:round2 && npm run build:round3 && npm run build:round4 && npm run build:round5 && npm run build:semanticos && npm run build:astgrep && npm run build:lessons && npm run build:round6 && npm run build:round7 && npm run build:index",
+    "build:all": "npm run build:round1 && npm run build:round2 && npm run build:round3 && npm run build:round4 && npm run build:round5 && npm run build:semanticos && npm run build:astgrep && npm run build:lessons && npm run build:round6 && npm run build:round7 && npm run build:round8 && npm run build:index",
     "build:round1": "slidev build presentations/agentic-journey-slides.md --base /agent-presentation/round1/ --out ../dist/round1",
     "build:round2": "slidev build presentations/round2-hype-to-habits.md --base /agent-presentation/round2/ --out ../dist/round2",
     "build:round3": "slidev build presentations/round3-patterns-that-stuck.md --base /agent-presentation/round3/ --out ../dist/round3",
@@ -25,7 +25,10 @@
     "dev:lessons": "slidev presentations/lessons-learned.md --open",
     "dev:semanticos": "slidev presentations/semanticos-sokrates-lightning-talk.md --open",
     "dev:round6": "slidev presentations/round6-agents-anonymous.md --open",
-    "dev:round7": "slidev presentations/round7-tonight.md --open"
+    "dev:round7": "slidev presentations/round7-tonight.md --open",
+    "build:round8": "slidev build presentations/round8-jev-review.md --base /agent-presentation/round8/ --out ../dist/round8",
+    "dev:round8": "slidev presentations/round8-jev-review.md --open",
+    "test:round8": "node docs/round8-review-exercise.mjs"
   },
   "devDependencies": {
     "@slidev/cli": "^52.6.0",

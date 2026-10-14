@@ -8,6 +8,15 @@ Real talk about agentic coding from the Cologne meetup trenches.
 
 ## 📊 Presentations
 
+### Round 8: Jev & the New Normal — Who Reviews All This Code? (20 October 2026)
+A 15-minute opening on structured judgments, review evidence, and human responsibility, followed by five-minute lightning talks and discussion.
+
+- **Event:** Tuesday 20 October 2026, 18:00–21:00 Europe/Berlin, STARTPLATZ Köln
+- **Deck source:** [Round 8](presentations/round8-jev-review.md)
+- **Published route after merge/deploy:** `/agent-presentation/round8/`
+- **Offline exercise:** `npm run test:round8` (synthetic example, no API key or network)
+- **Run of show:** [Facilitator notes](docs/round8-facilitator.md)
+
 ### Round 7: Less Steering, More Alignment (September 2026)
 How lean skills, decision-first reviews, and cloud agents shift the work from supervising execution to aligning intent.
 
@@ -99,6 +108,7 @@ npm run dev:round6    # Round 6: Make It Yours
 npm run dev:semanticos # Sokrates — semanticOS
 npm run dev:astgrep   # ast-grep + Claude Code
 npm run dev:round7    # Round 7: Less Steering, More Alignment
+npm run dev:round8    # Round 8: Jev & the New Normal
 
 # Build all presentations
 npm run build

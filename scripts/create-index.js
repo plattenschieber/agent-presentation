@@ -195,6 +195,13 @@ const html = `<!DOCTYPE html>
                 <span class="cta">View Slides →</span>
             </a>
 
+            <a href="./round8/" class="presentation-card">
+                <h2>Round 8: Jev &amp; the New Normal</h2>
+                <p>Who reviews all this code? Structured judgments, evidence-driven review, and a hands-on PR triage exercise.</p>
+                <p class="date">20 October 2026 · STARTPLATZ Köln · 18:00–21:00 Europe/Berlin</p>
+                <span class="cta">View Slides →</span>
+            </a>
+
             <a href="./ast-grep/" class="presentation-card">
                 <h2>ast-grep + Claude Code</h2>
                 <p>Automated architectural enforcement for AI-assisted development. How to prevent pattern drift and security issues.</p>
