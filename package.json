@@ -28,7 +28,9 @@
     "dev:round7": "slidev presentations/round7-tonight.md --open",
     "build:round8": "slidev build presentations/round8-jev-review.md --base /agent-presentation/round8/ --out ../dist/round8",
     "dev:round8": "slidev presentations/round8-jev-review.md --open",
-    "test:round8": "node docs/round8-review-exercise.mjs"
+    "test:round8": "node docs/round8-review-exercise.mjs",
+    "demo:round8": "node docs/round8-local-demo.mjs",
+    "test:round8:demo": "node --test docs/round8-local-demo.test.mjs"
   },
   "devDependencies": {
     "@slidev/cli": "^52.6.0",

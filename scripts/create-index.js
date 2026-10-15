@@ -197,7 +197,7 @@ const html = `<!DOCTYPE html>
 
             <a href="./round8/" class="presentation-card">
                 <h2>Round 8: Jev &amp; the New Normal</h2>
-                <p>Who reviews all this code? Structured judgments, evidence-driven review, and a hands-on PR triage exercise.</p>
+                <p>Who reviews all this code? A short opening, optional local-model demo, guest showcases, and a kefir for every presenter.</p>
                 <p class="date">20 October 2026 · STARTPLATZ Köln · 18:00–21:00 Europe/Berlin</p>
                 <span class="cta">View Slides →</span>
             </a>

@@ -28,7 +28,9 @@ npm run dev:round4   # Live dev server for a single presentation
 ### Build Verification
 
 There is no general test suite. The Round 8 offline teaching exercise runs with
-`npm run test:round8`. After any change, verify by building:
+`npm run test:round8`; `npm run test:round8:demo` runs offline mocked local-demo tests.
+`npm run demo:round8` is an optional actual local Ollama call, not an offline test.
+After any change, verify by building:
 
 ```sh
 npm run build
