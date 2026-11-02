@@ -1,0 +1,34 @@
+{
+  "name": "axa-agent-loop-workshop",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "setup": "node --env-file-if-exists=.env setup.mjs",
+    "pi": "node pi.mjs",
+    "demo": "node server.mjs",
+    "live": "node --env-file-if-exists=.env server.mjs --live",
+    "test": "node --test test/*.test.mjs",
+    "test:browser": "node test/browser.mjs",
+    "test:local-model": "node test/local-model.mjs",
+    "boards": "node scripts/boards.mjs",
+    "test:boards": "node test/boards.mjs"
+  },
+  "dependencies": {
+    "@earendil-works/chord": "1.4.0",
+    "@earendil-works/pi-ai": "1.4.0",
+    "@earendil-works/pi-codemode": "1.4.0",
+    "@earendil-works/pi-coding-agent": "1.4.0",
+    "@earendil-works/pi-durable": "1.4.0",
+    "typebox": "1.4.3"
+  },
+  "devDependencies": {
+    "@excalidraw/excalidraw": "0.18.0",
+    "@playwright/test": "1.51.1",
+    "esbuild": "0.25.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  }
+}
