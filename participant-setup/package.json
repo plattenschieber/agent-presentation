@@ -1,0 +1,7 @@
+{
+  "name": "axa-agentic-setup",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "dependencies": { "@earendil-works/pi-coding-agent": "1.4.0" }
+}

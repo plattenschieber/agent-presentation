@@ -1,0 +1,25 @@
+[workspace]
+name = "axa-agentic-setup"
+channels = ["conda-forge"]
+platforms = ["linux-64", "linux-aarch64", "osx-64", "osx-arm64", "win-64"]
+
+[dependencies]
+nodejs = ">=24,<25"
+git = ">=2.49,<3"
+
+[target.linux-64.dependencies]
+bash = ">=5,<6"
+[target.linux-aarch64.dependencies]
+bash = ">=5,<6"
+[target.osx-64.dependencies]
+bash = ">=5,<6"
+[target.osx-arm64.dependencies]
+bash = ">=5,<6"
+
+[tasks]
+setup = "node participant-setup/scripts/workshop.mjs setup"
+test-connection = "node participant-setup/scripts/workshop.mjs test-connection"
+pi = "node participant-setup/scripts/workshop.mjs pi"
+doctor = "node participant-setup/scripts/workshop.mjs doctor"
+test-agent = "node participant-setup/scripts/workshop.mjs test-agent"
+test = "node --test participant-setup/test/*.test.mjs"

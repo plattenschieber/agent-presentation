@@ -1,0 +1,23 @@
+name: Participant setup
+on:
+  pull_request:
+    paths: ['pixi.toml', 'pixi.lock', 'participant-setup/**', '.github/workflows/participant-setup.yml']
+permissions:
+  contents: read
+jobs:
+  setup:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: prefix-dev/setup-pixi@v0.9.3
+        with:
+          pixi-version: v0.83.0
+      - run: pixi install --locked
+      - run: pixi run test
+      - run: pixi run node -e "require('child_process').execFileSync(process.platform === 'win32' ? 'npm.cmd' : 'npm', ['ci'], {cwd:'participant-setup',stdio:'inherit',shell:process.platform === 'win32'})"
+      - run: pixi run node participant-setup/node_modules/@earendil-works/pi-coding-agent/dist/cli.js --version
+      - run: pixi run doctor

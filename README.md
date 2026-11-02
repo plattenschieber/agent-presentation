@@ -2,6 +2,10 @@
 
 Real talk about agentic coding from the Cologne meetup trenches.
 
+## AXA workshop · Wednesday, 4 November
+
+[Participant setup](participant-setup/README.md): install Pixi, then run `pixi run setup`, `pixi run test-agent`, and `pixi run pi` from this directory.
+
 ## 🎯 View Presentations Online
 
 **Live at:** https://plattenschieber.github.io/agent-presentation/
