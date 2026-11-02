@@ -7,13 +7,15 @@ import { Harness, createRegistry, defineExtension } from '@earendil-works/pi-dur
 import { createReadTool } from '@earendil-works/pi-durable/tools';
 import { Type } from 'typebox';
 import { NodeExecutionEnv } from '@earendil-works/pi-durable/env/node';
+import { CodemodeSandbox } from '@earendil-works/pi-codemode';
+import { readFile } from 'node:fs/promises';
 import { openNodeSqliteStorage } from '@earendil-works/pi-durable/storage/sqlite/node';
 import { resolve } from 'node:path';
 import { model } from './model.mjs';
 
 export const prompts = {
   baseline: 'Read claims.json. Return only JSON with count and mean of recorded claim amounts.',
-  candidate: 'Read claims.json, then calculate the count and arithmetic mean of its recorded amounts. Include zero amounts. Exclude null amounts. Return one JSON object with exactly two numeric fields: count and mean. Do not return the input records. Do not use Markdown.',
+  candidate: 'Read claims.json, then use summarize_claims to calculate the count and arithmetic mean. Include zero amounts. Exclude null amounts. Return only its JSON result; do not recalculate it.',
 };
 
 export async function openAgent(path, live = false) {
@@ -41,7 +43,9 @@ export async function openAgent(path, live = false) {
       faux.appendResponses([respond]);
       const last = context.messages.at(-1);
       if (last.role === 'user') return fauxAssistantMessage(
-        fauxToolCall('read', { path: 'claims.json' }), { stopReason: 'toolUse' });
+        JSON.stringify(last.content).includes('Include zero')
+          ? fauxToolCall('summarize_claims', {})
+          : fauxToolCall('read', { path: 'claims.json' }), { stopReason: 'toolUse' });
       const user = context.messages.findLast(message => message.role === 'user');
       const improved = JSON.stringify(user.content).includes('Include zero');
       return fauxAssistantMessage(JSON.stringify(improved ? { count: 3, mean: 100 } : { count: 2, mean: 150 }));
@@ -54,9 +58,24 @@ export async function openAgent(path, live = false) {
   const read = createReadTool();
   // The tiny model supplied limit: 0 and received no records. This task only
   // needs whole-file reads; remove irrelevant choices from its tool contract.
-  registry.install(defineExtension({ name: 'workshop-read', tools: [{ ...read,
+  registry.install(defineExtension({ name: 'workshop-tools', tools: [{ ...read,
     parameters: Type.Object({ path: Type.String() }),
     execute: (args, api, context) => read.execute({ path: args.path }, api, context),
+  }, {
+    name: 'summarize_claims', description: 'Read claims.json and compute its recorded count and mean. Zero is recorded; null is missing.',
+    parameters: Type.Object({}), replay: 'safe',
+    async execute() {
+      const script = `const rows = await tools.claims({});
+const values = rows.map(row => row.amount).filter(n => typeof n === 'number');
+return { count: values.length, mean: values.length ? values.reduce((a,b) => a+b,0) / values.length : null };`;
+      const sandbox = new CodemodeSandbox({ timeoutMs:5000, tools:[{ name:'claims',
+        execute:async () => JSON.parse(await readFile(resolve('fixture/claims.json'),'utf8')) }] });
+      try {
+        const result = await sandbox.execute(script);
+        if (!result.ok) throw new Error(result.error.message);
+        return { output:[{type:'text',text:JSON.stringify(result.value)}],details:{engine:'Pi Code Mode / QuickJS',script,fileRead:true} };
+      } finally { await sandbox.close(); }
+    },
   }] }));
   const env = new NodeExecutionEnv({ cwd: resolve('fixture') });
   const harness = await Harness.open(await openNodeSqliteStorage(path), {
@@ -64,7 +83,7 @@ export async function openAgent(path, live = false) {
   }, ctx);
   const root = await harness.root(ctx, { agent: {
     model: { provider: selected.provider, modelId: selected.id },
-    cwd: resolve('fixture'), tools: [{ name: 'read' }], instructions: 'Be concise. Inspect the file before answering. /no_think',
+    cwd: resolve('fixture'), instructions: 'Be concise. Use tools to inspect data and calculate results. /no_think',
   }});
   harness.resume();
   return {

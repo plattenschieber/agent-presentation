@@ -97,7 +97,7 @@ function render(result) {
     const list = node('ol'); list.append(...result.timeline.map(item => node('li',item))); target.append(list);
     target.append(node('p','This verifies reuse of a completed call. It does not make arbitrary external side effects exactly-once.'));
   }
-  if (result.answer) target.append(node('h3','Agent answer'),node('pre',result.answer));
+  if (result.answer) target.append(node('h3',result.answerSource || 'Agent answer'),node('pre',result.answer));
   if (result.script) target.append(detail('Inspect the Code Mode script',result.script));
   if (result.result) target.append(detail('Inspect the result',result.result));
   target.append(detail('Inspect the full trace',result.trace));

@@ -20,7 +20,9 @@ Start with [the common introduction](INTRO.md). Open `05-improve.excalidraw` and
 5. Add a case with all zeros or all missing values. Extend the task contract before extending the checker.
 6. Save your review and reload the page. Check that the evidence remains.
 
-**Fixture answer:** baseline returns count 2 / mean 150; candidate returns count 3 / mean 100. This contrast is scripted to teach the interface. A live model may get the baseline right; use its actual failure, or openly switch to the teaching fixture.
+**Offline answer:** scripted tool selection sends the baseline to a read and a deliberately wrong response (count 2 / mean 150). The candidate selects a real Code Mode calculation (count 3 / mean 100). This teaches the interface; it does not measure model improvement. A live model may get the baseline right; use its actual failure, or openly switch to the teaching fixture.
+
+**Actual build lesson:** tiny models misread tool options and made arithmetic errors. We narrowed the read contract, moved calculation into Code Mode, and preserved the structured tool artifact. The raw model response remains in the trace. This is a harness improvement, not evidence that one magic prompt fixed reasoning.
 
 ## Facilitation notes
 

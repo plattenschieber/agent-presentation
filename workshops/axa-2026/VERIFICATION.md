@@ -22,7 +22,7 @@ The **Workshop proof** GitHub Actions workflow repeats these checks on a fresh U
 
 ## Live model experiment
 
-The local experiment uses Qwen3-0.6B-Q8_0 (official Qwen GGUF revision `23749fefcc72300e3a2ad315e1317431b06b590a`) and llama.cpp b12032. No API key is involved.
+The experiments use Qwen3-0.6B-Q8_0 (revision `23749fefcc72300e3a2ad315e1317431b06b590a`) and Qwen2.5-1.5B-Instruct-Q4_K_M (revision `91cad51170dc346986eccefdc2dd33a9da36ead9`), both official Qwen GGUFs, with llama.cpp b12032. No API key is involved.
 
 ```sh
 LLAMA_SERVER=/path/to/llama-server \
@@ -33,6 +33,10 @@ npm run test:local-model
 The test starts and stops its own model process. It checks real classifier responses and an agent tool call, then asserts the task-specific output checks. A wrong answer fails the test. The saved trace remains available for error analysis.
 
 The initial real run successfully read the file but echoed the data instead of returning a summary. A stricter output instruction exposed an empty read (`limit: 0`). Narrowing the tool to whole-file reads fixed that issue, but the 0.6B model still returned an incorrect mean. These failures are retained in the `local-model-*-failure` / `local-model-initial` / `local-model-empty-read` evidence files; they are not relabeled as successes. The small reviewer also missed the positive holdout example. It is unsuitable for autonomous acceptance on this evidence.
+
+**Passing live run:** Qwen2.5-1.5B selected a real calculation tool. That tool reads the file and runs the arithmetic in Pi Code Mode; the harness returns its structured artifact without letting the model rewrite it. The resulting count 3 / mean 100 passed both independent checks. `evidence/local-model.json` contains the full trace and distinguishes the tool artifact from the model's prose. This verifies the combined workflow on this example, not general model competence. The reviewer returned valid scores but several wrong judgments; no judge-quality pass is claimed.
+
+On Linux x64, `bash scripts/local-model.sh` downloads checksum-verified, pinned binaries and weights and repeats the live test. It downloads approximately 1.1 GB and is for facilitator/CI verification, not participant setup.
 
 ## Limits
 
