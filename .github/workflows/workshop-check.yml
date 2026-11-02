@@ -1,0 +1,37 @@
+name: Workshop proof
+on:
+  push:
+    branches: ['workshop/**']
+    paths: ['workshops/axa-2026/**', '.github/workflows/workshop-check.yml']
+  pull_request:
+    paths: ['workshops/axa-2026/**', '.github/workflows/workshop-check.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: workshops/axa-2026
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: workshops/axa-2026/package-lock.json
+      - run: npm ci
+      - run: npm test
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:browser
+      - run: npm run test:boards
+      - name: Live open-model proof
+        run: bash scripts/local-model.sh
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workshop-proof
+          path: |
+            workshops/axa-2026/evidence/
+            workshops/axa-2026/course/boards/

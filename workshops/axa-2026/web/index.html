@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agent workshop — five ways in</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <header>
+      <span class="eyebrow">AXA · Amsterdam · 4 November 2026</span>
+      <h1>Five ways into<br /><em>agentic engineering.</em></h1>
+      <p>Understand the loop. Make one change. Inspect the evidence.</p>
+    </header>
+    <main>
+      <nav id="courses" aria-label="Course ideas"></nav>
+      <section id="course" aria-live="polite"></section>
+      <section id="workbench">
+        <div class="section-title">
+          <h2>Try the idea</h2>
+          <span id="mode" class="pill"></span>
+        </div>
+        <form id="controls">
+          <label id="variant-control"
+            >Instruction<select id="variant">
+              <option value="baseline">Baseline</option>
+              <option value="candidate">Include zero; exclude null</option>
+            </select></label
+          >
+          <label id="threshold-control"
+            >Accept at <output id="threshold-value">0.80</output
+            ><input
+              id="threshold"
+              type="range"
+              min="0"
+              max="1"
+              step="0.05"
+              value="0.8"
+          /></label>
+          <button id="run" type="submit">Run the exercise →</button>
+        </form>
+        <p id="status" role="status"></p>
+        <div id="result"></div>
+        <form id="review" hidden>
+          <h3>Your observation</h3>
+          <label
+            >What happened, and why does it matter?<textarea
+              id="notes"
+              required
+              placeholder="The result excludes zero, so the mean is too high."
+            ></textarea>
+          </label>
+          <label
+            >Verdict<select id="verdict">
+              <option value="fail">Fail</option>
+              <option value="pass">Pass</option>
+              <option value="defer">Needs another look</option>
+            </select></label
+          ><button>Save review</button><span id="saved" role="status"></span>
+        </form>
+      </section>
+      <section>
+        <div class="section-title">
+          <h2>Run history</h2>
+          <button id="refresh" class="quiet">Refresh</button>
+        </div>
+        <div id="history"></div>
+      </section>
+    </main>
+    <footer>
+      Local learning lab · Synthetic data · No customer information · Each
+      course is a two-hour option, not five sessions squeezed into one.
+    </footer>
+  </body>
+</html>

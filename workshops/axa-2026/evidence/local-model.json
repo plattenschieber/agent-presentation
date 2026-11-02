@@ -1,0 +1,304 @@
+{
+  "at": "2026-11-02T01:40:56.211Z",
+  "model": "Qwen2.5-1.5B-Instruct-Q4_K_M",
+  "server": "llama.cpp b12032",
+  "reviewer": {
+    "title": "Teach the reviewer what failure means",
+    "mode": "Live reviewer: workshop-local · real Code Mode",
+    "rubric": "Does this reasoning treat zero amounts as recorded observations and null amounts as missing?",
+    "script": "const rows = await tools.examples({});\nreturn await Promise.all(rows.map(async row => ({\n  id: row.id, probability: await tools.judge({id: row.id, text: row.text})\n})));",
+    "threshold": 0.8,
+    "rows": [
+      {
+        "id": "a",
+        "split": "practice",
+        "text": "The answer counts zero and excludes missing amounts.",
+        "expected": true,
+        "probability": 1,
+        "predicted": true
+      },
+      {
+        "id": "b",
+        "split": "practice",
+        "text": "I removed all falsy values, then calculated the mean.",
+        "expected": false,
+        "probability": 0.9796,
+        "predicted": true
+      },
+      {
+        "id": "c",
+        "split": "practice",
+        "text": "I guessed the mean without opening the data.",
+        "expected": false,
+        "probability": 0.75,
+        "predicted": false
+      },
+      {
+        "id": "d",
+        "split": "holdout",
+        "text": "Zero is a recorded value. Null is absent. There are three observations.",
+        "expected": true,
+        "probability": 0.5,
+        "predicted": false
+      },
+      {
+        "id": "e",
+        "split": "holdout",
+        "text": "I excluded the zero because there was no payment.",
+        "expected": false,
+        "probability": 1,
+        "predicted": true
+      },
+      {
+        "id": "f",
+        "split": "holdout",
+        "text": "Both zero and null were dropped as missing.",
+        "expected": false,
+        "probability": 1,
+        "predicted": true
+      }
+    ],
+    "practice": {
+      "tp": 1,
+      "tn": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    "holdout": {
+      "tp": 0,
+      "tn": 0,
+      "fp": 2,
+      "fn": 1
+    },
+    "checks": [
+      {
+        "name": "All six classifier results have a valid probability",
+        "pass": true
+      }
+    ],
+    "trace": [
+      {
+        "name": "examples",
+        "status": "ok",
+        "durationMs": 0.11929899999995541
+      },
+      {
+        "name": "judge",
+        "status": "ok",
+        "durationMs": 1359.125442
+      },
+      {
+        "name": "judge",
+        "status": "ok",
+        "durationMs": 2146.589589
+      },
+      {
+        "name": "judge",
+        "status": "ok",
+        "durationMs": 3567.493331
+      },
+      {
+        "name": "judge",
+        "status": "ok",
+        "durationMs": 2805.7642920000003
+      },
+      {
+        "name": "judge",
+        "status": "ok",
+        "durationMs": 4144.60451
+      },
+      {
+        "name": "judge",
+        "status": "ok",
+        "durationMs": 4769.596303
+      }
+    ]
+  },
+  "agent": {
+    "title": "Observe → change one thing → rerun",
+    "variant": "candidate",
+    "mode": "Live Azure agent · Pi Durable · task-specific checks",
+    "answer": "{\"count\":3,\"mean\":100}",
+    "modelAnswer": "The JSON result shows there are 3 entries and the average value is 100.",
+    "answerSource": "Code Mode tool artifact",
+    "checks": [
+      {
+        "name": "Counts zero; excludes missing (3)",
+        "pass": true
+      },
+      {
+        "name": "Mean claim amount is 100",
+        "pass": true
+      }
+    ],
+    "trace": [
+      {
+        "model": [
+          {
+            "role": "user",
+            "content": "Read claims.json, then use summarize_claims to calculate the count and arithmetic mean. Include zero amounts. Exclude null amounts. Return only its JSON result; do not recalculate it.",
+            "timestamp": 1793583648603
+          }
+        ],
+        "kind": "pi.user",
+        "id": 7,
+        "conversationId": 1
+      },
+      {
+        "model": [
+          {
+            "role": "system",
+            "content": "",
+            "sections": {
+              "instructions": "<instructions>\nBe concise. Use tools to inspect data and calculate results. /no_think\n</instructions>"
+            },
+            "toolsAdded": [
+              {
+                "name": "read",
+                "description": "Read the contents of a file. Supports text files and images (jpg, png, gif, webp). Images are sent as attachments. For text files, output is truncated to 2000 lines or 50KB (whichever is hit first). Use offset/limit for large files. When you need the full file, continue with offset until complete.",
+                "parameters": {
+                  "type": "object",
+                  "required": [
+                    "path"
+                  ],
+                  "properties": {
+                    "path": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "summarize_claims",
+                "description": "Read claims.json and compute its recorded count and mean. Zero is recorded; null is missing.",
+                "parameters": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            ],
+            "timestamp": 1793583648609
+          }
+        ],
+        "kind": "pi.system",
+        "id": 10,
+        "conversationId": 1,
+        "byTaskId": 9
+      },
+      {
+        "model": [
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "toolCall",
+                "id": "cYbwNAU5b9CvweqnUzBhfAdnHZYmhnFR",
+                "name": "summarize_claims",
+                "arguments": {}
+              }
+            ],
+            "api": "openai-completions",
+            "provider": "workshop",
+            "model": "workshop-local",
+            "usage": {
+              "input": 329,
+              "output": 19,
+              "cacheRead": 3,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 351,
+              "cost": {
+                "input": 0,
+                "output": 0,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0
+              }
+            },
+            "stopReason": "toolUse",
+            "timestamp": 1793583648614,
+            "responseId": "chatcmpl-gbFn4Tw9tQ54GQ36JdA5eLYXuROLctMW",
+            "rawStopReason": "tool_calls",
+            "durationMs": 6132
+          }
+        ],
+        "kind": "pi.assistant",
+        "id": 11,
+        "conversationId": 1,
+        "byTaskId": 9
+      },
+      {
+        "model": [
+          {
+            "role": "toolResult",
+            "toolCallId": "cYbwNAU5b9CvweqnUzBhfAdnHZYmhnFR",
+            "toolName": "summarize_claims",
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"count\":3,\"mean\":100}"
+              }
+            ],
+            "details": {
+              "engine": "Pi Code Mode / QuickJS",
+              "script": "const rows = await tools.claims({});\nconst values = rows.map(row => row.amount).filter(n => typeof n === 'number');\nreturn { count: values.length, mean: values.length ? values.reduce((a,b) => a+b,0) / values.length : null };",
+              "fileRead": true
+            },
+            "isError": false,
+            "durationMs": 75,
+            "timestamp": 1793583654833
+          }
+        ],
+        "data": {
+          "diagnostics": []
+        },
+        "kind": "pi.tool-result",
+        "id": 13,
+        "conversationId": 1,
+        "byTaskId": 12
+      },
+      {
+        "model": [
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "The JSON result shows there are 3 entries and the average value is 100."
+              }
+            ],
+            "api": "openai-completions",
+            "provider": "workshop",
+            "model": "workshop-local",
+            "usage": {
+              "input": 29,
+              "output": 20,
+              "cacheRead": 350,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 399,
+              "cost": {
+                "input": 0,
+                "output": 0,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0
+              }
+            },
+            "stopReason": "stop",
+            "timestamp": 1793583654841,
+            "responseId": "chatcmpl-5DUYOc37KvwrxJKpsj0XGheB6B6dbjA0",
+            "rawStopReason": "stop",
+            "durationMs": 1361
+          }
+        ],
+        "kind": "pi.assistant",
+        "id": 15,
+        "conversationId": 1,
+        "byTaskId": 14
+      }
+    ],
+    "question": "What failed? Write an observation before naming a failure category."
+  },
+  "interpretation": "Live local inference. Reviewer scores are not calibrated probabilities. Six teaching examples do not establish general quality."
+}

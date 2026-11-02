@@ -1,0 +1,6 @@
+[
+  { "claim": "A", "amount": 0 },
+  { "claim": "B", "amount": 100 },
+  { "claim": "C", "amount": null },
+  { "claim": "D", "amount": 200 }
+]
