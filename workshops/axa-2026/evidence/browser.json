@@ -1,0 +1,29 @@
+{
+  "at": "2026-11-02T01:34:47.586Z",
+  "browser": "134.0.6998.35",
+  "results": [
+    {
+      "lab": "coding",
+      "status": "passed"
+    },
+    {
+      "lab": "context",
+      "status": "passed"
+    },
+    {
+      "lab": "reviewer",
+      "status": "passed"
+    },
+    {
+      "lab": "crash",
+      "status": "passed"
+    },
+    {
+      "lab": "improve",
+      "status": "passed"
+    }
+  ],
+  "reviewSurvivesReload": true,
+  "mobileOverflow": false,
+  "errors": []
+}

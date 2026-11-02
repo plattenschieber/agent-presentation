@@ -45,6 +45,7 @@ test('Five exercises through HTTP, saved review, and reload', async () => {
 });
 
 test('Durable reopen preserves transcript and deduplicates the same submission',async () => {
+  await mkdir('.local',{recursive:true});
   const directory = await mkdtemp(resolve('.local/reopen-'));
   const path = join(directory,'state.sqlite');
   let agent = await openAgent(path);

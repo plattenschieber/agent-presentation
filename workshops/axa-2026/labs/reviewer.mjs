@@ -35,7 +35,7 @@ export async function reviewerLab(threshold = 0.8, live = false) {
 return await Promise.all(rows.map(async row => ({
   id: row.id, probability: await tools.judge({id: row.id, text: row.text})
 })));`;
-  const sandbox = new CodemodeSandbox({ timeoutMs: 60000, tools: [
+  const sandbox = new CodemodeSandbox({ timeoutMs: Number(process.env.JUDGE_TIMEOUT_MS || 60000), tools: [
     { name: 'examples', execute: () => examples.map(({ id, text }) => ({ id, text })) },
     { name: 'judge', execute: classify },
   ] });

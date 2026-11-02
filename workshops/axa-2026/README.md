@@ -6,7 +6,7 @@ Five two-hour course options. One shared introduction. Small experiments you can
 
 ```sh
 cd workshops/axa-2026
-npm ci
+npm ci --omit=dev
 npm run setup
 npm run demo
 ```

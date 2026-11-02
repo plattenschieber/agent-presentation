@@ -3,8 +3,9 @@ import { createModels, createProvider } from '@earendil-works/pi-ai/models';
 import { stream, streamSimple } from '@earendil-works/pi-ai/api/openai-completions';
 import { azureProvider } from '@earendil-works/pi-ai/providers/azure';
 import { fauxProvider, fauxAssistantMessage, fauxToolCall } from '@earendil-works/pi-ai/providers/faux';
-import { Harness, createRegistry } from '@earendil-works/pi-durable';
-import { CodingTools } from '@earendil-works/pi-durable/tools';
+import { Harness, createRegistry, defineExtension } from '@earendil-works/pi-durable';
+import { createReadTool } from '@earendil-works/pi-durable/tools';
+import { Type } from 'typebox';
 import { NodeExecutionEnv } from '@earendil-works/pi-durable/env/node';
 import { openNodeSqliteStorage } from '@earendil-works/pi-durable/storage/sqlite/node';
 import { resolve } from 'node:path';
@@ -50,7 +51,13 @@ export async function openAgent(path, live = false) {
     selected = faux.getModel();
   }
   const registry = createRegistry();
-  registry.install(CodingTools);
+  const read = createReadTool();
+  // The tiny model supplied limit: 0 and received no records. This task only
+  // needs whole-file reads; remove irrelevant choices from its tool contract.
+  registry.install(defineExtension({ name: 'workshop-read', tools: [{ ...read,
+    parameters: Type.Object({ path: Type.String() }),
+    execute: (args, api, context) => read.execute({ path: args.path }, api, context),
+  }] }));
   const env = new NodeExecutionEnv({ cwd: resolve('fixture') });
   const harness = await Harness.open(await openNodeSqliteStorage(path), {
     models, registry, env: () => env,

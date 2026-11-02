@@ -78,7 +78,11 @@ function render(result) {
       card.append(node('p',sample.text));
       for (const label of ['Sound reasoning','Failure']) {
         const button = node('button',label,'quiet');
-        button.onclick = () => { for (const b of card.querySelectorAll('button')) b.setAttribute('aria-pressed',String(b === button)); button.textContent = `✓ ${label}`; };
+        button.dataset.label = label;
+        button.onclick = () => { for (const b of card.querySelectorAll('button')) {
+          b.setAttribute('aria-pressed',String(b === button));
+          b.textContent = `${b === button ? '✓ ' : ''}${b.dataset.label}`;
+        } };
         card.append(button);
       }
       const reference = node('p',`${sample.split} · reference: ${sample.expected ? 'sound' : 'failure'} · score ${sample.probability.toFixed(2)} · predicted: ${sample.predicted ? 'sound' : 'failure'}`,'reference');
@@ -116,7 +120,7 @@ $('#review').addEventListener('submit',async event => {
 async function history() {
   const runs = await api('/api/runs'); $('#history').replaceChildren();
   if (!runs.length) $('#history').append(node('p','Your first run starts the comparison.'));
-  for (const run of runs.slice().reverse()) {
+  for (const run of runs.sort((a,b) => b.at.localeCompare(a.at))) {
     const row = node('div',undefined,'history-run');
     const button = node('button',`${run.title}${run.variant ? ` · ${run.variant}` : ''}`,'quiet');
     button.onclick = () => { select(courses.find(course => course.id === run.lab)); current = run; render(run); };

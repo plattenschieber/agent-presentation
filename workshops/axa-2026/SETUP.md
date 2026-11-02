@@ -1,5 +1,7 @@
 # Preparation session · 30 minutes
 
+Tuesday, 3 November 2026, 16:00 Amsterdam time.
+
 **Finish line:** every participant can launch Pi, reach the assigned model, open the exercise, and run one check.
 
 Bring the personal laptop you will use on Wednesday, its charger, and the organizer's credentials. Do not bring AXA customer data. Work in pairs during the workshop; each pair has a driver and reviewer.
@@ -19,7 +21,7 @@ git clone https://github.com/plattenschieber/agent-presentation.git
 cd agent-presentation
 git switch workshop/axa-agent-loop
 cd workshops/axa-2026
-npm ci
+npm ci --omit=dev
 ```
 
 Create `.env` in this directory with the organizer's key. The file is ignored by Git.
