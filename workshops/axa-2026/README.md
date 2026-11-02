@@ -40,6 +40,8 @@ Offline mode executes real file edits, tests, QuickJS scripts, HTTP requests, SQ
 
 ## Read the code
 
+Dependencies are pinned to Pi 1.5.0 and React 18.3.1. The package overrides patch Excalidraw's nested Nano ID, Lodash and KaTeX dependencies; browser and native board-export checks cover this combination. `npm audit` reports known vulnerabilities. npm's `node-domexception` and `sliced` deprecation notices come from upstream Google and PNG dependencies.
+
 `labs/` contains five small exercises. `agent.mjs` owns Durable; `server.mjs` owns HTTP; `web/` owns the interface. `evaluate.mjs` contains two concrete output checks. Provider configuration stays outside the interface.
 
 This is a local teaching prototype, not a shared hosted service. It runs on loopback and writes traces under ignored `runs/`. Pi's file and shell tools run with your user permissions; a working directory is not a security sandbox.

@@ -30,5 +30,5 @@ Primary references: [Pi SDK](https://pi.dev/docs/latest/sdk), [Code Mode](https:
 - Use Hamel/Shreya's error-discovery approach. The prototype includes free-text observations and expandable traces; it is not a complete implementation of every eval skill.
 - Keep subagents optional. First make one agent observable and testable.
 - Teach context degradation as a practical risk, not a universal token threshold or a fixed “dumb zone.”
-- Keep Durable experimental and pinned to 1.4.0. Its host still has to restart it. Completed-call replay does not guarantee exactly-once arbitrary external effects.
+- Keep Durable experimental and pinned to 1.5.0. Its host still has to restart it. Completed-call replay does not guarantee exactly-once arbitrary external effects.
 - Hold one model, dataset and task constant when comparing an instruction change. Re-run on fresh examples before claiming improvement.
