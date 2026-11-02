@@ -47,6 +47,16 @@ Pi opens in `participant-setup/`. Ask it to create a small file, explain a chang
 pixi run pi --print "Explain the files in this directory."
 ```
 
+## Optional local Kev
+
+```sh
+pixi run -e kev kev
+```
+
+This installs [Kev-0.8B](https://huggingface.co/jaredpalmer/kev-0.8b), a small JEV-style decision model, in a separate Pixi environment. The first start downloads the model and its base weights from Hugging Face. No API key or Ollama is needed. The environment supports Apple Silicon with macOS 14+, Linux x64 and Windows x64.
+
+The local TypeSafe-compatible endpoint is `http://127.0.0.1:8009/v1/systemone`, model `kev-latest`. In another terminal, run `pixi run -e kev test-kev` for two real billing judgments. This is a smoke test, not a quality benchmark. Stop the server with Ctrl+C.
+
 ## Troubleshooting
 
 Run `pixi run doctor` to check Node, Git, bash and key availability.
@@ -64,3 +74,5 @@ Pixi supplies Node 24 and Git locally to the project, plus bash on macOS/Linux. 
 ## Maintainer checks
 
 `pixi run test` checks configuration and failure handling without credentials. CI exercises clean installs on Linux, macOS and Windows. Live connection and tool tests require the organizer's key; never add it to source control or CI logs.
+
+Pi is pinned to 1.5.0, including patched dependencies. Unneeded Google/protobuf install scripts are explicitly disabled. npm may still warn about `node-domexception`, an upstream Google compatibility dependency; this is separate from the security audit. Check security with `pixi run npm audit --prefix participant-setup`.

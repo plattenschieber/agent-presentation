@@ -18,6 +18,10 @@ jobs:
           pixi-version: v0.83.0
       - run: pixi install --locked
       - run: pixi run test
-      - run: pixi run node -e "require('child_process').execFileSync(process.platform === 'win32' ? 'npm.cmd' : 'npm', ['ci'], {cwd:'participant-setup',stdio:'inherit',shell:process.platform === 'win32'})"
+      - run: |
+          pixi run node -e "require('child_process').execFileSync(process.platform === 'win32' ? 'npm.cmd' : 'npm', ['ci'], {cwd:'participant-setup',stdio:'inherit',shell:process.platform === 'win32'})"
       - run: pixi run node participant-setup/node_modules/@earendil-works/pi-coding-agent/dist/cli.js --version
       - run: pixi run doctor
+      - run: pixi run npm audit --prefix participant-setup
+      - run: pixi install -e kev --locked
+      - run: pixi run -e kev python -m kev.serve --help
