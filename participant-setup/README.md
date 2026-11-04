@@ -36,7 +36,7 @@ Already cloned? Run `git fetch origin` and `git switch workshop/participant-setu
 ```sh
 pixi run test-connection
 pixi run test-agent
-pixi run pi
+pixi run baseline
 ```
 
 The first check expects **OK** from Azure. The second verifies that the model actually reads a file and runs Node through bash. Both must pass before Wednesday.
@@ -46,6 +46,32 @@ Pi opens in `participant-setup/`. Ask it to create a small file, explain a chang
 ```sh
 pixi run pi --print "Explain the files in this directory."
 ```
+
+## Workshop attempts: clean baseline and interview
+
+Run from the repository root:
+
+```sh
+pixi run baseline
+```
+
+This starts a fresh, non-persisted Pi session with read/write/edit/bash. It disables discovered skills, extensions (including MCP), prompt templates and AGENTS.md/CLAUDE.md context files. Personal files are not deleted. Check that startup shows no personal **Skills** or **Context** entries.
+
+Exit Pi before the second attempt, then run:
+
+```sh
+pixi run interview
+```
+
+Only the bundled **grill-me** and **grilling** skills should appear. Start the interview with:
+
+```text
+/skill:grill-me Help me design a minimal terminal coding agent. Interview me before building it.
+```
+
+Both commands still open in `participant-setup/`. Use `attempt-01/` for the first build and a new `attempt-02/` folder for the second; neither command deletes or resets your files. Sessions are deliberately not saved or resumed. These modes accept no extra CLI options so a skill or old session cannot accidentally bypass the comparison. `pixi run pi` now starts with the same baseline isolation and still accepts explicit custom options (for example `--print`). Explicit `--skill` or `--extension` options can deliberately load extra resources; use the fixed baseline/interview commands for the workshop comparison. `test-agent` also uses the clean baseline.
+
+This controls automatically loaded resources, not filesystem permissions or a security sandbox: the agent can still read files you ask it to inspect. The model/endpoint and key configuration remain the existing workshop setup. Review the bundled skills and their pinned upstream attribution in `skills/UPSTREAM.md`; no personal skill installation is required.
 
 ## Optional local Kev
 

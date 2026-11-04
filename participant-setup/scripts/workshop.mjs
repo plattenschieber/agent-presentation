@@ -2,6 +2,7 @@ import { spawnSync, spawn } from 'node:child_process';
 import { mkdir, writeFile, chmod, access } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { modeArguments } from './modes.mjs';
 import { configure, testConnection, agentDir, deployment } from './config.mjs';
 
 process.chdir(resolve(dirname(fileURLToPath(import.meta.url)), '..'));
@@ -53,15 +54,15 @@ async function setup() {
   run(process.platform === 'win32' ? 'npm.cmd' : 'npm', ['ci'], { shell: process.platform === 'win32' });
   await configure();
   console.log(await testConnection(key));
-  console.log('Ready. Start Pi with: pixi run pi');
+  console.log('Ready. Start the clean baseline with: pixi run baseline');
 }
 
-async function startPi(extra = [], capture = false) {
+async function startPi(extra = [], capture = false, mode = 'baseline') {
   if (!process.env.AZURE_OPENAI_API_KEY) throw new Error('Run pixi run setup first.');
   const cli = resolve('node_modules/@earendil-works/pi-coding-agent/dist/cli.js');
   try { await access(cli); } catch { throw new Error('Pi is not installed. Run pixi run setup.'); }
   await configure();
-  const child = spawn(process.execPath, [cli, '--provider', 'azure', '--model', deployment, ...extra], {
+  const child = spawn(process.execPath, [cli, '--provider', 'azure', '--model', deployment, ...modeArguments(mode), ...extra], {
     stdio: capture ? ['ignore', 'pipe', 'pipe'] : 'inherit', env: piEnvironment(),
   });
   let output = '', errors = '';
@@ -97,6 +98,11 @@ try {
   if (command === 'setup') await setup();
   else if (command === 'test-connection') console.log(await testConnection(process.env.AZURE_OPENAI_API_KEY));
   else if (command === 'pi') await startPi(process.argv.slice(3));
+  else if (command === 'baseline' || command === 'interview') {
+    if (process.argv.length > 3) throw new Error('Workshop modes accept no CLI overrides. Paste your prompt after Pi opens; use pixi run pi for custom options.');
+    console.log(command === 'baseline' ? 'Baseline: no discovered skills or context files.' : 'Interview: only bundled grill-me and grilling skills. Start with /skill:grill-me');
+    await startPi([], false, command);
+  }
   else if (command === 'test-agent') await testAgent();
   else if (command === 'doctor') {
     console.log(`Node: ${process.version}`);
@@ -105,7 +111,7 @@ try {
     run(getShellConfig().shell, ['--version']);
     console.log(`Key: ${process.env.AZURE_OPENAI_API_KEY ? 'configured' : 'missing'}`);
     console.log(`Pi configuration: ${agentDir}`);
-  } else throw new Error('Use setup, test-connection, test-agent, doctor or pi.');
+  } else throw new Error('Use setup, test-connection, test-agent, doctor, pi, baseline or interview.');
 } catch (error) {
   console.error(error.message.replaceAll(process.env.AZURE_OPENAI_API_KEY || '\u0000', '[redacted]'));
   process.exitCode = 1;
