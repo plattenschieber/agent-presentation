@@ -1,0 +1,4 @@
+.env
+.pixi/
+.workshop/
+node_modules/

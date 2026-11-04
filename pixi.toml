@@ -1,0 +1,43 @@
+[workspace]
+name = "axa-agentic-setup"
+channels = ["conda-forge"]
+platforms = ["linux-64", "linux-aarch64", "osx-64", "osx-arm64", "win-64", { name = "kev-mac", platform = "osx-arm64", macos = "14.0" }]
+
+[dependencies]
+nodejs = ">=24,<25"
+git = ">=2.49,<3"
+
+[target.linux-64.dependencies]
+bash = ">=5,<6"
+[target.linux-aarch64.dependencies]
+bash = ">=5,<6"
+[target.osx-64.dependencies]
+bash = ">=5,<6"
+[target.osx-arm64.dependencies]
+bash = ">=5,<6"
+
+[tasks]
+setup = "node participant-setup/scripts/workshop.mjs setup"
+test-connection = "node participant-setup/scripts/workshop.mjs test-connection"
+pi = "node participant-setup/scripts/workshop.mjs pi"
+baseline = "node participant-setup/scripts/workshop.mjs baseline"
+interview = "node participant-setup/scripts/workshop.mjs interview"
+doctor = "node participant-setup/scripts/workshop.mjs doctor"
+test-agent = "node participant-setup/scripts/workshop.mjs test-agent"
+test = "node --test participant-setup/test/*.test.mjs"
+
+[feature.kev]
+platforms = ["linux-64", "kev-mac", "win-64"]
+
+[feature.kev.dependencies]
+python = "3.12.*"
+
+[feature.kev.pypi-dependencies]
+kev = { git = "https://github.com/jaredpalmer/kev.git", rev = "2074cc44256200bb37540103fa4572901faa10f3", extras = ["serve"] }
+
+[feature.kev.tasks]
+kev = "python -m kev.serve --run jaredpalmer/kev-0.8b@9a45d25e --host 127.0.0.1 --port 8009"
+test-kev = { cmd = "node --test participant-setup/test/kev.test.mjs", env = { TEST_KEV = "1" } }
+
+[environments]
+kev = { features = ["kev"] }
