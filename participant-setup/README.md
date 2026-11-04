@@ -73,6 +73,10 @@ Both commands still open in `participant-setup/`. Use `attempt-01/` for the firs
 
 This controls automatically loaded resources, not filesystem permissions or a security sandbox: the agent can still read files you ask it to inspect. The model/endpoint and key configuration remain the existing workshop setup. Review the bundled skills and their pinned upstream attribution in `skills/UPSTREAM.md`; no personal skill installation is required.
 
+## Build and run your own harness
+
+Follow [the copy/paste prompts](prompts/README.md): first build with `pixi run baseline`, then run the generated harness yourself with the `agent-01` task created by that build. The guide also covers the interview attempt and self-improvement.
+
 ## Optional local Kev
 
 ```sh
