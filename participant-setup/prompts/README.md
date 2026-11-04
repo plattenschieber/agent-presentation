@@ -1,24 +1,26 @@
-# Try the workshop yourself
+# Build it. Then use it.
 
-**Pi builds the harness. The generated harness is a second program that you run yourself.**
-All commands below start in the repository root. The Pi launchers open in `participant-setup/`.
+**Pi builds your harness. Your harness is the program you then try yourself.**
 
-| Step | Start | Copy into Pi |
+Run commands from the repository root. Pi opens in `participant-setup/`.
+
+| Try | Start Pi | Paste |
 | --- | --- | --- |
-| First build | `pixi run baseline` | [01 — prepared brief](01-baseline-build.md) |
-| Fresh interview/build | `pixi run interview` | [02 — grill-me](02-interview-build.md) |
+| A direct brief | `pixi run baseline` | [First build](01-baseline-build.md) |
+| An interview | `pixi run interview` | [Interview build](02-interview-build.md) |
 
-After the first build finishes, open another terminal in the repository root and run:
+After building:
 
 ```sh
-pixi run agent-01 "Create a small text file, read it back, edit it, and run a command that checks the final contents."
+pixi run agent-01
 ```
 
-**agent-01 is added by the first build prompt. It does not exist in the untouched checkout.**
-The second build similarly adds `agent-02`. If you already built a harness with an earlier prompt, use [04 — add a launcher](04-add-launcher-to-existing-build.md) in Pi first. Do not rerun the entire build just to get a launch command.
+Chat with it, ask a follow-up, then try [self-improvement](03-self-improvement.md). Use `agent-02` for the second attempt.
 
-Then give the generated harness [03 — self-improvement](03-self-improvement.md). It adds `--summarize-tools` to its own code. The model still receives full tool output; only the terminal display changes.
+**The build creates these launch tasks.** If you already built a harness with an earlier prompt, use [add the launcher](04-add-launcher-to-existing-build.md).
 
-Keep the attempts separate. No command here deploys an application or changes your server/Cloudflare configuration. Use dummy demo files: working-directory selection is not a security sandbox.
+## Setup context
 
-The launcher uses the workshop key in the existing ignored `participant-setup/.env`; never paste credentials into a prompt or commit them. If setup has not created that file yet, run `pixi run setup` first.
+The workshop connection is in `scripts/config.mjs` and `.workshop/pi/models.json`, relative to Pi's starting directory. Pixi tasks go in `../pixi.toml`. Keep existing tasks intact. The ignored `.env` holds the key: load it at runtime, never print or commit it.
+
+Keep attempts separate. These exercises run locally; nothing gets deployed. Use disposable files while trying the harness.
