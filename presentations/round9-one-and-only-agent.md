@@ -63,7 +63,7 @@ class: round9 r9-statement
 
 <!--
 1:00–1:20
-Alfred läuft zu Hause. Morina und Sokrates laufen auf Hetzner. Hermes taucht lokal und auf Servern auf. Das ist mein Setup, keine allgemeine Eigenschaft dieser Produkte. Je nach Aufgabe muss ich wissen, welche Maschine gerade welchen Zugriff hat.
+Hans ist mein lokales MacBook. Alfred ist ein zweites MacBook, das zu Hause dauerhaft läuft. Morina auf Hetzner ist der Haupthost für meinen Hermes Agent. Sokrates ist das Company Brain und betreibt ebenfalls einen Hermes Agent. Agent und Rechner sind also nicht dasselbe.
 -->
 
 ---
@@ -180,7 +180,7 @@ class: round9 r9-contrast
 
 <!--
 4:00–4:20
-Tailscale verbindet meine Rechner. Das ist hilfreich. Aber das Netzwerk legt nicht fest, welcher Agent zuständig ist, wo Entscheidungen liegen oder ob eine Aufgabe schon fertig ist. Die Verbindung zwischen Maschinen ersetzt nicht die Kontinuität meiner Arbeit.
+Hans und das dauerhaft laufende MacBook Alfred sind über Tailscale verbunden. Hermes auf Morina kann Alfred nutzen. Technisch gibt es also Wege zwischen den Maschinen. Offen bleibt für mich: Wer ist zuständig, wo liegt die aktuelle Entscheidung, und wie bleibt meine Arbeit ein zusammenhängender Vorgang?
 -->
 
 ---
