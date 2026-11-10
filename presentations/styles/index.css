@@ -479,3 +479,17 @@
 .round8 .r8-caveat { margin-top: 36px; padding-top: 20px; border-top: 1px solid #425048; font-size: 18px; line-height: 1.55; color: #b8c4bd; }
 .round8.r8-sources li { font-size: 20px; line-height: 1.65; }
 .round8 a { color: var(--r8-accent); }
+
+/* Round 9: editorial typography, warm paper, ink and signal orange. */
+.slidev-layout.round9 { background: #f3efe5; color: #22251f; padding: 58px 64px; font-family: Arial, Helvetica, sans-serif; }
+.round9 .r9-top { position: absolute; top: 28px; left: 64px; right: 64px; font-family: 'Courier New', monospace; font-size: 12px; font-weight: 700; letter-spacing: .12em; border-bottom: 1px solid currentColor; padding-bottom: 12px; }
+.round9 .r9-top span { float: right; }
+.slidev-layout.round9 h1 { margin: 66px 0 0; font-size: 74px; line-height: 1.04; font-weight: 800; letter-spacing: -.055em; color: inherit; max-width: 860px; }
+.slidev-layout.round9 h1 em { font-style: normal; color: #df4b23; }
+.round9 .r9-byline { position: absolute; bottom: 42px; left: 66px; font-family: 'Courier New', monospace; font-size: 15px; }
+.slidev-layout.round9.r9-cover h1 { font-size: 82px; margin-top: 45px; }
+.slidev-layout.round9.r9-question { background: #22251f; color: #f3efe5; }
+.slidev-layout.round9.r9-question h1 { font-size: 88px; margin-top: 95px; }
+.slidev-layout.round9.r9-rollcall h1 { font-size: 75px; font-weight: 500; }
+.slidev-layout.round9.r9-contrast { background: #df4b23; color: #fff8ee; }
+.slidev-layout.round9.r9-contrast h1 { margin-top: 85px; }
