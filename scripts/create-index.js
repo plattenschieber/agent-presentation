@@ -132,6 +132,12 @@ const html = `<!DOCTYPE html>
         </div>
 
         <div class="presentations">
+            <a href="./round9/" class="presentation-card">
+                <h2>Round 9: The One and Only Agent</h2>
+                <p>Zwanzig knappe Folien über Agenten-Chaos, Gerätewechsel und den Wunsch nach einem Ansprechpartner.</p>
+                <p class="date">10. November 2026 · Pecha Kucha · 6:40</p>
+                <span class="cta">View Slides →</span>
+            </a>
             <a href="./round1/" class="presentation-card">
                 <h2>Round 1: Intent → Impact</h2>
                 <p>My journey from tab completion to building what matters. A 5-minute lightning talk on finding what actually works in AI-powered development.</p>
